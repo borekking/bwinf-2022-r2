@@ -1,0 +1,4 @@
+- For each section: Which section does play a role in it? 
+  -> Order of sections good?
+- For each section: Look if it's important for the docs (next section(s)), if so add this to sections
+- Especially look for sections 3, 4, 5
