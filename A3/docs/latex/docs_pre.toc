@@ -1,0 +1,23 @@
+\babel@toc {ngerman}{}
+\contentsline {section}{\numberline {1}Einleitung}{1}{}%
+\contentsline {section}{\numberline {2}Ziffern veraendern}{2}{}%
+\contentsline {section}{\numberline {3}Reihenfolge der Veraenderungen}{3}{}%
+\contentsline {section}{\numberline {4}Eigenschaften einer korrekten Loesung}{4}{}%
+\contentsline {section}{\numberline {5}Schluesse aus der korrekten Loesung}{4}{}%
+\contentsline {section}{\numberline {6}Modellierung}{5}{}%
+\contentsline {section}{\numberline {7}Rekursiver Algorithmus}{6}{}%
+\contentsline {section}{\numberline {8}Loesung durch Dynamische Programmierung}{7}{}%
+\contentsline {section}{\numberline {9}Berechnung der Umlegungen}{8}{}%
+\contentsline {section}{\numberline {10}Optimierung}{10}{}%
+\contentsline {section}{\numberline {11}Korrektheit}{10}{}%
+\contentsline {section}{\numberline {12}Implementierung}{11}{}%
+\contentsline {section}{\numberline {13}Laufzeitanalyse}{12}{}%
+\contentsline {section}{\numberline {14}Platzkomplexitaet}{13}{}%
+\contentsline {section}{\numberline {15}Beispiele}{14}{}%
+\contentsline {subsection}{\numberline {15.1}hexmax0.txt}{14}{}%
+\contentsline {subsection}{\numberline {15.2}hexmax1.txt}{15}{}%
+\contentsline {subsection}{\numberline {15.3}hexmax2.txt}{15}{}%
+\contentsline {subsection}{\numberline {15.4}hexmax3.txt}{15}{}%
+\contentsline {subsection}{\numberline {15.5}hexmax4.txt}{15}{}%
+\contentsline {subsection}{\numberline {15.6}hexmax5.txt}{16}{}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

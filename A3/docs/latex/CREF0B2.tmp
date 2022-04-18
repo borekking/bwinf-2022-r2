@@ -1,0 +1,529 @@
+\documentclass[a4paper,10pt,ngerman]{scrartcl}
+\usepackage{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[a4paper,margin=1.3cm,footskip=0.5cm]{geometry}
+
+% Die nÃ¤chsten drei Felder bitte anpassen:
+\newcommand{\Aufgabe}{Aufgabe 3 - HexMax} % Aufgabennummer und Aufgabennamen angeben
+\newcommand{\TeilnahmeId}{...}                  % Teilnahme-ID angeben
+\newcommand{\Name}{Florian Bange}             % Name des Bearbeiter / der Bearbeiterin dieser Aufgabe angeben
+
+
+% Kopf- und FuÃŸzeilen
+\usepackage{scrlayer-scrpage, lastpage}
+\setkomafont{pageheadfoot}{\large\textrm}
+\lohead{\Aufgabe}
+\rohead{Teilnahme-ID: \TeilnahmeId}
+\cfoot*{\thepage{}/\pageref{LastPage}}
+
+% Position des Titels
+\usepackage{titling}
+\setlength{\droptitle}{-1.0cm}
+
+% FÃ¼r mathematische Befehle und Symbole
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% FÃ¼r Bilder
+\usepackage{graphicx}
+
+% FÃ¼r Algorithmen
+% \usepackage{algpseudocode}
+
+% Pseudocode
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+% Trees
+\usepackage{qtree}
+
+% FÃ¼r Quelltext
+\usepackage{listings}
+\usepackage{color}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\lstset{
+  keywordstyle=\color{blue},commentstyle=\color{mygreen},
+  stringstyle=\color{mymauve},rulecolor=\color{black},
+  basicstyle=\footnotesize\ttfamily,numberstyle=\tiny\color{mygray},
+  captionpos=b, % sets the caption-position to bottom
+  keepspaces=true, % keeps spaces in text
+  numbers=left, numbersep=5pt, showspaces=false,showstringspaces=true,
+  showtabs=false, stepnumber=2, tabsize=2, title=\lstname
+}
+\lstdefinelanguage{JavaScript}{ % JavaScript ist als einzige Sprache noch nicht vordefiniert
+  keywords={break, case, catch, continue, debugger, default, delete, do, else, finally, for, function, if, in, instanceof, new, return, switch, this, throw, try, typeof, var, void, while, with},
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]',
+  morestring=[b]",
+  sensitive=true
+}
+
+% Diese beiden Pakete mÃ¼ssen zuletzt geladen werden
+%\usepackage{hyperref} % Anklickbare Links im Dokument
+\usepackage{cleveref}
+
+% Daten fÃ¼r die Titelseite
+\title{\textbf{\Huge\Aufgabe}}
+\author{\LARGE Teilnahme-ID: \LARGE \TeilnahmeId \\\\
+	    \LARGE Bearbeitet von \\ 
+	    \LARGE \Name\\\\}
+\date{\LARGE\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\vspace{0.5cm}
+
+Dieses Problem moechte ich loesen, indem ich das gleiche, allgemeinere Problem fuer beliebige Basen angehe. Das Programm unterstuetzt alle Basen zwischen 1 und 16.
+
+Im Folgenden werden die Positionen („kleine Staebchen“) einer Siebensegmentanzeige Segmente genannt.
+
+\section{Einleitung}
+Um dieses Problem zu loesen, muss man offensichtlich die Ziffern der gegebenen Zahl systematisch veraendern.
+
+\section{Ziffern veraendern}
+Moechte man eine Ziffer d zu einer anderen Ziffer g veraendern, muss man dafuer Segmente entfernen und hinzufuegen.
+Hinzufuegen muss man die Segmente, welche in d nicht aktiviert, aber in g aktiviert sind und entfernen muss man die Segmente, welche in d aktiviert sind, aber in g nicht.
+\\ \\
+Der Prozess des Veraenderns einer Ausgangszahl d zu einer Zielzahl g wird im Folgenden schlicht Veraenderung genannt.
+\\
+Die Anzahl der Segmente, die hinzugefuegt werden muessen, nenne ich im Folgenden a und die Anzahl der Segmente, die entfernt werden muessen, r.
+\\\\
+
+\textbf{Beispiele}
+\begin{enumerate}
+	\item
+	Moechte man A zu B veraendern,
+  ----
+|      |     |
+|      |     |
+  ----         ----
+|      |     |      |
+|      | ,   |      |
+              ----
+muss man zwei Segmente, oben rechts entfernen und ein Segment unten hinzufuegen. Somit ist r=2 und a=1.
+	\item
+	Moechte man A zu F veraendern,
+  ----         ----
+|      |     |
+|      |     |
+  ----         ----
+|      |     |
+|      | ,   |
+muss man zwei Segmente, rechts entfernen und keine Segmente hinzufuegen. Somit ist r=2 und a=0.
+	\item
+Moechte man 2 zu 5 veraendern,
+  ----         ----
+       |     |
+       |     |
+  ----         ----
+|                   |
+|                   |
+  ----  ,      ----
+muss man oben links und unten rechts ein Segment hinzufuegen und oben rechts und unten links ein Segment entfernen. Somit ist r=2 und a=2.
+\end{enumerate}
+
+\\\\
+Selbstverstaendlich exestiert ebenfalls der Fall, dass r und a gleich 0 sind, falls d = g gilt.
+\\\\
+Sei
+\[changes: (d, \ g) \rightarrow (r, \ a)\]
+eine Funktion, welche von Tupeln an Ziffern (d und g) abbildet auf Tupel der natuerlichen Zahlen (r, a).\\
+Dabei stellt d die Ausgangszahl und g die Zielzahl dar. r ist die Anzahl der Segmente, welche entfernt werden muessen und a die Anzahl der Segmente, welche hinzugefuegt werden muessen, um von d zu g zukommen.\\
+Weiter muss 0 <= a <= 7 und 0 <= r <= 7 gelten, da es nur sieben Segmente gibt, die entfernt/hinzugefuegt werden koennen.
+
+\section{Reihenfolge der Veraenderungen}
+Es ist leicht erkennbar, dass man zunaechst versuchen sollte, die Ziffern von links nach rechts zu erhoehen, bzw. die linken Ziffern zuerst erhoehen sollte, da eine Ziffer an Index i (0 <= i < n) schon bei Erhoehung um eins mehr Einfluss auf den Wert der Zahl hat, als wuerde man alle anderen Ziffern von Index i+1 bis n auf den hoechsten Wert a-1 setzen.
+\\\\
+Dies laesst sich wie folgt durch vollstaendige Induktion beweisen.
+\\\\
+Sein
+\[d_n, d_{n-1}, ... , d_2, d_1\]
+die Ziffern einer Zahl m mit Basis a, welche n Ziffern hat. Dabei liegt \(d_n\) ganz links. Die Ziffern sind also absteigend von links nach rechts.
+\\\\
+Den Wert der Zahl m kann man als Summe mit Hilfe der Ziffern und der Basis wie folgt darstellen:\\
+\[m = \sum_{i=1}^n d_i * a^{i-1}\]
+\\
+Sei i eine natuerliche Zahl mit \(1 <= i <= n\).
+Nun wird gezeigt, dass das der Wert der Stelle i mit der Ziffer 1 groeszer ist als die Summe aller Stellen mit einem Index kleiner als i mit je der groeszten Ziffer, \(a-1\).\\
+Formal (Induktionsvoraussetzung):
+\[1 * a^{i-1} > \sum_{k=1}^{i-1} (a-1) * a^{k-1}\]
+Induktions Anfang (i = 1)
+\[1 * a^{1-1} = a^{1-1} = a^0 = 1 > 0 = \sum_{k=1}^0 (a-1)*a^{k-1} = \sum_{k=1}^{1-1} (a-1)*a^{k-1}\]
+Induktionsbehauptung:
+\[1 * a^{(i+1)-1} > \sum_{k=1}^{(i+1)-1} (a-1) * a^{k-1}\]
+Induktionsschritt:
+\[1 * a^{(i+1)-1} = a^{i} = a * a^{i-1} = (a-1) * a^{i-1} + a^{i-1} \overset{IV}{>} (a-1) * a^{i-1} + \sum_{k=1}^{i-1} (a-1) * a^{k-1} = \sum_{k=1}^{i} (a-1) * a^{k-1} = \sum_{k=1}^{(i+1)-1} (a-1) * a^{k-1}\]
+\\\\\\\\\\
+Die Folgenden Loesungswege werden ausschlieszlich (versuchen) die Berechnung der hoechsten Zahl umzusetzen ohne die Umlegungen zu beachten. Denn diese koennen deutlich einfacher im Nachhinein berechnet werden. Dazu spaeter mehr.
+
+\section{Loesungsweg 1: Greedy Algorithmus}
+Dieser Loesungsweg ist Teil meiner Loesungsfindung und wird im Folgenden als falsch erkannt.
+\\\\
+Betrachtet man das HexMax-Problem als Optimierungsproblem, bei welchem eine hoechstmoegliche Zahl erreicht werden soll, so kann man einen Greedy Algorithmus in Betracht ziehen.
+Dieser versucht jeder Ziffer von links nach rechts, einzeln, moeglichst stark zu erhoehen, kann dabei aber nicht vorrausschauend handeln.
+\\\\
+\\\\
+Sein die Ziffern einer gegebenen Zahl der Basis a mit n Ziffern, von links nach nach rechts, \(d_n, …, d_1\) und sei m die Maximalzahl an erlaubten Veraenderungen. Weiter sei \(u_0\) die uebrige Anzahl an Veraenderungen, welche am Anfang den Wert m hat.
+\\\\
+Nun wird fuer jede Ziffer \(d_i\) an Index i (0 <= i < n) versucht, die Ziffer moeglichst stark zu erhoehen.
+Dazu wird probiert \(d_i\) zu allen Ziffern der Basis a, welche groeszer sind als \(d_i\) zu veraendern. Diese Ziffer wird g (wie goal) genannt.
+\\\\
+Fuer \(d_i\) als Startzahl und \(g\) als Zielzahl werden nun die dazugehoerigen Werte \((r, a)\) mit der changes-Funktion berechnet (\(changes(d_i, g)\)).
+Stellt man sich a und r als Listen von Segmenten vor, wird ersichtlich, dass man alle Segmente aus der kleineren Liste mit Segmenten aus der groeszeren Liste tauschen kann. Demnach koennte man zunaechst min(a, r) Segmente in \(d_i\) selbst tauschen.
+Danach gibt es drei Faelle fuer die weiteren Umlegungen:\\
+\begin{enumerate}
+\item r = a\\
+In diesem Fall braucht man keine weiteren Umlegungen. Somit ist die insgesamt Anzahl an benoetigten Umlegungen fuer diesen Fall r bzw. a.
+\\\\
+\item r > a\\
+In diesem Fall muessen \(r - a\) weitere Segmente entfernt werden. Somit ist die insgesamt Anzahl an benoetigten Umlegungen fuer diesen Fall \(a + (r - a) = r\)
+\\\\
+\item a > r\\
+In diesem Fall muessen \(a - r\) weitere Segmente hinzugefuegt werden. Somit ist die insgesamt Anzahl an benoetigten Umlegungen fuer diesen Fall \(r + (a - r) = a\)
+\end{enumerate}
+Allgemein kann die Anzahl an benoetigten Umlegungen berechnet werden mit folgender Formel:
+\[f: (r, a) -> min(a, r) + |a-r|\]
+Denn dadurch werden alle drei Faelle erfuellt:
+\begin{enumerate}
+\item r = a\\
+\[min(a, r) + |a-r| = a + |0| = a = r + |0| = r\]
+\\\\
+\item r > a\\
+\[min(a, r) + |a-r| = a + |a-r| = a -(a-r) =) a - a + r = r\]
+\\\\
+\item a > r\\
+\[min(a, r) + |a-r| = r + |a-r| = r + (a-r) =) r + a - r = a\]
+\end{enumerate}
+
+\\\\
+\textbf{Beispiele}
+\begin{enumerate}
+	\item Fall 1
+	Moechte man eine 4 zu C veraendern,
+               ----
+|      |     |
+|      |     |
+  ----
+       |     |
+       |  ,  |
+               ----
+	erhaelt man r=3 und a=3. Und somit \(min(3, 3) + |3-3| = 3 + 0 = 3\) Umlegungen. In diesem Beispiel muss man zwei Segmente an der rechten Seite und eines in der Mitte entfernen, sowie unten, oben und unten links eines hinzufuegen. Somit kommt man mit drei Umlegungen innerhalb der 4 aus.
+	\item Fall 2
+	Moechte man eine 2 zu einem F veraendern,
+  ----        ----
+       |    |
+       |    |
+  ----        ----
+|           |
+|           |
+  ---- ,
+erhaelt man r=2 und a=1. Demnach braucht man insgesamt \(min(2, 1) + |1-2| = 1 + 1 = 2\) Umlegungen. Dies ist logisch, da man zum Beispiel das Segment oben rechts nach links Umlegen koennte (1. Umlegung) und anschlieszend noch das unterste Segment entfernen muss (2. Umlegung).
+
+	\item Fall 3
+	Moechte man 7 zu d veraendern,
+	  ----
+       |            |
+       |            |
+               ----
+       |     |      |
+       |  ,  |      |
+               ----
+	so erhaelt man r=1 und a=3. Denn man muss das Segment oben entfernen und unten, unten links und in der Mitte hinzufuegen. Nach der Formel braucht man \(min(3, 1) + |3-1| = 1 + 2 = 3\) Umlegungen.
+\end{enumerate}
+
+Mit diesem Wissen kann man zunaechst berechnen, ob das momentane changesLeft ueberhaupt grosz genug fuer die Momentane Veraenderung ist. Ist changesLeft 0, so wird das Programm beendet.\\
+Der Algorithmus muss dies zunaechst ueberpruefen. Dann kann man ggf. min(a, r) Segmente tauschen.\\
+Anschlieszend muss man entweder Segmente zu anderen Ziffern hinzufuegen oder sie von ihnen entfernen. Selbstverstaendlich ist auch moeglich, dass man g bereits nach den Tauschen erreicht hat, in diesem Fall war a gleich r und es muss nicht auszerhalb von \(d_i\) passieren.\\
+Ist es allerdings noetig, so ist wichtig, dass die Segmente nur rechts von d_i hinzugefuegt bzw. entfernt werden, damit bereits maximal erhoehte Ziffern nicht veraendert werden.
+\\\\
+Die restlichen Segmente, die entweder a) entfernt oder b) hinzugefuegt werden muessen, muessen je a) zu anderen Ziffern hinzugefuegt oder b) von anderen Ziffern entfernt werden.\\
+Um nun Segmente zu anderen Ziffern hinzuzufuegen, bzw. sie von ihnen zu entfernen, wird rekursiv vorgegangen, indem von den Ziffern \(d_1\) bis \(d_{i-1}\), angefangen bei der rechtesten Ziffer \(d_{1}\) die Segmente hinzugefuegt bzw. entfernt werden, indem man die Ziffer zu einer neuen veraendert, welche keine aeuszeren aenderungen hat. r oder a muss also 0 sein. Somit entstehen ggf. zu rechten von \(d_i\) neue Ziffern.
+\\\\
+Selbstverstaendlich ist es moeglich, dass dabei nicht ausreichend Ziffern gefunden werden. In diesem Fall wird die naechst kleinere Zahl als g fuer das momentane d_i ausprobiert.\\
+Sollte es jedoch moeglich sein, wird nun Final d_i zu g gesetzt und die Ziffern zur rechen von d_i evtl. angepasst. Weiter muss u_{i+1} zu \(u_i - (min(a-r) + |a-r|)\) gesetzt werden.
+\\\\
+Der Pseudocode dazu sieht wie folgt aus, die Liste der Ziffern (digits) und dessen Laenge n ist gegeben:
+\begin{algorithm}
+\caption{Greedy Algorithmus}
+\begin{algorithmic} 
+
+\FOR i:=1 \TO 10 \STEP 1 \DO
+	 \FORALL{g} \STATE{<text>} 
+	 \ENDFOR
+	
+\end{algorithmic}
+\end{algorithm}
+
+\section{Problematik des Greedy Algorithmus}
+Das Problem mit der beschriebenen Vorgehensweise ist, dass nicht immer die beste Loesung gefunden werden kann. Denn, wie bereits erwaehnt, nicht vorrausschauend gehandelt werden kann.\\
+Das Problem besteht darin, dass bei dem Verteilen der restlichen Segmente auf die Ziffern zu der Rechten von \(d_i\) nicht sicher ist, ob dabei Segmente so gelegt werden, dass die beste Loesung nicht mehr mit den restlichen Veraenderungen moeglich ist.\\
+Es waere zum Beispiel moeglich, dass Segmente so in eine Ziffer gelegt werden, dass sie anschlieszend mehr Umlegungen braeuchte, um eine hoehere Ziffer zu erreichen als vorher.
+\\\\
+Ein gutes Beispiel dazu ist die Zahl 2A4 mit 4 Umlegungen.
+Wuerde man diese mit dem Greedy Algorithmus veraendern, wuerde man folgende Schritte durchlaufen:\\
+\begin{enumerate}
+	\item Index 1: 2 zu F veraendern. Diese Veraenderung ist oben beschrieben. Es wird eine Umlegung in 2 selbst getaetigt und anschlieszend muss eine weitere Umlegung auszerhalb von 2 geschehen. (1. Umlegung)
+	\item Diese zweite Umlegung muss von 2 in eine andere Ziffer rechts von zwei geschehen, sodass eine neue Ziffer entsteht. Da dies bei 4 nicht moeglich ist, wird dies bei A getan, sodass aus A 8 wird. (2. Umlegung)
+	\item Index 2: Nun wird 8 erhoeht. Moechte man 8 zu F veraendern, muss man drei Segmente entfernen und somit auch drei Umlegungen durchfuehren. Dies ist allerdings nicht mehr moeglich, da nur noch 2 Umlegungen verbleiben. Somit wird als naechstes versucht 8 zu E zu veraendern. Dies ist Moeglich, indem man zwei Segmente an der rechten Seite entfernt und diese zu 4 hinzufuegt, sodass eine 9 entsteht (3., 4. Umlegung)
+\end{enumerate}
+Betrachtet man die Ziffern faellt allerdings auf, dass eine Optimale Loesung waere, 2 und A zu Fs zu veraendern, bei 2 zu F ist a=1 und r=2 und bei A zu F ist a=0 und r=2. Vollzieht man eine Umlegung in 2 (1. Umlegung), bleiben insgesamt r Segmente, welche entfernt werden muessen. Diese kann man zu 4 hinzufuegen, so dass 8 entsteht. Insgesamt erhaelt man die Zahl FF8 mit 4 Umlegungen.
+\\\\\\\\
+Nun folgenden die Vorüberlegungen für meinen finalen Lösungsweg.
+
+\section{Eigenschaften einer korrekten Loesung}
+Damit eine Zahl eine korrekte Loesung ist, muss Folgendes gegeben sein:\\
+1. Die Zahl ist gueltig /jede Ziffer existiert in der Basis\\
+2. Die Anzahl der Segmente ist die gleiche wie bei der gegebenen Zahl\\
+3. Die gegebene Maximalzahl an Umlegungen ist nicht ueberschritten\\
+4. Die Zahl ist groeszer als die gegebene Zahl oder gleich grosz\\
+
+\section{Schluesse aus der korrekten Loesung}
+Sein \(d_n, \cdots , d_1\) die Ziffern der gegeben Zahl von links nach rechts und \(d_n‘, … d_1‘\) die jeweiligen Ziffern d korrekten Loesung. Weiter sind \(a_i und r_i\) die Segmente, die man hinzufuegen, bzw. entfernen muss um von \(d_i\) zu \(d_i‘\) zu kommen (\(1 <= i <= n\)), bzw.
+\[(r_i, a_i) = changes(d_i, d_i')\]
+für alle i mit \(1 <= i <= n\).
+\\\\
+Weiter sei 
+\[A = \sum_{i=1}^n a_i\]
+\[R = \sum_{i=1}^n r_i\]
+
+Daraus, dass eine korrekte Loesung, nach den zuvor beschriebenen Punkten gegeben ist, laesst sich Folgendes schlieszen:
+\begin{enumerate}
+
+	\item
+	\[\sum_{i=1}^n a_i - r_i = 0\]
+Dies liegt schlicht daran, dass somit nicht mehr Segmente entfernt oder hinzugefuegt werden muessen als existieren, so dass am Ende gleich viele Segmente vorhanden sind, wie bei der gegebenen Zahl.
+
+	\item A = R\\
+	Dies laesst sich aus dem ersten Punkt wie folgt schlieszen.
+	\[\sum_{i=1}^n a_i - r_i = 0\]
+	\[\Leftrightarrow (a_1 - r_1) + \cdots + (a_n - r_n) = 0\]
+	\[\Leftrightarrow a_1 + (-r_1) + \cdots + a_n + (-r_n) = 0\]
+	\[\Leftrightarrow a_1 + \cdots + a_n + (-r_1) + \cdots + (-r_n) = 0\]
+	\[\Leftrightarrow a_1 + \cdots + a_n - r_1 - \cdots - r_n = 0\]
+	\[\Leftrightarrow a_1 + \cdots + a_n - (r_1 + \cdots + r_n) = 0\]
+	\[\Leftrightarrow \sum_{i=1}^n a_i - \sum_{i=1}^n r_i = 0\]
+	\[\Leftrightarrow A - R = 0\]
+	\[\Leftrightarrow A = R\]
+	
+	\item Man kann benoetigt \((A+B) / 2\) Umlegungen\\
+	Dies wird ersicht, da A die Anzahl aller Segmente ist, die hinzugefügt werden müssen (dort ist also noch kein aktiviertes Segment)  und R die Anzahl der Segmente ist, die entfernt werden müssen (dort ist also ein aktiviertes Segment) (um von \(d_1, \cdots , d_n\) zu \(d_1', \cdots , d_n'\) zu kommen). Nun kann man an die R Segmente, die entfernt werden müssen an die A Stellen umlegen, die aktiviert werden müssen. Somit ergeben sich \((A+B) / 2\) Umlegungen. Bzw., da A gleich R gilt, A = R Umlegungen.
+\end{enumerate}
+\\\\\\\\
+
+\section{Modellierung}
+Sei eine Zahl der Basis a mit n Ziffern gegeben. Die Ziffern seien erneut \(d_1, \cdots, d_n\).\\\\
+Die Moeglichen Belegungen der Ziffern \(d_1, \cdots, d_n\) lassen sich darstellen als Baum.\\\\
+Dabei ist die Wurzel auf Level 0 des Baums leer.\\
+Fuer jeden Index i der Zahl (1 <= i <= n) gehen auf Level i stets a Pfade von jedem Knoten auf Level \(i-1\) zu je einem Knoten ab. Diese a Knoten Stellen je alle a Ziffern der Basis a (0, \cdots, a-1) dar.\\\\
+Jeder Knoten auf Level l enthaelt eine Ziffer g, sowie das Tupel changes(d_{l-1}, g)\\\\
+Die Anzahl an Blaettern ist demnach a^n und die Hoehe ist n+1.
+
+Ein Beispiel Baum zur Zahl 12 Der Basis 3 waere:
+\begin{center}
+\Tree 
+   [
+   [.{0; r=0, a=4}
+      [.{0; r=1, a=2}
+      ]
+      [.{1; r=4, a=1}
+      ]
+      [.{2; r=0, a=0}
+      ]
+   ]
+   [.{1; r=0, a=0}
+      [.{0; r=1, a=2}
+      ]
+      [.{1; r=4, a=1}
+      ]
+      [.{2; r=0, a=0}
+      ]
+   ]
+   [.{2; r=1, a=4}
+      [.{0; r=1, a=2}
+      ]
+      [.{1; r=4, a=1}
+      ]
+      [.{2; r=0, a=0}
+      ]
+   ]
+]
+\end{center}
+
+In einem solchen Baum waere nun die Aufgabe, den Pfad zu finden, bei dem die Summe A aller a’s der Summe R aller r’s entspricht. Und diese Summen nicht groeszer sind als die Maximalanzahl an Veraenderungen.\\
+Selbstverstaendlich soll dabei der Pfad gefunden werden, der als Zahl den groeszten Wert hat. Dazu koennte man die a Knoten, welche die a Ziffern der Basis a darstellenimmer absteigend hinzufuegen (wie im Beispiel). Dann muesste man nur von links nach rechts suchen und den ersten Pfad waehlen.
+
+\section{Rekursiver Algorithmus}
+Das HexMax Problem laesst sich nun rekursiv definieren:
+
+Geben ist erneut die Zahl der Basis a mit den n Ziffern d_0, … , d_{n-1} und die Maximalzahl an Veraenderungen c.
+
+Fuer die Rekursive Definition sei nun als Eingabe gegeben:
+- Ein momentaner Index einer Ziffer: index
+- Die momentane Anzahl an Segmenten, die hinzugefuegt werden muessen: A
+- Die momentane Anzahl an Segmenten, die entfernt werden muessen: R
+
+Die Ausgabe soll eine Liste an Ziffern der Groesze n – index oder NULL sein.
+
+Die Aufgabe lautet nun, ab Index index die hoechste Belegung der Ziffern zu finden, welche die benoetigten Eigenschaften enthaelt: A am Ende gleich R und A = R <= c gilt.
+
+Rekursion kann hier sehr schoen angewendet werden, indem jeder Aufruf an einem Index i, alle moeglichen Ziffern g der Basis a absteigend durchgegangen werden. Dazu wird dann (r, a) = changes(d_i, g) berechnet und die Funktion rekursiv benutzt, wobei als Index index+1, als A A+a und als R R+r genommen werden. Sollte der Rueckgabewert des rekursiven Aufrufs NULL sein, so wird die naechstkleinere moegliche Ziffer probiert. Sollte der Rueckgabewert nicht NULL sein, wird eine Liste erzeugt, welche an erster Position g hat und weiter mit dem Rueckgabewert gefuellt ist. Diese wird zurueckgegeben.
+
+Die Abbruchbedingungen stellen dar…
+1. A+R ist groeszer als 2 * c
+In diesem Fall wuerde zu viele Veraenderungen gebraucht, so dass null zurueckgegeben werden muss.
+
+2. Ein zu groszer Index, bzw. ein Index der groeszer oder gleich grosz zu n ist
+In diesem Fall wird ueberprueft, ob A=R und A+R <= c ist, nur dann wird eine leere Liste zurueckgegeben, sonst wird NULL zurueckgegeben. Wird die Reihenfolge, wie hier nummeriert benutzt, kann die Abfrage nach A+R <= c natuerlich weggelassen werden, da sie durch Punkt 1 gegeben ist.
+
+3. A+R = 2*c
+In diesem Fall muss zusaetzlich ueberprueft werden, ob A-
+ist die Anzahl an Veraenderungen genau richtig, sodass eine Teilmenge der Ziffer ab Index index zurueckgegeben werden kann.
+
+<Pseudocode> <- TODO
+
+
+\section{Loesung durch Dynamische Programmierung}
+Die soeben beschriebene Loesung loest zwar das Problem, indem die beschriebene Funktion mit Index 0, A = 0 und R = 0 aufgerufen wird, hat aber eine deutlich zu hohe Laufzeit von maximal ca. a^n.
+Dies ergibt sich daraus, dass so lange gesucht wuerde, bis das Ergebnis gleich der Eingabezahl ist. Dies waere (a-d_0-1) * 16^{n-1} + (a-d_1) * … * (d-d_{n-1}) mal. Dabei stellt (a-d_0-1) * 16^{n-1} alle Moeglichkeiten der ersten Ziffer da, die hoeher sind als die erste Ziffer, wobei fuer jeder dieser die Moeglichkeiten der restlichen Ziffern vollstaendig probiert werden muessen. (a-d_1) * … * (d-d_{n-1}) stellt alle Kombinationen da, wobei d_0‘ = d_0 ist (TODO Eingefuehrt?)
+TODO Beispiel berechnen mit Baum.
+
+Um diese Laufzeit stark zu senken, kann man einen Blick auf die Moeglichen Eingaben werfen.
+Moeglich sind fuer…
+- Index n (n wird abgefangen)
+- A maximal 5*n
+- R maximal 5*n
+… verschiedene Eingaben.
+Multipliziert man diese, erhaelt man die Anzahl an allen Verschiedenen Eingaben:
+n * 5n * 5n = 25 * n^3.
+
+Deswegen kann man hier Memoisation bzw. Dynamische Programmierung benutzen, indem man bereits berechnete Funktionswerte speichert, um sie ggf. wieder benutzen zu koennen.
+Dazu wird am Anfang des Algorithmus‘ ueberprueft, ob dieselbe Eingabe (index, A, R) bereits gespeichert wurde. Ist dies der Fall, wird das gespeicherte Ergebnis zurueckgegeben.
+Weiter wird am Ende des Algorithmus’ der Wert, welcher zurueckgegeben werden wird, gespeichert.
+
+\section{Berechnung der Umlegungen}
+Nach dem die hoechstmoegliche Zahl berechnet wurde, kann man mit dieser die Umlegungen berechnen. Dabei muss beachtet werden, dass stets ein aktiviertes Segment mit einem nicht aktivierten Segment getauscht wird.
+
+Gegeben sein die Ziffern der gegebenen Zahl d_0, … d_{n-1} und die Ziffern der resultierenden Zahl d_0‘, … , d_{n-1}‘.
+
+Zunaechst wird fuer jedes Paar die Liste der Segmente, die entfernt werden muessen – removes_i  - und die Liste der Segmente, die hinzugefuegt werden muessen – adds_i, berechnet. Segmente werden dabei ueber ihren Index j (0 <= j < 7) definiert.
+
+(1)
+Anschlieszend werden alle Indexe i (0 <= i < n) durchgegangen. Fuer jeden Index i werden so lange Elemente aus adds_i mit Elementen aus removes_i getauscht, bis eine Liste leer ist.
+
+(2)
+Als naechstes werden alle restlichen Segmente aus add- und remove-Listen miteinander getauscht.
+
+TODO Segmente: aktiviert, nicht aktiviert <- Worte Nutzung!
+
+
+\section{Optimierung}
+Optimieren kann man diesen Loesungsweg durch zwei Dinge.
+Das erste scheint offensichtlich. Naemlich sollten alle Ergebnisse changes-Funktion bereits vorgeneriet sein, so dass r und a nicht jedes Mal neu berechnet werden muessen.
+
+Zweitens kann man die Anzahl der verschiedenen Ziffern, die fuer einen Index probiert werden, verringern. Dazu werden alle Ziffern, die die gleichen Werte fuer a und r haben aussortiert, wobei nur die mit dem hoechsten Wert bleibt. Auch dies wird selbstverstaendlich gespeichert und fuer jede Ziffer nur einmal berechnet.
+
+
+\section{Korrektheit}
+Die Korrektheit werde ich nun Punkt fuer Punkt begruenden.
+
+Zunaechst zur Korrektheit der Berechnung der Umlegungen.
+Hier ist zu beachten, dass eine Siebensegmentanzeige niemals vollkommen leer sein darf. Es muss also jede immer mindestens ein aktiviertes Segment enthalten.
+
+Im ersten Teil der Berechnung wird die niemals eine Anzeige leer sein, da die Anzahl an aktivierten Segmenten in einer Anzeige die gleiche bleibt, wenn man eine Umlegung vornimmt.
+
+Im zweiten Teil der Berechnung gibt es fuer jede Ziffer an Index i drei Moeglichkeiten:
+1. Es wird nicht nach auszen veraendert, da die d_i‘ bereits erreicht ist.
+2. Es muessen |a_i – r_i| Segmente entfernt werden, sodass diese zu anderen Ziffern hinzugefuegt werden.
+In diesem Fall wird es niemals dazu kommen, dass die Anzeige an Index i vollkommen leer wird. Denn es ist sicher, dass durch das Entfernen der Segmente eine neue Ziffer entsteht. Und jede Ziffer besitzt aktivierte Segmente.
+3. Es muessen a_i – r_i Segmente hinzugefuegt werden, sodass diese von anderen genommen werden muessen.
+In diesem Fall werden Segmente hinzugefuegt, sodass die Anzahl der aktivierten Segmente nicht kleiner wird und die Anzeige niemals leer wird.
+
+
+Nun zur Korrektheit des rekursiven Algorithmus mit der Dynamischen Programmierung.
+
+1. Die Anzahl an Umlegungen ist niemals groeszer als angegeben.
+Dies wird durch die Abbruchbedingung A+R > 2*c gegeben, welche dafuer sorgt, dass niemals mehr Veraenderungen gebraucht werden als durch Umlegungen moeglich sind.
+
+2. Die Anzahl der Ziffern ist nicht veraendert.
+Dies ist gegeben, da in dem Loesungsweg keine Moeglichkeit existiert, Ziffern hinzuzufuegen oder zu entfernen.
+
+3. Die Anzahl der aktivierten Segmente ist die gleiche, wie bei der gegebenen Zahl.
+Dies ist gegeben, da in den Abbruchbedingungen stets geprueft wird, dass A = R ist, sodass gleich viele Segmente entfernt und hinzugefuegt werden.
+TODO Definieren: Veraenderung, Umlegung
+-> Klarer Betonen: A+R ist das doppelte der benutzen Umlegungen, da r’s mit a’s getauscht werden.
+
+4. Die Loesung ist groeszer oder gleich grosz zur gegebenen Zahl.
+Dies ist gegeben, da der Algorithmus maximal eine Loesung sucht, bis d_i‘ = d_i fuer alle i gilt. In diesem Fall wird der Algorithmus den Abbruchfall des letzten Index‘ erreichen und die Loesung zurueckgeben, da A und R immer 0 bleiben.
+Das dies die kleinstmoegliche Loesung, die der Algorithmus findet, da die moeglichen Ziffern stets von grosz nach klein probiert werden.
+
+\section{Laufzeitanalyse}
+Die Laufzeit des gesamten Algorithmus setzt sich zusammen aus Folgenden Teilen:
+
+1. Die Vorgenerierung der r’s und a’s von allen Ziffern auf alle Ziffern.
+Diese laeuft in Konstanter Zeit, da stets genau a^2 Durchlaeufe benoetigt werden, wobei a kein Teil der Eingabe ist.
+Dieser Teil laeuft somit in O(1).
+
+2. Die Berechnung der hoechsten Zahl mit Hilfe dynamischer Programmierung.
+Diese Laufzeit stellt sich als etwas komplizierter heraus.
+
+Zunaechst sei zu wissen, dass die Laufzeit eines Algorithmus mit Memoisation wie folgt berechnet wird:
+Anzahl der Teilprobleme * Laufzeit pro Teilproblem,
+wobei der rekursive Teil als konstant gewertet wird.
+
+Die Laufzeit pro Teilproblem besteht aus…
+- 4 Abfragen Konstanter Zeit -> O(1)
+- Einer Schleife mit maximal a Durchgaengen -> O(1)
+- Einem kopieren von maximal n Elementen -> O(n)
+- Einem Speichern des Ergebnisses in konstanter Zeit -> O(1)
+Insgesamt erhaelt man also eine Laufzeit von O(n)
+
+Die Anzahl der Teilprobleme ist schwieriger. Diese kann man angehen, ueber die Eingabeparamether des Algorithmus: index, A, R
+Fuer den Index gibt es n Moeglichkeiten, bevor abgebrochen wird.
+Fuer A und R gibt es je maximal 5*n Moeglichkeiten. Das ergibt sich aus der Anzahl der Ziffern und der Maximal Anzahl Segmenten die man hinzufuegen und entfernen kann: 5
+
+Multipliziert man diese Werte zusammen, erhaelt man:
+n * 5n * 5n = 25 n^3
+
+Dies befindet sich somit in O(n^3).
+
+Selbstverstaendlich stellt dies nur einen unrealistischen Fall dar. In der Realitaet verhaelt sich die Anzahl an Teilproblemen naemlich anders.
+Hier habe wird vier Mal die durchschnittliche Anzahl der Teilprobleme von je 100 pseudo-zufaellig generierten Zahlen und einer Zufaelligen Zahl an Umlegungen zwischen 100 und 2.000 gegraft:
+
+
+
+Es ist zu erkennen, dass die vier Graphen ca. gegen 0.8 * x^2,5 laufen.
+Demnach gaebe es O(srqt(x^5)) Teilprobleme.
+
+Betrachtet man das theoretische Ergebnis, so erhaelt man O(n) * O(n^3) = O(n^4).
+Bei der praktischen Analyse erhaelt man O(n) * O(n^2,5) = O(n^3,5) = O(sqrt(n^6))
+
+TODO Cleanup, More digits in graph
+
+3. Berechnung der Umlegungen.
+O(n)
+
+Demnach landet man bei:
+O(1) + O(n^4) + O(n) = O(n^4)
+
+\section{Platzkomplexitaet}
+Die Platzkomplexitaet beschraenkt sich ebenfalls auf diese drei Teile.
+
+1. Die Vorgenerierung der r’s und a’s von allen Ziffern auf alle Ziffern.
+O(1)
+
+2. Die Berechnung der hoechsten Zahl mit Hilfe dynamischer Programmierung.
+Memo-Objekt: O(n^3)
+foo: O(1) + O(n) + O(n) = O(n)
+
+
+
+
+
+\end{document}

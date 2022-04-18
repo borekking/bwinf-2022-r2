@@ -1,0 +1,15 @@
+\babel@toc {ngerman}{}
+\contentsline {section}{\numberline {1}Definierung dex XORs}{2}{}%
+\contentsline {section}{\numberline {2}Darstellung durch \(\mathbb {Z}_{2}\) mit der Addition}{2}{}%
+\contentsline {section}{\numberline {3}Eigenschaften des XORs}{2}{}%
+\contentsline {section}{\numberline {4}XOR auf Bitfolgen}{2}{}%
+\contentsline {section}{\numberline {5}Umformung der Aufgabe}{3}{}%
+\contentsline {section}{\numberline {6}Loesung durch ein Gleichungssystem}{3}{}%
+\contentsline {section}{\numberline {7}Loesen des Gleichungssystems}{4}{}%
+\contentsline {subsection}{\numberline {7.1}Loesen des Gleichungssystems in \(\mathbb {Z}_{2}\)}{4}{}%
+\contentsline {subsection}{\numberline {7.2}Loesen der letzten Gleichung}{5}{}%
+\contentsline {section}{\numberline {8}Implementierung}{5}{}%
+\contentsline {section}{\numberline {9}Laufzeitanalyse}{6}{}%
+\contentsline {section}{\numberline {10}Aufgabenteil c - Beispiele}{6}{}%
+\contentsline {section}{\numberline {11}Aufgabenteil b}{6}{}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
