@@ -109,46 +109,47 @@ eine Funktion, welche von Tupeln an Ziffern (d und g) abbildet auf Tupel der nat
 Dabei stellt d die Ziffer der Ausgangssiebensegmentanzeige und g die Ziffer der Zielsiebensegmentanzeige dar. a ist die Anzahl der Segmente, welche aktiviert werden muessen und r die Anzahl der Segmente, welche deaktiviert werden muessen, 
 um von d's Siebensegmentanzeige zu g's Siebensegmentanzeige zu kommen.\\\\
 \textbf{Pseudocode}\\
-Der Pseudocode zum erhalten von den Werten a und r fuer zwei Ziffern d und g sieht wie folgt aus:
+Der Pseudocode zum erhalten von den Werten \(a\) und \(r\) fuer zwei Ziffern \(d\) und \(g\) sieht wie folgt aus:
 \begin{algorithmic}[1]
-\Procedure {getAddAndRemove}{d, g}
+\Procedure {getAddAndRemove}{\(d, \ g\)}
 		\State \(segmentD_1, \ \dots \ , \ segmentD_7\) \gets \(getSegments(d)\)
 		\State \(segmentG_1, \ \dots \ , \ segmentG_7\) \gets \(getSegments(g)\)
-		\State a \gets \(0\)
-		\State r \gets \(0\)
+		\State \(a\) \gets \(0\)
+		\State \(r\) \gets \(0\)
 		\State 
 		\For{\(i \gets 1 \ \textbf{to} \ 7\)} \Comment{Go through segments}
 					\If {\(segmentD_i \ \textbf{and} \ \textbf{not} \ segmentG_i\)}
-							\State r \gets \(r+1\)
-					\Else {\( \textbf{not} \ segmentD_i \ \textbf{and} \  segmentG_i\)}
-							\State sa \gets \(a+1\)
+							\State \(r\) \gets \(r+1\)
+					\Else {\( \ \textbf{not} \ segmentD_i \ \textbf{and} \  segmentG_i\)}
+							\State \(a\) \gets \(a+1\)
 					\EndIf
 		\EndFor
 		\State
+		\State \textbf{return} \((a, \ r)\)
 \EndProcedure
 \end{algorithmic}
 \\\\
-Die Methode getSegments soll hier eine Methode darstellen, welche die sieben Segmente der Siebensegmentanzeige einer Ziffer zurueckgibt.\\\\
-Die soeben beschriebene Vorgehensweise kann ebenfalls benutzt werden, um herrauszufinden, welche Indexe aktiviert/deaktiviert werden muessen, um von d zu g zu kommen.
+Die Methode \(getSegments\) soll hier eine Methode darstellen, welche die sieben Segmente der Siebensegmentanzeige einer Ziffer als Wahrheitswert zurueckgibt.\\\\
+Die soeben beschriebene Vorgehensweise kann ebenfalls benutzt werden, um herrauszufinden, welche Segmente (bestimmt durch ihren Index) aktiviert/deaktiviert werden muessen, um von \(d\) zu \(g\) zu kommen.
 
 \section{Reihenfolge der Veraenderungen}
-Es ist leicht erkennbar, dass man versuchen sollte, die Ziffern von links nach rechts zu erhoehen. Denn fuer eine Zahl mit den Ziffern \(d_n, \ d_{n-1}, \ \dots \ , \ d_2, \ d_1\) (von links nach rechts in dieser Reihenfolge - absteigend nummeriert) hat eine Ziffer an Index i (\(1 \leq i \leq n\)) schon bei Erhoehung um eins mehr Einfluss auf den Wert der Zahl, als wuerde man alle anderen Ziffern von Index 1 bis i-1 auf den hoechsten Wert - \((a-1)\) - setzen.
+Es ist leicht erkennbar, dass man versuchen sollte, die Ziffern von links nach rechts zu erhoehen. Denn fuer eine Zahl mit den Ziffern \(d_n, \ d_{n-1}, \ \dots \ , \ d_2, \ d_1\) (von links nach rechts in dieser Reihenfolge - absteigend nummeriert) hat eine Ziffer an Index \(i\) (\(1 \leq i \leq n\)) schon bei Erhoehung um eins mehr Einfluss auf den Wert der Zahl, als wuerde man alle anderen Ziffern von Index \(1\) bis \(i-1\) auf den hoechsten Wert - \((a-1)\) - setzen.
 \\\\
 Dies laesst sich wie folgt durch vollstaendige Induktion beweisen.
 \\\\
 Sein
 \[d_n, \ d_{n-1}, \ \dots \ , \ d_2, \ d_1\]
-die Ziffern einer Zahl m mit Basis a, welche n Ziffern hat. Dabei liegt die Ziffer \(d_n\) ganz links in der Zahl und die Ziffer \(d_1\) ganz rechts in der Zahl. Die Ziffern sind also von rechts nach links aufsteigend nummeriert.
+die Ziffern einer Zahl \(m\) mit Basis \(a\), welche \(n\) Ziffern hat. Dabei liegt die Ziffer \(d_n\) ganz links in der Zahl und die Ziffer \(d_1\) ganz rechts in der Zahl. Die Ziffern sind also von rechts nach links aufsteigend nummeriert.
 \\\\
-Den Wert der Zahl m kann man als Summe mit Hilfe der Ziffern und der Basis wie folgt darstellen:\\
+Den Wert der Zahl \(m\) kann man als Summe mit Hilfe der Ziffern und der Basis wie folgt darstellen:\\
 \[m = \sum_{i=1}^n d_i * a^{i-1}\]
-Dabei hat jede Ziffer an Index i (\(1 \leq i \leq n\)) den Stellenwert \(a^{i-1}\).
+Dabei hat jede Ziffer an Index \(i\) (\(1 \leq i \leq n\)) den Stellenwert \(a^{i-1}\).
 \\\\
-Sei i eine natuerliche Zahl mit \(1 \leq i \leq n\).
-Nun wird gezeigt, dass der Wert der Stelle i mit der Ziffer 1 groeszer ist als die Summe aller Stellen mit einem Index kleiner als i mit je der groeszten Ziffer, \(a-1\).\\
+Sei \(i\) eine natuerliche Zahl mit \(1 \leq i \leq n\).
+Nun wird gezeigt, dass der Wert der Stelle \(i\) mit der Ziffer \(1\) groeszer ist als die Summe aller Stellen mit einem Index kleiner als \(i\) mit je der groeszten Ziffer, \(a-1\).\\
 Formal (Induktionsvoraussetzung):
 \[1 * a^{i-1} > \sum_{k=1}^{i-1} (a-1) * a^{k-1}\]
-Induktions Anfang (i = 1)
+Induktions Anfang (\(i = 1\))
 \[1 * a^{1-1} = a^{1-1} = a^0 = 1 > 0 = \sum_{k=1}^0 (a-1)*a^{k-1} = \sum_{k=1}^{1-1} (a-1)*a^{k-1}\]
 Induktionsbehauptung:
 \[1 * a^{(i+1)-1} > \sum_{k=1}^{(i+1)-1} (a-1) * a^{k-1}\]
@@ -573,8 +574,8 @@ $$
 Anzahl Umlegungen: 3\\
 Zeit (mit Ausgabe der Umlegungen): 2 ms
 \\\\
-Umlegungen:
-
+Umlegungen: \\
+\includegraphics{result0}
 
 \\\\
 \subsection{hexmax1.txt}
@@ -589,8 +590,9 @@ $$
 Anzahl Umlegungen: 8\\
 Zeit (mit Ausgabe der Umlegungen): 16 ms
 \\\\
-Umlegungen:
-
+Umlegungen: \\
+\includegraphics[width=15cm]{result1_1} \\
+\includegraphics[width=15cm]{result1_2}
 
 \\\\
 \subsection{hexmax2.txt}
@@ -605,8 +607,27 @@ $$
 Anzahl Umlegungen: 37
 Zeit (mit Ausgabe der Umlegungen): 32 ms
 \\\\
-Umlegungen: 
-
+Umlegungen: \\
+\includegraphics[width=9cm]{result2_1_1}
+\includegraphics[width=5.4cm]{result2_1_2}
+\\
+\includegraphics[width=9cm]{result2_2_1}
+\includegraphics[width=5.4cm]{result2_2_2}
+\\
+\includegraphics[width=9cm]{result2_3_1}
+\includegraphics[width=5.4cm]{result2_3_2}
+\\
+\includegraphics[width=9cm]{result2_4_1}
+\includegraphics[width=5.4cm]{result2_4_2}
+\\
+\includegraphics[width=9cm]{result2_5_1}
+\includegraphics[width=5.4cm]{result2_5_2}
+\\
+\includegraphics[width=9cm]{result2_6_1}
+\includegraphics[width=5.4cm]{result2_6_2}
+\\
+\includegraphics[width=9cm]{result2_7_1}
+\includegraphics[width=5.4cm]{result2_7_2}
 
 \\\\
 \subsection{hexmax3.txt}
