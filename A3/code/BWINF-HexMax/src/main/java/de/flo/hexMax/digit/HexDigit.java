@@ -1,6 +1,7 @@
 package de.flo.hexMax.digit;
 
 import de.flo.hexMax.digit.display.SevenSegmentDisplay;
+
 import java.util.Arrays;
 
 /**

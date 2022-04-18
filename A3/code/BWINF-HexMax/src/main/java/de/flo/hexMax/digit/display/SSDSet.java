@@ -1,11 +1,8 @@
 package de.flo.hexMax.digit.display;
 
 import de.flo.hexMax.digit.HexDigit;
-import de.flo.hexMax.util.JavaUtils;
 
 import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * Immutable class for representing one or more Seven Segment Displays

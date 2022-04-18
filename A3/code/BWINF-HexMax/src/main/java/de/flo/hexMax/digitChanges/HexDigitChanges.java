@@ -1,8 +1,8 @@
 package de.flo.hexMax.digitChanges;
 
 import de.flo.hexMax.digit.HexDigit;
+
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**

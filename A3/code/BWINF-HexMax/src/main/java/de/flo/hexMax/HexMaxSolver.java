@@ -1,9 +1,9 @@
 package de.flo.hexMax;
 
 import de.flo.hexMax.digit.HexDigit;
-
 import de.flo.hexMax.digit.HexDigitUtils;
 import de.flo.hexMax.digitChanges.HexDigitChanges;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;

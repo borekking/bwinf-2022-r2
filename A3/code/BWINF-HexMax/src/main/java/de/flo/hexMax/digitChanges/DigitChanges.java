@@ -66,14 +66,29 @@ public class DigitChanges {
         }
     }
 
+    /**
+     * @return The value array containing the amount of segments to add and remove
+     */
     public int[] getValues() {
         return Arrays.copyOf(this.values, this.values.length);
     }
 
+    /**
+     * Methode to get a copy of add list
+     * @param func A function to convert an integer collection to another Collection<Integer>
+     * @param <V> Type of created Collection<Integer> (e.g. ArrayList<Integer>)
+     * @return A copy of the add list converted by given function func
+     */
     public <V extends Collection<Integer>> V getAdd(Function<Collection<Integer>, V> func) {
         return JavaUtils.clone(this.add, func);
     }
 
+    /**
+     * Methode to get a copy of remove list
+     * @param func A function to convert an integer collection to another Collection<Integer>
+     * @param <V> Type of created Collection<Integer> (e.g. ArrayList<Integer>)
+     * @return A copy of the remove list converted by given function func
+     */
     public <V extends Collection<Integer>> V getRemove(Function<Collection<Integer>, V> func) {
         return JavaUtils.clone(this.remove, func);
     }

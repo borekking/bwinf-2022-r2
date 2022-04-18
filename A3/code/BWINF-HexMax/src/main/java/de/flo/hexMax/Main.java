@@ -10,9 +10,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.Collections;
 import java.util.Deque;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -20,8 +18,6 @@ import java.util.Scanner;
  * Main class of whole Program
  */
 public class Main {
-
-    // inputs/hexmax0.txt
 
     /**
      * main Methode of the program
@@ -153,11 +149,12 @@ public class Main {
             System.out.println("Changes:");
 
             changesSeraMillis = System.currentTimeMillis();
-            SSDSetChangingRow changingRow = new RealChangesCreater(swaps, digits).getChangingRow();
+            SSDSetChangingRow changingRow = new ChangingRowCreater(swaps, digits).getChangingRow();
             String text = changingRow.getText();
             changesSeraMillis = System.currentTimeMillis() - changesSeraMillis;
 
-            System.out.println(text);
+            // Print "/%n" if text is empty, text otherwise.
+            System.out.println(text.isEmpty() ? "/" + System.lineSeparator(): text);
         }
 
         millis = System.currentTimeMillis() - millis;
@@ -197,8 +194,14 @@ public class Main {
         BigDecimal digitsValue = HexDigitUtils.getDecimalValue(digits); // a value
         BigDecimal resultValue = HexDigitUtils.getDecimalValue(result); // b value
 
+        // Avoid dividing by zero
+        if (digitsValue.doubleValue() == 0D) {
+            return 0D;
+        }
+
         // Difference of b and a: b - a
         BigDecimal difference = resultValue.subtract(digitsValue);
+
 
         // Get fraction (b - a) / a with scale 10, rounding down
         BigDecimal factor = difference.divide(digitsValue, 10, RoundingMode.DOWN);

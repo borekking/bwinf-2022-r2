@@ -1,7 +1,6 @@
 package de.flo.hexMax;
 
 import de.flo.hexMax.digit.HexDigit;
-import java.util.List;
 
 /**
  * Abstract class for the HexMax Solver providing an

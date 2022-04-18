@@ -1,6 +1,6 @@
 import de.flo.hexMax.AbstractHexMaxSolver;
 import de.flo.hexMax.HexMaxSolver;
-import de.flo.hexMax.RealChangesCreater;
+import de.flo.hexMax.ChangingRowCreater;
 import de.flo.hexMax.ResultChangesCreater;
 import de.flo.hexMax.changingTrack.SSDSetChangingRow;
 import de.flo.hexMax.digit.HexDigit;
@@ -50,6 +50,11 @@ public class Tests {
     }
 
     @Test
+    public void hexMax5() throws FileNotFoundException {
+        this.testFile("../../inputs/hexmax5.txt");
+    }
+
+    @Test
     public void hexMax6() throws FileNotFoundException {
         this.testFile("../../inputs/hexmax6.txt");
     }
@@ -57,11 +62,6 @@ public class Tests {
     @Test
     public void hexMax7() throws FileNotFoundException {
         this.testFile("../../inputs/hexmax7.txt");
-    }
-
-    @Test
-    public void hexMax5() throws FileNotFoundException {
-        this.testFile("../../inputs/hexmax5.txt");
     }
 
     private void testFile(String fileName) throws FileNotFoundException {
@@ -79,7 +79,7 @@ public class Tests {
 
         HexDigit[] result = solver.solve();
         Deque<ResultChangesCreater.Swap> swaps = new ResultChangesCreater(digits, result).getSwaps();
-        SSDSetChangingRow changingRow = new RealChangesCreater(swaps, digits).getChangingRow();
+        SSDSetChangingRow changingRow = new ChangingRowCreater(swaps, digits).getChangingRow();
 
         this.testResults(digits, result, changingRow, changes);
     }
