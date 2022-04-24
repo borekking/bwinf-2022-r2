@@ -2,32 +2,24 @@ package de.flo.zzz;
 
 import de.flo.zzz.bitSequence.BitSequence;
 
+import de.flo.zzz.bruteforceAlgorithm.BruteforceZZZSolver;
 import de.flo.zzz.util.JavaUtils;
+import org.jlinalg.Vector;
+import org.jlinalg.f2.F2;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.function.Consumer;
+import java.util.function.Function;
 
 public class Main {
 
-    public static class ZZZTask {
-        public final int n, k, m;
-        public final List<BitSequence> bits;
-
-        private ZZZTask(int n, int k, int m, List<BitSequence> bits) {
-            this.n = n;
-            this.k = k;
-            this.m = m;
-            this.bits = bits;
-        }
-    }
+    private static Function<ZZZProblem, int[]> solve =
+            prop -> new ZZZSolver(prop).getResult();
 
     /*
      * Formula:
@@ -56,39 +48,6 @@ public class Main {
         return result;
     }
 
-    public static Set<int[]> getAllCombinations(int n, int k) {
-        Set<int[]> set = new HashSet<>();
-
-        int current = -1;
-        int index = 0;
-        int[] array = new int[k];
-
-        getBioArray(set, array, current, index, n, k);
-
-        return set;
-    }
-
-    public static void getBioArray(Set<int[]> set, int[] array, int current, int index, int n, int k) {
-        if (k == 0) {
-            set.add(Arrays.copyOf(array, array.length));
-            return;
-        }
-
-        int start = current + 1;
-        int end = n - k;
-        int nextK = k - 1;
-        int nextIndex = index + 1;
-
-        for (int i = start; i <= end; i++) {
-            array[index] = i;
-            getBioArray(set, array, i, nextIndex, n, nextK);
-        }
-    }
-
-    public static void main(String[] args) throws FileNotFoundException {
-        new Main();
-    }
-
     /*
      * Note:
      *
@@ -101,44 +60,53 @@ public class Main {
     // unsorted 1: [1, 2, 4, 6, 7, 9, 11, 14, 15]
     // unsorted 5: [70, 77, 163, 167, 185]
 
-    Main() throws FileNotFoundException {
-//        System.out.println("start");
-
-//        String fileName = "stapel2.txt"; // "stapel%d.txt";
-        this.runTask("stapel3.txt");
-//        this.runAllTasks(this::runTask, 6);
+    public static void main(String[] args) throws FileNotFoundException {
+        new Main();
     }
 
-    private void runAllTasks(Consumer<ZZZTask> consumer, int amount) throws FileNotFoundException {
-        String format = "stapel%d.txt";
+    private Main() throws FileNotFoundException {
+        // "stapel%d.txt";
+        // this.runTask("inputs/stapel3.txt");
+        this.runAllTasks(this::runTask, 6);
+    }
+
+    private void runAllTasks(Consumer<ZZZProblem> consumer, int amount) throws FileNotFoundException {
+        String format = "inputs/stapel%d.txt";
 
         for (int i = 0; i < amount; i++) {
             String fileName = String.format(format, i);
-            ZZZTask task = Main.readFile(fileName);
+            ZZZProblem task = Main.readFile(fileName);
 
             consumer.accept(task);
         }
     }
 
-    private void runTask(ZZZTask task) {
-        AbstractZZZSolver solver = new ZZZSolver(task.n, task.k, task.m, task.bits);
+    private void runTask(ZZZProblem task) {
+        List<BitSequence> bitSequences = task.getBitSequences();
 
         long millis = System.currentTimeMillis();
-        List<Integer> indexes = solver.getResult();
+        int[] indexes = solve.apply(task);
         millis = System.currentTimeMillis() - millis;
+
+        System.out.println("Bit Sequences:");
+        if (indexes.length == 0) System.out.println("/");
+        for (int index : indexes) {
+            System.out.println(bitSequences.get(index));
+        }
 
         System.out.println();
         System.out.println("millis: " + millis);
-        System.out.println("indexes: " + indexes);
+        System.out.println("indexes: " + Arrays.toString(indexes));
+        System.out.println();
     }
 
     private void runTask(String fileName) throws FileNotFoundException {
-        ZZZTask task = Main.readFile(fileName);
+        ZZZProblem task = Main.readFile(fileName);
 
         this.runTask(task);
     }
 
-    public static ZZZTask readFile(String fileName) throws FileNotFoundException {
+    public static ZZZProblem readFile(String fileName) throws FileNotFoundException {
         File file = new File(fileName);
 
         List<String> lines = JavaUtils.readFile(file);
@@ -156,6 +124,6 @@ public class Main {
             bits.add(new BitSequence(lines.get(i)));
         }
 
-        return new ZZZTask(n, k, m, bits);
+        return new ZZZProblem(n, k, m, bits);
     }
 }

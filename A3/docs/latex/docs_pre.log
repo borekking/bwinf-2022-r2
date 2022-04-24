@@ -1,49 +1,121 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.9.13)  19 APR 2022 00:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.21)  21 APR 2022 22:51
 entering extended mode
-**./docs_pre.tex
-(docs_pre.tex
-LaTeX2e <2021-06-01>
-L3 programming layer <2021-06-01>
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrartcl
-.cls
-Document Class: scrartcl 2021/06/25 v3.34 KOMA-Script document class (article)
-
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrkbase
-.sty
-Package: scrkbase 2021/06/25 v3.34 KOMA-Script package (KOMA-Script-dependent b
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**docs_pre.tex
+(./docs_pre.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18>
+(/usr/local/texlive/2021/texmf-dist/tex/latex/koma-script/scrartcl.cls
+Document Class: scrartcl 2021/03/17 v3.33 KOMA-Script document class (article)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2021/03/17 v3.33 KOMA-Script package (KOMA-Script-dependent b
 asics and keyval usage)
 
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrbase.
-sty
-Package: scrbase 2021/06/25 v3.34 KOMA-Script package (KOMA-Script-independent 
+(/usr/local/texlive/2021/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2021/03/17 v3.33 KOMA-Script package (KOMA-Script-independent 
 basics and keyval usage)
 
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile
-.sty
-Package: scrlfile 2021/06/25 v3.34 KOMA-Script package (file load hooks)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2021/03/17 v3.33 KOMA-Script package (file load hooks)
 
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile
--hook.sty
-Package: scrlfile-hook 2021/06/25 v3.34 KOMA-Script package (using LaTeX hooks)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+Package: scrlfile-hook 2021/03/17 v3.33 KOMA-Script package (using LaTeX hooks)
 
 
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlogo.
-sty
-Package: scrlogo 2021/06/25 v3.34 KOMA-Script package (logo)
+LaTeX3 Info: Defining command \BeforeFile with sig. 'm' on line 61.
+
+
+LaTeX3 Info: Defining command \AfterFile with sig. 'm' on line 65.
+
+
+LaTeX3 Info: Defining command \BeforeClass with sig. 'm' on line 69.
+
+
+LaTeX3 Info: Defining command \BeforePackage with sig. 'm' on line 73.
+
+
+LaTeX3 Info: Defining command \AfterAtEndOfClass with sig. 'smo+m' on line 83.
+
+
+LaTeX3 Info: Defining command \AfterAtEndOfPackage with sig. 'smo+m' on line
+(LaTeX3)     93.
+
+
+LaTeX3 Info: Defining command \scrlfile@AfterClass with sig. 'smo+m' on line
+(LaTeX3)     173.
+
+
+LaTeX3 Info: Defining command \AfterClass with sig. '' on line 174.
+
+
+LaTeX3 Info: Defining command \scrlfile@AfterPackage with sig. 'smo+m' on line
+(LaTeX3)     191.
+
+
+LaTeX3 Info: Defining command \AfterPackage with sig. '' on line 192.
+
+
+LaTeX3 Info: Defining command \ReplaceInput with sig. '' on line 193.
+
+
+LaTeX3 Info: Defining command \ReplaceClass with sig. 'mm' on line 196.
+
+
+LaTeX3 Info: Defining command \ReplacePackage with sig. 'mm' on line 199.
+
+
+LaTeX3 Info: Defining command \UnReplaceInput with sig. '' on line 200.
+
+
+LaTeX3 Info: Defining command \UnReplaceClass with sig. 'm' on line 203.
+
+
+LaTeX3 Info: Defining command \UnReplacePackage with sig. 'mm' on line 206.
+
+
+LaTeX3 Info: Defining command \PreventPackageFromLoading with sig. 's+om' on
+(LaTeX3)     line 234.
+
+
+LaTeX3 Info: Defining command \StorePreventPackageFromLoading with sig. 'm' on
+(LaTeX3)     line 242.
+
+
+LaTeX3 Info: Defining command \ResetPreventPackageFromLoading with sig. '' on
+(LaTeX3)     line 247.
+
+
+LaTeX3 Info: Defining command \UnPreventPackageFromLoading with sig. 'sm' on
+(LaTeX3)     line 261.
+
+
+LaTeX3 Info: Defining command \BeforeClosingMainAux with sig. 'om' on line
+(LaTeX3)     274.
+
+
+LaTeX3 Info: Defining command \AfterReadingMainAux with sig. 'om' on line 287.
+
+
+LaTeX3 Info: Defining command \protected@immediate@write with sig. 'm+m+m' on
+(LaTeX3)     line 298.
+
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/koma-script/scrlogo.sty
+Package: scrlogo 2021/03/17 v3.33 KOMA-Script package (logo)
 )))
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks16
+\KV@toks@=\toks15
 )
-Applying: [2021/05/01] Usage of raw or classic option list on input line 252.
-Already applied: [0000/00/00] Usage of raw or classic option list on input line
- 368.
+Skipping: [2021/05/01] Usage of raw option list on input line 252.
+Applying: [0000/00/00] compatibility for LaTeX before 2021/05/01 on input line 
+337.
 ))
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\tocbasic
-.sty
-Package: tocbasic 2021/06/25 v3.34 KOMA-Script package (handling toc-files)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/koma-script/tocbasic.sty
+Package: tocbasic 2021/03/17 v3.33 KOMA-Script package (handling toc-files)
 \scr@dte@tocline@numberwidth=\skip47
-\scr@dte@tocline@numbox=\box50
+\scr@dte@tocline@numbox=\box47
 )
 Package tocbasic Info: babel extension for `toc' omitted
 (tocbasic)             because of missing \bbl@set@language on input line 135.
@@ -54,18 +126,16 @@ Package scrartcl Info: You've used standard option `10pt'.
 (scrartcl)             you'd have to use `fontsize=10pt' there
 (scrartcl)             instead of `10pt', too.
 Class scrartcl Info: File `scrsize10pt.clo' used to setup font sizes on input l
-ine 2241.
+ine 2239.
 
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrsize1
-0pt.clo
-File: scrsize10pt.clo 2021/06/25 v3.34 KOMA-Script font size class option (10pt
+(/usr/local/texlive/2021/texmf-dist/tex/latex/koma-script/scrsize10pt.clo
+File: scrsize10pt.clo 2021/03/17 v3.33 KOMA-Script font size class option (10pt
 )
 )
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\typearea
-.sty
-Package: typearea 2021/06/25 v3.34 KOMA-Script package (type area)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/koma-script/typearea.sty
+Package: typearea 2021/03/17 v3.33 KOMA-Script package (type area)
 \ta@bcor=\skip48
-\ta@div=\count182
+\ta@div=\count179
 Package typearea Info: You've used standard option `a4paper'.
 (typearea)             This is correct!
 (typearea)             Internally I'm using `paper=a4'.
@@ -92,124 +162,115 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 10.0pt
 (typearea)              \footskip       = 42.0pt
 (typearea)              \baselineskip   = 12.0pt
-(typearea)              on input line 1742.
+(typearea)              on input line 1741.
 )
-\c@part=\count183
-\c@section=\count184
-\c@subsection=\count185
-\c@subsubsection=\count186
-\c@paragraph=\count187
-\c@subparagraph=\count188
+\c@part=\count180
+\c@section=\count181
+\c@subsection=\count182
+\c@subsubsection=\count183
+\c@paragraph=\count184
+\c@subparagraph=\count185
 \scr@dte@section@maxnumwidth=\skip53
 Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\section on input line 4851.
+(scrartcl)           for `\section on input line 4846.
 Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\section on input line 4851.
+(scrartcl)           for `\section on input line 4846.
 \scr@dte@part@maxnumwidth=\skip54
 Class scrartcl Info: using compatibility default `afterindent=false'
-(scrartcl)           for `\part on input line 4859.
+(scrartcl)           for `\part on input line 4854.
 \scr@dte@subsection@maxnumwidth=\skip55
 Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\subsection on input line 4869.
+(scrartcl)           for `\subsection on input line 4864.
 Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\subsection on input line 4869.
+(scrartcl)           for `\subsection on input line 4864.
 \scr@dte@subsubsection@maxnumwidth=\skip56
 Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\subsubsection on input line 4879.
+(scrartcl)           for `\subsubsection on input line 4874.
 Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\subsubsection on input line 4879.
+(scrartcl)           for `\subsubsection on input line 4874.
 \scr@dte@paragraph@maxnumwidth=\skip57
 Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\paragraph on input line 4890.
+(scrartcl)           for `\paragraph on input line 4885.
 Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\paragraph on input line 4890.
+(scrartcl)           for `\paragraph on input line 4885.
 \scr@dte@subparagraph@maxnumwidth=\skip58
 Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\subparagraph on input line 4900.
+(scrartcl)           for `\subparagraph on input line 4895.
 Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\subparagraph on input line 4900.
+(scrartcl)           for `\subparagraph on input line 4895.
 \abovecaptionskip=\skip59
 \belowcaptionskip=\skip60
-\c@pti@nb@sid@b@x=\box51
+\c@pti@nb@sid@b@x=\box48
 Package tocbasic Info: babel extension for `lof' omitted
-(tocbasic)             because of missing \bbl@set@language on input line 6075.
+(tocbasic)             because of missing \bbl@set@language on input line 6127.
 
 \scr@dte@figure@maxnumwidth=\skip61
-\c@figure=\count189
+\c@figure=\count186
 Package tocbasic Info: babel extension for `lot' omitted
-(tocbasic)             because of missing \bbl@set@language on input line 6087.
+(tocbasic)             because of missing \bbl@set@language on input line 6139.
 
 \scr@dte@table@maxnumwidth=\skip62
-\c@table=\count190
-Class scrartcl Info: Redefining `\numberline' on input line 6251.
+\c@table=\count187
+Class scrartcl Info: Redefining `\numberline' on input line 6303.
 \bibindent=\dimen138
 )
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2021/06/02 3.60 The Babel package
+(/usr/local/texlive/2021/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2021/03/24 3.56 The Babel package
 
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.def
-File: babel.def 2021/06/02 3.60 Babel common definitions
-\babel@savecnt=\count191
+(/usr/local/texlive/2021/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2021/03/24 3.56 Babel common definitions
+\babel@savecnt=\count188
 \U@D=\dimen139
-\l@unhyphenated=\language79
+\l@babelnohyphens=\language87
 
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def
-)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
 )
-\bbl@dirlevel=\count192
+\bbl@dirlevel=\count189
 
-*************************************
-* Local config file bblopts.cfg used
-*
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
-File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
- babel
-)
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/babel-german\ngerman
-.ldf
+(/usr/local/texlive/2021/texmf-dist/tex/generic/babel-german/ngerman.ldf
 Language: ngerman 2021/02/27 v2.13 German support for babel (post-1996 orthogra
 phy)
 
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/babel-german\ngerman
-b.ldf
+(/usr/local/texlive/2021/texmf-dist/tex/generic/babel-german/ngermanb.ldf
 Language: ngermanb 2021/02/27 v2.13 German support for babel (post-1996 orthogr
 aphy)
 Package babel Info: Making " an active character on input line 122.
 )))
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
-Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
 )
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
-Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks17
-\inpenc@posthook=\toks18
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2020/08/01 v1.3d Input encoding file
+\inpenc@prehook=\toks16
+\inpenc@posthook=\toks17
 
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/ucs\utf8x.def
+(/usr/local/texlive/2021/texmf-dist/tex/latex/ucs/utf8x.def
 File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
 ))
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/ucs\ucs.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/ucs/ucs.sty
 Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
 
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/ucs\uni-global.def
+(/usr/local/texlive/2021/texmf-dist/tex/latex/ucs/data/uni-global.def
 File: uni-global.def 2013/05/13 UCS: Unicode global data
 )
-\uc@secondtry=\count193
-\uc@combtoks=\toks19
-\uc@combtoksb=\toks20
-\uc@temptokena=\toks21
+\uc@secondtry=\count190
+\uc@combtoks=\toks18
+\uc@combtoksb=\toks19
+\uc@temptokena=\toks20
 )
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.st
-y
+(/usr/local/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
- (C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
-\Gm@cnth=\count194
-\Gm@cntv=\count195
-\c@Gm@tempcnt=\count196
+\Gm@cnth=\count191
+\Gm@cntv=\count192
+\c@Gm@tempcnt=\count193
 \Gm@bindingoffset=\dimen140
 \Gm@wd@mp=\dimen141
 \Gm@odd@mp=\dimen142
@@ -218,18 +279,14 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 \Gm@layoutheight=\dimen145
 \Gm@layouthoffset=\dimen146
 \Gm@layoutvoffset=\dimen147
-\Gm@dimlist=\toks22
-
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cf
-g))
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlayer
--scrpage.sty
-Package: scrlayer-scrpage 2021/06/25 v3.34 KOMA-Script package (end user interf
+\Gm@dimlist=\toks21
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/koma-script/scrlayer-scrpage.sty
+Package: scrlayer-scrpage 2021/03/17 v3.33 KOMA-Script package (end user interf
 ace for scrlayer)
 
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlayer
-.sty
-Package: scrlayer 2021/06/25 v3.34 KOMA-Script package (defining layers and pag
+(/usr/local/texlive/2021/texmf-dist/tex/latex/koma-script/scrlayer.sty
+Package: scrlayer 2021/03/17 v3.33 KOMA-Script package (defining layers and pag
 e styles)
 Package scrlayer Info: Using already defined \footheight
 (scrlayer)             hoping, that this is a length and
@@ -244,77 +301,77 @@ Package scrlayer-scrpage Info: deactivating warning for font element
 )
 Package scrlayer-scrpage Info: auto-selection of `pagestyleset=KOMA-Script'.
 
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpage.st
-y
-Package: lastpage 2021/09/03 v1.2n Refers to last page's name (HMM; JPG)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/lastpage/lastpage.sty
+Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
 )
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/titling\titling.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/titling/titling.sty
 Package: titling 2009/09/04 v2.1d maketitle typesetting
 \thanksmarkwidth=\skip63
 \thanksmargin=\skip64
 \droptitle=\skip65
-) (C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.st
-y
-Package: amsmath 2021/04/20 v2.17j AMS math features
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/09/23 v2.17i AMS math features
 \@mathmargin=\skip66
+
 For additional information on amsmath, use the `?' option.
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks23
+\@emptytoks=\toks22
 \ex@=\dimen148
-)) (C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.st
-y
+))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen149
-) (C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count197
+\inf@bad=\count194
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count198
-\leftroot@=\count199
+\uproot@=\count195
+\leftroot@=\count196
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count266
-\DOTSCASE@=\count267
+\classnum@=\count197
+\DOTSCASE@=\count198
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box52
-\strutbox@=\box53
+\Mathstrutbox@=\box49
+\strutbox@=\box50
 \big@size=\dimen150
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count268
-\c@MaxMatrixCols=\count269
+\macc@depth=\count199
+\c@MaxMatrixCols=\count266
 \dotsspace@=\muskip16
-\c@parentequation=\count270
-\dspbrk@lvl=\count271
-\tag@help=\toks24
-\row@=\count272
-\column@=\count273
-\maxfields@=\count274
-\andhelp@=\toks25
+\c@parentequation=\count267
+\dspbrk@lvl=\count268
+\tag@help=\toks23
+\row@=\count269
+\column@=\count270
+\maxfields@=\count271
+\andhelp@=\toks24
 \eqnshift@=\dimen151
 \alignsep@=\dimen152
 \tagshift@=\dimen153
 \tagwidth@=\dimen154
 \totwidth@=\dimen155
 \lineht@=\dimen156
-\@envbody=\toks26
+\@envbody=\toks25
 \multlinegap=\skip67
 \multlinetaggap=\skip68
-\mathdisplay@stack=\toks27
+\mathdisplay@stack=\toks26
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
 )
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.st
-y
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
@@ -322,85 +379,79 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.st
-y
-Package: graphicx 2020/12/05 v1.2c Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
 
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.st
-y
-Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
- (C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphic
-s.cfg
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 107.
+Package graphics Info: Driver file: pdftex.def on input line 105.
 
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.
-def
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen157
 \Gin@req@width=\dimen158
 )
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algpseu
-docode.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
 Package: algpseudocode 
 
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
-Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algorit
-hmicx.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count275
-\c@ALG@rem=\count276
-\c@ALG@nested=\count277
+\c@ALG@line=\count272
+\c@ALG@rem=\count273
+\c@ALG@nested=\count274
 \ALG@tlm=\skip69
 \ALG@thistlm=\skip70
-\c@ALG@Lnr=\count278
-\c@ALG@blocknr=\count279
-\c@ALG@storecount=\count280
-\c@ALG@tmpcounter=\count281
+\c@ALG@Lnr=\count275
+\c@ALG@blocknr=\count276
+\c@ALG@storecount=\count277
+\c@ALG@tmpcounter=\count278
 \ALG@tmplength=\skip71
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
-)
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorithm
-.sty
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/algorithms/algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
- (C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count282
-\float@exts=\toks28
-\float@box=\box54
-\@float@everytoks=\toks29
-\@floatcapt=\box55
+\c@float@type=\count279
+\float@exts=\toks27
+\float@box=\box51
+\@float@everytoks=\toks28
+\@floatcapt=\box52
 )
-\@float@every@algorithm=\toks30
-\c@algorithm=\count283
-) (C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/qtree\qtree.sty
+\@float@every@algorithm=\toks29
+\c@algorithm=\count280
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/qtree/qtree.sty
 Package: 2008/12/12 v.3.1bQtree: tree-drawing for linguistics
 Package: qtree 2008/12/12 v.3.1bQtree: tree-drawing for linguistics
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/pict2e\pict2e.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/pict2e/pict2e.sty
 Package: pict2e 2020/09/30 v0.4b Improved picture commands (HjG,RN,JT)
 
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/pict2e\pict2e.cfg
+(/usr/local/texlive/2021/texmf-dist/tex/latex/pict2e/pict2e.cfg
 File: pict2e.cfg 2016/02/05 v0.1u pict2e configuration for teTeX/TeXLive
 )
 Package pict2e Info: Driver file: pdftex.def on input line 112.
 Package pict2e Info: Driver file for pict2e: p2e-pdftex.def on input line 114.
 
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/pict2e\p2e-pdftex.de
-f
+(/usr/local/texlive/2021/texmf-dist/tex/latex/pict2e/p2e-pdftex.def
 File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 )
-\pIIe@GRAPH=\toks31
+\pIIe@GRAPH=\toks30
 \@arclen=\dimen159
 \@arcrad=\dimen160
 \pIIe@tempdima=\dimen161
@@ -410,30 +461,30 @@ File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 \pIIe@tempdime=\dimen165
 \pIIe@tempdimf=\dimen166
 )
-\c@treecount=\count284
-\c@branchcount=\count285
-\parentbox=\box56
-\treebox=\box57
-\treeboxone=\box58
-\treeboxtwo=\box59
-\treeboxthree=\box60
-\treeboxfour=\box61
-\treeboxfive=\box62
-\treeboxsix=\box63
-\treeboxseven=\box64
-\treeboxeight=\box65
-\treeboxnine=\box66
-\treeboxten=\box67
-\treeboxeleven=\box68
-\treeboxtwelve=\box69
-\treeboxthirteen=\box70
-\treeboxfourteen=\box71
-\treeboxfifteen=\box72
-\treeboxsixteen=\box73
-\treeboxseventeen=\box74
-\treeboxeighteen=\box75
-\treeboxnineteen=\box76
-\treeboxtwenty=\box77
+\c@treecount=\count281
+\c@branchcount=\count282
+\parentbox=\box53
+\treebox=\box54
+\treeboxone=\box55
+\treeboxtwo=\box56
+\treeboxthree=\box57
+\treeboxfour=\box58
+\treeboxfive=\box59
+\treeboxsix=\box60
+\treeboxseven=\box61
+\treeboxeight=\box62
+\treeboxnine=\box63
+\treeboxten=\box64
+\treeboxeleven=\box65
+\treeboxtwelve=\box66
+\treeboxthirteen=\box67
+\treeboxfourteen=\box68
+\treeboxfifteen=\box69
+\treeboxsixteen=\box70
+\treeboxseventeen=\box71
+\treeboxeighteen=\box72
+\treeboxnineteen=\box73
+\treeboxtwenty=\box74
 \treeoffsetone=\skip72
 \treeoffsettwo=\skip73
 \treeoffsetthree=\skip74
@@ -508,61 +559,57 @@ File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 \branchwidth=\skip143
 \parentwidth=\skip144
 \treewidth=\skip145
-\qta=\toks32
-\qtb=\toks33
-\nbranches=\count286
-\qroofx=\count287
-\qroofy=\count288
-\@qrscratchbox=\box78
+\qta=\toks31
+\qtb=\toks32
+\nbranches=\count283
+\qroofx=\count284
+\qroofy=\count285
+\@qrscratchbox=\box75
 )
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.st
-y
-\lst@mode=\count289
-\lst@gtempboxa=\box79
-\lst@token=\toks34
-\lst@length=\count290
+(/usr/local/texlive/2021/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count286
+\lst@gtempboxa=\box76
+\lst@token=\toks33
+\lst@length=\count287
 \lst@currlwidth=\dimen167
-\lst@column=\count291
-\lst@pos=\count292
+\lst@column=\count288
+\lst@pos=\count289
 \lst@lostspace=\dimen168
 \lst@width=\dimen169
-\lst@newlines=\count293
-\lst@lineno=\count294
+\lst@newlines=\count290
+\lst@lineno=\count291
 \lst@maxwidth=\dimen170
 
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count295
-\lst@skipnumbers=\count296
-\lst@framebox=\box80
+\c@lstnumber=\count292
+\lst@skipnumbers=\count293
+\lst@framebox=\box77
 )
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cf
-g
+(/usr/local/texlive/2021/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
 
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
 
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.c
-fg
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package color Info: Driver file: pdftex.def on input line 149.
+Package color Info: Driver file: pdftex.def on input line 147.
 )
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/cleveref\cleveref.st
-y
+(/usr/local/texlive/2021/texmf-dist/tex/latex/cleveref/cleveref.sty
 Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
 Package cleveref Info: `algorithmicx' support loaded on input line 3120.
 Package cleveref Info: `listings' support loaded on input line 3131.
 )
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-
-pdftex.def
-File: l3backend-pdftex.def 2021-05-07 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count297
-\l__pdf_internal_box=\box81
-) (docs_pre.aux)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count294
+\l__pdf_internal_box=\box78
+)
+(./docs_pre.aux)
 \openout1 = `docs_pre.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
@@ -579,8 +626,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
 LaTeX Font Info:    ... okay on input line 65.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
 LaTeX Font Info:    ... okay on input line 65.
-
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/ucs\ucsencs.def
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 *geometry* driver: auto-detecting
@@ -620,52 +666,47 @@ File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
 (lastpage)             ! on input line 65.
-
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf
-.mkii
+(/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count298
+\scratchcounter=\count295
 \scratchdimen=\dimen171
-\scratchbox=\box82
-\nofMPsegments=\count299
-\nofMParguments=\count300
-\everyMPshowfont=\toks35
-\MPscratchCnt=\count301
+\scratchbox=\box79
+\nofMPsegments=\count296
+\nofMParguments=\count297
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count298
 \MPscratchDim=\dimen172
-\MPnumerator=\count302
-\makeMPintoPDFobject=\count303
-\everyMPtoPDFconversion=\toks36
-)
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopd
-f-base.sty
+\MPnumerator=\count299
+\makeMPintoPDFobject=\count300
+\everyMPtoPDFconversion=\toks35
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sy
-s.cfg
-File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+(/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
 ))
-\c@lstlisting=\count304
+\c@lstlisting=\count301
 LaTeX Font Info:    Trying to load font information for U+msa on input line 67.
 
 
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 67.
 
 
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for T1+cmss on input line 6
 8.
 
-(C:\Users\Anwender\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmss.fd
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-(docs_pre.toc
+) (./docs_pre.toc
 Package cleveref Info: loaded `ngerman' language definitions on input line 1.
 )
 \tf@toc=\write3
@@ -678,7 +719,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--76
 
 [1
 
-{C:/Users/Anwender/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Underfull \hbox (badness 10000) in paragraph at lines 78--87
 
  []
@@ -693,7 +734,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 78--87
 
  []
 
-<./images//AB.png, id=11, 135.50626pt x 118.19156pt>
+<./images//AB.png, id=12, 135.50626pt x 118.19156pt>
 File: ./images//AB.png Graphic file (type png)
 <use ./images//AB.png>
 Package pdftex.def Info: ./images//AB.png  used on input line 90.
@@ -703,7 +744,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--93
 
  []
 
-<./images//AF.png, id=12, 125.71968pt x 103.13531pt>
+<./images//AF.png, id=13, 125.71968pt x 103.13531pt>
 File: ./images//AF.png Graphic file (type png)
 <use ./images//AF.png>
 Package pdftex.def Info: ./images//AF.png  used on input line 94.
@@ -713,7 +754,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--97
 
  []
 
-<./images//25.png, id=14, 134.00063pt x 116.68594pt>
+<./images//25.png, id=15, 134.00063pt x 116.68594pt>
 File: ./images//25.png Graphic file (type png)
 <use ./images//25.png>
 Package pdftex.def Info: ./images//25.png  used on input line 98.
@@ -978,48 +1019,65 @@ Underfull \hbox (badness 10000) in paragraph at lines 145--151
 
 
 Overfull \hbox (56.66362pt too wide) detected at line 157
-\OT1/cmr/m/n/10 1 \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 = \OM
-L/cmm/m/it/10 a[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 a \OMS/cmsy/m/n/10  \OML/
-cmm/m/it/10 a[] \OT1/cmr/m/n/10 = (\OML/cmm/m/it/10 a \OMS/cmsy/m/n/10   \OT1/c
-mr/m/n/10 1) \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 + \OML/cmm
-/m/it/10 a[] [] \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a \OMS/cmsy/m/n/10   \OT1/cmr
-/m/n/10 1) \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 + [](\OML/cm
-m/m/it/10 a \OMS/cmsy/m/n/10   \OT1/cmr/m/n/10 1) \OMS/cmsy/m/n/10  \OML/cmm/m
-/it/10 a[] \OT1/cmr/m/n/10 = [](\OML/cmm/m/it/10 a \OMS/cmsy/m/n/10   \OT1/cmr/
-m/n/10 1) \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 = [](\OML/cmm
-/m/it/10 a \OMS/cmsy/m/n/10   \OT1/cmr/m/n/10 1) \OMS/cmsy/m/n/10  \OML/cmm/m/
-it/10 a[]
+\OT1/cmr/m/n/10 1 \OMS/cmsy/m/n/10 ^^C \OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 = \
+OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 a \OMS/cmsy/m/n/10 ^^C \
+OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 = (\OML/cmm/m/it/10 a \OMS/cmsy/m/n/10 ^^@ 
+\OT1/cmr/m/n/10 1) \OMS/cmsy/m/n/10 ^^C \OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 + 
+\OML/cmm/m/it/10 a[] [] \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a \OMS/cmsy/m/n/10 ^^
+@ \OT1/cmr/m/n/10 1) \OMS/cmsy/m/n/10 ^^C \OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 
++ [](\OML/cmm/m/it/10 a \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 1) \OMS/cmsy/m/n/1
+0 ^^C \OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 = [](\OML/cmm/m/it/10 a \OMS/cmsy/m/
+n/10 ^^@ \OT1/cmr/m/n/10 1) \OMS/cmsy/m/n/10 ^^C \OML/cmm/m/it/10 a[] \OT1/cmr/
+m/n/10 = [](\OML/cmm/m/it/10 a \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 1) \OMS/cms
+y/m/n/10 ^^C \OML/cmm/m/it/10 a[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 171--175
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.167 \\\\
+          
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.168 A
+       us diesen Eigenschaften lassen sich weitere Eigenschaften schlieszen.\\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--172
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--176
 
  []
 
 [4]
 
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `utf8x'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.198 ... Anzahl aller Segmente ist, die hinzugefü
-                                                  gt werden muessen (dort is...
-
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
 ! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.200 \\\\
-          \\\\
+l.201 \\\\
+          \\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -1031,8 +1089,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.200 \\\\\\
-            \\
+l.201 \\\\\\
+            
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -1044,138 +1102,126 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.200 \\\\\\\\
-              
+l.202 D
+       urch diese Schlussfolgerungen weisz man nun, welche Eigenschaften ein...
+
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.201 
-      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 203--210
+Underfull \hbox (badness 10000) in paragraph at lines 206--213
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 203--210
+Underfull \hbox (badness 10000) in paragraph at lines 206--213
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 203--210
+Underfull \hbox (badness 10000) in paragraph at lines 206--213
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 203--210
+Underfull \hbox (badness 10000) in paragraph at lines 206--213
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 203--210
+Underfull \hbox (badness 10000) in paragraph at lines 206--213
 
  []
 
 [5]
-<./images//12_B3-Graph.png, id=40, 1120.9378pt x 318.43968pt>
+<./images//12_B3-Graph.png, id=41, 1120.9378pt x 318.43968pt>
 File: ./images//12_B3-Graph.png Graphic file (type png)
 <use ./images//12_B3-Graph.png>
-Package pdftex.def Info: ./images//12_B3-Graph.png  used on input line 211.
+Package pdftex.def Info: ./images//12_B3-Graph.png  used on input line 214.
 (pdftex.def)             Requested size: 426.79134pt x 121.24641pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 213--216
+Underfull \hbox (badness 10000) in paragraph at lines 216--219
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 218--223
+Underfull \hbox (badness 10000) in paragraph at lines 221--226
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 218--223
+Underfull \hbox (badness 10000) in paragraph at lines 221--226
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 218--223
+Underfull \hbox (badness 10000) in paragraph at lines 221--226
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--237
+Underfull \hbox (badness 10000) in paragraph at lines 231--240
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--237
+Underfull \hbox (badness 10000) in paragraph at lines 231--240
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--237
+Underfull \hbox (badness 10000) in paragraph at lines 231--240
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--237
+Underfull \hbox (badness 10000) in paragraph at lines 231--240
 
  []
 
 [6 <./images//12_B3-Graph.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 253--263
+Underfull \hbox (badness 10000) in paragraph at lines 256--266
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--263
+Underfull \hbox (badness 10000) in paragraph at lines 256--266
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--263
+Underfull \hbox (badness 10000) in paragraph at lines 256--266
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--263
+Underfull \hbox (badness 10000) in paragraph at lines 256--266
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--263
+Underfull \hbox (badness 10000) in paragraph at lines 256--266
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--275
+Underfull \hbox (badness 10000) in paragraph at lines 266--278
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--275
+Underfull \hbox (badness 10000) in paragraph at lines 266--278
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--275
+Underfull \hbox (badness 10000) in paragraph at lines 266--278
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--275
+Underfull \hbox (badness 10000) in paragraph at lines 266--278
 
  []
 
@@ -1183,7 +1229,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 263--275
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.280 \State memo \gets
+l.283 \State memo \gets
                         \([ \ ]\) \Comment{Memoisation object - dictionary}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1195,7 +1241,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.280 \State memo \gets \(
+l.283 \State memo \gets \(
                           [ \ ]\) \Comment{Memoisation object - dictionary}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1204,8 +1250,8 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.306 	\For{g \gets (a-1) \ \textbf{to} \ 0}
-                                             \Comment{Go through digits of b...
+l.309 	\For{g \gets $(a-1)$ \ \textbf{to} \ 0}
+                                               \Comment{Go through digits of...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
@@ -1216,7 +1262,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.306 ...{Go through digits of base a, decreasing}
+l.309 ...{Go through digits of base a, decreasing}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1225,8 +1271,8 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.307 			\State (adds, removes) \gets
-                                      changes(\(d_{index}\), \ g)
+l.310 			\State $(adds, removes)$ \gets
+                                        changes(\(d_{index}\), \ g)
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
@@ -1237,8 +1283,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.307 			\State (adds, removes) \gets changes(\(
-                                                d_{index}\), \ g)
+l.310 			\State $(adds, removes)$ \gets changes(\(
+                                                  d_{index}\), \ g)
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -1246,7 +1292,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.308 			\State subResult \gets
+l.311 			\State subResult \gets
                                 getHighestNumber(index \(+1\), \ A \(+\) add...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1258,7 +1304,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.308 ...subResult \gets getHighestNumber(index \(
+l.311 ...subResult \gets getHighestNumber(index \(
                                                   +1\), \ A \(+\) adds, \ R ...
 
 Your command was ignored.
@@ -1268,7 +1314,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.310 					\State finalResult \gets
+l.313 					\State finalResult \gets
                                     \([ \ g \ ]\)
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1280,12 +1326,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.310 					\State finalResult \gets \(
+l.313 					\State finalResult \gets \(
                                       [ \ g \ ]\)
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
+[8]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -1293,7 +1340,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.322 \\\\
+l.325 \\\\
           \\Wichtig ist zu beachten, dass die Reihenfolge der Abbruchbedingu...
 
 Your command was ignored.
@@ -1307,7 +1354,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.322 \\\\\\
+l.325 \\\\\\
             Wichtig ist zu beachten, dass die Reihenfolge der Abbruchbedingu...
 
 Your command was ignored.
@@ -1321,7 +1368,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.322 \\\\\\W
+l.325 \\\\\\W
              ichtig ist zu beachten, dass die Reihenfolge der Abbruchbedingu...
 
 Your command was ignored.
@@ -1329,50 +1376,49 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 322--325
+Underfull \hbox (badness 10000) in paragraph at lines 325--328
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 322--325
+Underfull \hbox (badness 10000) in paragraph at lines 325--328
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--344
+Underfull \hbox (badness 10000) in paragraph at lines 330--347
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--344
+Underfull \hbox (badness 10000) in paragraph at lines 330--347
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--344
+Underfull \hbox (badness 10000) in paragraph at lines 330--347
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--344
+Underfull \hbox (badness 10000) in paragraph at lines 330--347
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--344
+Underfull \hbox (badness 10000) in paragraph at lines 330--347
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--344
+Underfull \hbox (badness 10000) in paragraph at lines 330--347
 
  []
 
-[8]
 ! Argument of \) has an extra }.
 <inserted text> 
                 \par 
-l.345 ... , \ d_n\), \(d_1', \ \dots \ , \ d_n'\)}
+l.348 ... , \ d_n\), \(d_1', \ \dots \ , \ d_n'\)}
                                                   
 I've run across a `}' that doesn't seem to match anything.
 For example, `\def\a#1{...}' and `\a}' would produce
@@ -1385,7 +1431,7 @@ Runaway argument?
 ! Paragraph ended before \) was complete.
 <to be read again> 
                    \par 
-l.345 ... , \ d_n\), \(d_1', \ \dots \ , \ d_n'\)}
+l.348 ... , \ d_n\), \(d_1', \ \dots \ , \ d_n'\)}
                                                   
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
@@ -1394,7 +1440,7 @@ My plan is to forget the whole thing and hope for the best.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.348 	\For{i \gets 1 \ \textbf{to} \ n}
+l.351 	\For{i \gets 1 \ \textbf{to} \ n}
                                          \Comment{Get remove- and add-stacks...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1406,7 +1452,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.348 ... remove- and add-stacks for each index i}
+l.351 ... remove- and add-stacks for each index i}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1415,7 +1461,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.349 			\State \(add_i\) \gets
+l.352 			\State \(add_i\) \gets
                                 \(neededAdds(d_i, \ d_i')\)
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1427,7 +1473,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.349 			\State \(add_i\) \gets \(
+l.352 			\State \(add_i\) \gets \(
                                   neededAdds(d_i, \ d_i')\)
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1436,7 +1482,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.350 			\State \(removes_i\) \gets
+l.353 			\State \(removes_i\) \gets
                                     \(neededRemoves(d_i, \ d_i')\)
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1448,7 +1494,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.350 			\State \(removes_i\) \gets \(
+l.353 			\State \(removes_i\) \gets \(
                                       neededRemoves(d_i, \ d_i')\)
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1457,7 +1503,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.353 	\For{i \gets 1 \ \textbf{to} \ n}
+l.356 	\For{i \gets 1 \ \textbf{to} \ n}
                                          \Comment{1. Swap inside of digits}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1469,7 +1515,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.353 ...} \ n} \Comment{1. Swap inside of digits}
+l.356 ...} \ n} \Comment{1. Swap inside of digits}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1478,7 +1524,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.359 	\State addIndex \gets
+l.362 	\State addIndex \gets
                              \(0\)
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1490,16 +1536,17 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.359 	\State addIndex \gets \(
+l.362 	\State addIndex \gets \(
                                0\)
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
+[9]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.360 	\State removeIndex \gets
+l.363 	\State removeIndex \gets
                                 \(0\)
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1511,7 +1558,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.360 	\State removeIndex \gets \(
+l.363 	\State removeIndex \gets \(
                                   0\)
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1520,7 +1567,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.361 	\State addStack \gets
+l.364 	\State addStack \gets
                              \([ \ ]\)
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1532,7 +1579,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.361 	\State addStack \gets \(
+l.364 	\State addStack \gets \(
                                [ \ ]\)
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1541,7 +1588,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.362 	\State removeStack \gets
+l.365 	\State removeStack \gets
                                 \([ \ ]\)
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1553,7 +1600,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.362 	\State removeStack \gets \(
+l.365 	\State removeStack \gets \(
                                   [ \ ]\)
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1562,7 +1609,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.363 	\State isDone \gets
+l.366 	\State isDone \gets
                            \(false\)
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1574,7 +1621,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.363 	\State isDone \gets \(
+l.366 	\State isDone \gets \(
                              false\)
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1583,7 +1630,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.366 ...k.size > 0 \textbf{and} addIndex \leq n }
+l.369 ...k.size > 0 \textbf{and} addIndex \leq n }
                                                    \Comment{Get next non-emp...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1595,7 +1642,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.366 ...ck if current is empty and it's possible}
+l.369 ...ck if current is empty and it's possible}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1604,7 +1651,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.367 					\State addIndex \gets
+l.370 					\State addIndex \gets
                                  \(addIndex + 1\)
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1616,7 +1663,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.367 					\State addIndex \gets \(
+l.370 					\State addIndex \gets \(
                                    addIndex + 1\)
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1625,7 +1672,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.368 					\State addStack \gets
+l.371 					\State addStack \gets
                                  \(adds_{addIndex}\)
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1637,7 +1684,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.368 					\State addStack \gets \(
+l.371 					\State addStack \gets \(
                                    adds_{addIndex}\)
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1646,7 +1693,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.372 					\State removeIndex \gets
+l.375 					\State removeIndex \gets
                                     \(removeIndex + 1\)
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1658,7 +1705,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.372 					\State removeIndex \gets \(
+l.375 					\State removeIndex \gets \(
                                       removeIndex + 1\)
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1667,7 +1714,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.373 					\State removeStack \gets
+l.376 					\State removeStack \gets
                                     \(removes_{removeIndex}\)
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1679,17 +1726,16 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.373 					\State removeStack \gets \(
+l.376 					\State removeStack \gets \(
                                       removes_{removeIndex}\)
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[9]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.377 					\State isDone \gets
+l.380 					\State isDone \gets
                                \(true\)
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1701,7 +1747,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.377 					\State isDone \gets \(
+l.380 					\State isDone \gets \(
                                  true\)
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1714,7 +1760,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.385 \\\\
+l.388 \\\\
           
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1727,7 +1773,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.386 D
+l.389 D
        ie removes und adds Listen werden hier ueber die Methoden neededAdds ...
 
 Your command was ignored.
@@ -1735,17 +1781,12 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 386--392
+Underfull \hbox (badness 10000) in paragraph at lines 389--395
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 386--392
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 401--409
+Underfull \hbox (badness 10000) in paragraph at lines 389--395
 
  []
 
@@ -1754,6 +1795,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 401--409
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 401--409
+
+ []
+
+[10]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -1781,7 +1828,6 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[10]
 
 ! Package utf8x Error: Character145appearedalone.
 
@@ -1814,7 +1860,8 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.435 \\\\
-          Die Umsetzung des Algorithmus wurde in Java 8 vorgenommen.
+          Die Umsetzung des Algorithmus wurde in Java 8 vorgenommen. Im Prog...
+
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -1827,87 +1874,87 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.435 \\\\D
-           ie Umsetzung des Algorithmus wurde in Java 8 vorgenommen.
+           ie Umsetzung des Algorithmus wurde in Java 8 vorgenommen. Im Prog...
+
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--475
+Underfull \hbox (badness 10000) in paragraph at lines 435--476
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--475
+Underfull \hbox (badness 10000) in paragraph at lines 435--476
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--475
+Underfull \hbox (badness 10000) in paragraph at lines 435--476
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--475
+Underfull \hbox (badness 10000) in paragraph at lines 435--476
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--475
+Underfull \hbox (badness 10000) in paragraph at lines 435--476
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--475
+Underfull \hbox (badness 10000) in paragraph at lines 435--476
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--475
+Underfull \hbox (badness 10000) in paragraph at lines 435--476
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--475
+Underfull \hbox (badness 10000) in paragraph at lines 435--476
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--475
+Underfull \hbox (badness 10000) in paragraph at lines 435--476
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--475
+Underfull \hbox (badness 10000) in paragraph at lines 435--476
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--475
+Underfull \hbox (badness 10000) in paragraph at lines 435--476
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--475
+Underfull \hbox (badness 10000) in paragraph at lines 435--476
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--475
+Underfull \hbox (badness 10000) in paragraph at lines 435--476
 
  []
 
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 485--492
+[11] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 486--493
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 485--492
+Underfull \hbox (badness 10000) in paragraph at lines 486--493
 
  []
 
-[12]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -1915,7 +1962,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.498 	\\\\
+l.499 	\\\\
            
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1928,34 +1975,34 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.499 	\(
+l.500 	\(
          a\) feallt hier als Faktor weg, da \(a\) kein Teil der Eingabe ist.
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--505
+Underfull \hbox (badness 10000) in paragraph at lines 500--506
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--505
+Underfull \hbox (badness 10000) in paragraph at lines 500--506
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 505--510
+Underfull \hbox (badness 10000) in paragraph at lines 506--511
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 510--513
+Underfull \hbox (badness 10000) in paragraph at lines 511--514
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 517--520
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 518--521
 
  []
 
@@ -1966,13 +2013,12 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.527 D
-       emnach ist die insgesamte Laufzeitkomplexitaet
+l.528 D
+       emnach ist die gesamte Laufzeitkomplexitaet
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[13]
 
 ! LaTeX Error: \mathcal allowed only in math mode.
 
@@ -1980,57 +2026,57 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.540 ... also eine Platzkomplexitaet von \mathcal
+l.541 ... also eine Platzkomplexitaet von \mathcal
                                                   {O}(n).
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 536--544
+Underfull \hbox (badness 10000) in paragraph at lines 537--545
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 536--544
+Underfull \hbox (badness 10000) in paragraph at lines 537--545
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 536--544
+Underfull \hbox (badness 10000) in paragraph at lines 537--545
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 549--555
+Underfull \hbox (badness 10000) in paragraph at lines 550--556
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 561--565
+Underfull \hbox (badness 10000) in paragraph at lines 562--566
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 561--565
+Underfull \hbox (badness 10000) in paragraph at lines 562--566
 
- []
-
-<./images//result0.png, id=68, 493.845pt x 306.39468pt>
-File: ./images//result0.png Graphic file (type png)
-<use ./images//result0.png>
-Package pdftex.def Info: ./images//result0.png  used on input line 578.
-(pdftex.def)             Requested size: 493.84378pt x 306.39394pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 573--579
-
- []
-
-
-Overfull \hbox (38.59967pt too wide) in paragraph at lines 573--579
-[] 
  []
 
 [14]
+<./images//result0.png, id=72, 493.845pt x 306.39468pt>
+File: ./images//result0.png Graphic file (type png)
+<use ./images//result0.png>
+Package pdftex.def Info: ./images//result0.png  used on input line 581.
+(pdftex.def)             Requested size: 493.84378pt x 306.39394pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 576--582
+
+ []
+
+
+Overfull \hbox (38.59967pt too wide) in paragraph at lines 576--582
+[] 
+ []
+
 
 ! LaTeX Error: There's no line here to end.
 
@@ -2038,7 +2084,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.580 \\\\
+l.583 \\\\
           
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2051,7 +2097,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.581 \subsection
+l.584 \subsection
                  {hexmax1.txt}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2060,15 +2106,15 @@ or  <return>  to continue without it.
 <./images//result1_1.png, id=73, 724.95844pt x 878.53218pt>
 File: ./images//result1_1.png Graphic file (type png)
 <use ./images//result1_1.png>
-Package pdftex.def Info: ./images//result1_1.png  used on input line 594.
+Package pdftex.def Info: ./images//result1_1.png  used on input line 599.
 (pdftex.def)             Requested size: 426.79134pt x 517.20345pt.
 <./images//result1_2.png, id=74, 724.95844pt x 288.3272pt>
 File: ./images//result1_2.png Graphic file (type png)
 <use ./images//result1_2.png>
-Package pdftex.def Info: ./images//result1_2.png  used on input line 595.
+Package pdftex.def Info: ./images//result1_2.png  used on input line 600.
 (pdftex.def)             Requested size: 426.79134pt x 169.742pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 589--596
+Underfull \hbox (badness 10000) in paragraph at lines 594--601
 
  []
 
@@ -2080,7 +2126,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.597 \\\\
+l.602 \\\\
           
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2093,91 +2139,90 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.598 \subsection
+l.603 \subsection
                  {hexmax2.txt}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[16 <./images//result1_1.png> <./images//result1_2.png>]
+[16 <./images//result1_1.png>]
 <./images//result2_1_1.png, id=83, 1796.96344pt x 883.80188pt>
 File: ./images//result2_1_1.png Graphic file (type png)
 <use ./images//result2_1_1.png>
-Package pdftex.def Info: ./images//result2_1_1.png  used on input line 611.
+Package pdftex.def Info: ./images//result2_1_1.png  used on input line 618.
 (pdftex.def)             Requested size: 256.0748pt x 125.94307pt.
 <./images//result2_1_2.png, id=84, 1065.9825pt x 871.00406pt>
 File: ./images//result2_1_2.png Graphic file (type png)
 <use ./images//result2_1_2.png>
-Package pdftex.def Info: ./images//result2_1_2.png  used on input line 612.
+Package pdftex.def Info: ./images//result2_1_2.png  used on input line 619.
 (pdftex.def)             Requested size: 153.6447pt x 125.54144pt.
 <./images//result2_2_1.png, id=85, 1795.45781pt x 890.5772pt>
 File: ./images//result2_2_1.png Graphic file (type png)
 <use ./images//result2_2_1.png>
-Package pdftex.def Info: ./images//result2_2_1.png  used on input line 614.
+Package pdftex.def Info: ./images//result2_2_1.png  used on input line 621.
 (pdftex.def)             Requested size: 256.0748pt x 127.01727pt.
 <./images//result2_2_2.png, id=86, 1071.25218pt x 889.82437pt>
 File: ./images//result2_2_2.png Graphic file (type png)
 <use ./images//result2_2_2.png>
-Package pdftex.def Info: ./images//result2_2_2.png  used on input line 615.
+Package pdftex.def Info: ./images//result2_2_2.png  used on input line 622.
 (pdftex.def)             Requested size: 153.6447pt x 127.61594pt.
 <./images//result2_3_1.png, id=87, 1800.7275pt x 898.85812pt>
 File: ./images//result2_3_1.png Graphic file (type png)
 <use ./images//result2_3_1.png>
-Package pdftex.def Info: ./images//result2_3_1.png  used on input line 617.
+Package pdftex.def Info: ./images//result2_3_1.png  used on input line 624.
 (pdftex.def)             Requested size: 256.0748pt x 127.8143pt.
 <./images//result2_3_2.png, id=88, 1074.26344pt x 886.81313pt>
 File: ./images//result2_3_2.png Graphic file (type png)
 <use ./images//result2_3_2.png>
-Package pdftex.def Info: ./images//result2_3_2.png  used on input line 618.
+Package pdftex.def Info: ./images//result2_3_2.png  used on input line 625.
 (pdftex.def)             Requested size: 153.6447pt x 126.83226pt.
 <./images//result2_4_1.png, id=89, 1802.23312pt x 902.6222pt>
 File: ./images//result2_4_1.png Graphic file (type png)
 <use ./images//result2_4_1.png>
-Package pdftex.def Info: ./images//result2_4_1.png  used on input line 620.
+Package pdftex.def Info: ./images//result2_4_1.png  used on input line 627.
 (pdftex.def)             Requested size: 256.0748pt x 128.23935pt.
 <./images//result2_4_2.png, id=90, 1067.48813pt x 890.5772pt>
 File: ./images//result2_4_2.png Graphic file (type png)
 <use ./images//result2_4_2.png>
-Package pdftex.def Info: ./images//result2_4_2.png  used on input line 621.
+Package pdftex.def Info: ./images//result2_4_2.png  used on input line 628.
 (pdftex.def)             Requested size: 153.6447pt x 128.17235pt.
 <./images//result2_5_1.png, id=91, 1793.19937pt x 898.85812pt>
 File: ./images//result2_5_1.png Graphic file (type png)
 <use ./images//result2_5_1.png>
-Package pdftex.def Info: ./images//result2_5_1.png  used on input line 623.
+Package pdftex.def Info: ./images//result2_5_1.png  used on input line 630.
 (pdftex.def)             Requested size: 256.0748pt x 128.3492pt.
 <./images//result2_5_2.png, id=92, 1072.75781pt x 891.33pt>
 File: ./images//result2_5_2.png Graphic file (type png)
 <use ./images//result2_5_2.png>
-Package pdftex.def Info: ./images//result2_5_2.png  used on input line 624.
+Package pdftex.def Info: ./images//result2_5_2.png  used on input line 631.
 (pdftex.def)             Requested size: 153.6447pt x 127.65508pt.
 <./images//result2_6_1.png, id=93, 1800.7275pt x 896.59969pt>
 File: ./images//result2_6_1.png Graphic file (type png)
 <use ./images//result2_6_1.png>
-Package pdftex.def Info: ./images//result2_6_1.png  used on input line 626.
+Package pdftex.def Info: ./images//result2_6_1.png  used on input line 633.
 (pdftex.def)             Requested size: 256.0748pt x 127.49316pt.
 <./images//result2_6_2.png, id=94, 1072.75781pt x 894.34125pt>
 File: ./images//result2_6_2.png Graphic file (type png)
 <use ./images//result2_6_2.png>
-Package pdftex.def Info: ./images//result2_6_2.png  used on input line 627.
+Package pdftex.def Info: ./images//result2_6_2.png  used on input line 634.
 (pdftex.def)             Requested size: 153.6447pt x 128.08633pt.
 <./images//result2_7_1.png, id=95, 1796.21063pt x 154.32657pt>
 File: ./images//result2_7_1.png Graphic file (type png)
 <use ./images//result2_7_1.png>
-Package pdftex.def Info: ./images//result2_7_1.png  used on input line 629.
+Package pdftex.def Info: ./images//result2_7_1.png  used on input line 636.
 (pdftex.def)             Requested size: 256.0748pt x 22.00117pt.
 <./images//result2_7_2.png, id=96, 1070.49937pt x 134.75343pt>
 File: ./images//result2_7_2.png Graphic file (type png)
 <use ./images//result2_7_2.png>
-Package pdftex.def Info: ./images//result2_7_2.png  used on input line 630.
+Package pdftex.def Info: ./images//result2_7_2.png  used on input line 637.
 (pdftex.def)             Requested size: 153.6447pt x 19.34032pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 606--631
+Underfull \hbox (badness 10000) in paragraph at lines 613--638
 
  []
 
-[17 <./images//result2_1_1.png> <./images//result2_1_2.png> <./images//result2_
-2_1.png> <./images//result2_2_2.png> <./images//result2_3_1.png> <./images//res
-ult2_3_2.png> <./images//result2_4_1.png> <./images//result2_4_2.png>]
+[17 <./images//result1_2.png> <./images//result2_1_1.png> <./images//result2_1_
+2.png> <./images//result2_2_1.png> <./images//result2_2_2.png>]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -2185,7 +2230,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.632 \\\\
+l.639 \\\\
           
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2198,81 +2243,355 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.633 \subsection
+l.640 \subsection
                  {hexmax3.txt}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 647--651
+Underfull \hbox (badness 10000) in paragraph at lines 656--660
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 647--651
+Underfull \hbox (badness 10000) in paragraph at lines 656--660
+
+ []
+
+[18 <./images//result2_3_1.png> <./images//result2_3_2.png> <./images//result2_
+4_1.png> <./images//result2_4_2.png> <./images//result2_5_1.png> <./images//res
+ult2_5_2.png> <./images//result2_6_1.png> <./images//result2_6_2.png> <./images
+//result2_7_1.png> <./images//result2_7_2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 677--681
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 666--670
+Underfull \hbox (badness 10000) in paragraph at lines 677--681
+
+ []
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 806--810
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 666--670
-
- []
-
-[18 <./images//result2_5_1.png> <./images//result2_5_2.png> <./images//result2_
-6_1.png> <./images//result2_6_2.png> <./images//result2_7_1.png> <./images//res
-ult2_7_2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 793--797
+Underfull \hbox (badness 10000) in paragraph at lines 806--810
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 793--797
+Underfull \hbox (badness 10000) in paragraph at lines 811--816
 
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 823--829
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 823--829
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 836--842
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 836--842
+
+ []
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 849--851
+
+ []
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+Underfull \hbox (badness 10000) in paragraph at lines 856--858
+
+ []
+
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 8
+58.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+Overfull \hbox (3.64795pt too wide) in paragraph at lines 860--861
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (44.43835pt too wide) in paragraph at lines 877--878
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 888--890
+
+ []
+
+
+Overfull \hbox (13.84555pt too wide) in paragraph at lines 896--897
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+
+ []
+
+
+Overfull \hbox (59.73476pt too wide) in paragraph at lines 897--898
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][] 
+ []
+
+[21]
+Overfull \hbox (156.61197pt too wide) in paragraph at lines 946--948
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 973--975
+
+ []
+
+[22]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.989 \\N
+         un zu den bereits benutzten Methoden.\\\\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 989--991
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 989--991
+
+ []
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1005 \\\\
+           
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1006 \textbf
+              {getFromMemo-Methode}\\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1006--1007
+
+ []
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1019 \\\\
+           
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1020 \textbf
+              {putInMemo-Methode}\\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1020--1021
+
+ []
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 1047--1051
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1047--1051
+
+ []
+
+
+Overfull \hbox (95.42636pt too wide) in paragraph at lines 1060--1062
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][] 
+ []
+
+
+Overfull \hbox (115.82156pt too wide) in paragraph at lines 1063--1065
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][] 
+ []
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1072 \textbf
+              {fillSwaps-Methode und Untermethoden}\\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1072--1075
+
+ []
+
+
+Overfull \hbox (3.64795pt too wide) in paragraph at lines 1077--1078
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (8.74675pt too wide) in paragraph at lines 1091--1092
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[24]
+Overfull \hbox (69.93236pt too wide) in paragraph at lines 1096--1097
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][] 
+ []
+
+
+Overfull \hbox (80.12996pt too wide) in paragraph at lines 1102--1103
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][] 
+ []
+
+
+Overfull \hbox (100.52516pt too wide) in paragraph at lines 1148--1149
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][] 
+ []
+
+
+Overfull \hbox (29.14195pt too wide) in paragraph at lines 1161--1162
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[25] 
 AED: lastpage setting LastPage
-[19] (docs_pre.aux
+[26]
+
+LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
+(LaTeX3)     1174.
+
+
+LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
+(LaTeX3)     1174.
+
+
+LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
+(LaTeX3)     1174.
+
+ (./docs_pre.aux
 Package cleveref Info: loaded `ngerman' language definitions on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
- 12864 strings out of 478864
- 258846 string characters out of 2847238
- 762745 words of memory out of 3000000
- 30625 multiletter control sequences out of 15000+600000
- 421990 words of font info for 69 fonts, out of 8000000 for 9000
+ 13091 strings out of 478994
+ 255982 string characters out of 5858183
+ 1042638 words of memory out of 5000000
+ 30409 multiletter control sequences out of 15000+600000
+ 422616 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,21n,108p,10623b,662s stack positions out of 5000i,500n,10000p,200000b,80000s
- <C:\Users\Anwender\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\
-ecsx1200.pk> <C:\Users\Anwender\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/e
-c/dpi600\eccc1000.pk> <C:\Users\Anwender\AppData\Local\MiKTeX\fonts/pk/ljfour/j
-knappen/ec/dpi600\ecrm0800.pk> <C:\Users\Anwender\AppData\Local\MiKTeX\fonts/pk
-/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\Anwender\AppData\Local\MiKTeX
-\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Anwender\AppData\Loc
-al\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Anwender\Ap
-pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1000.pk> <C:\Users\An
-wender\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:
-\Users\Anwender\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm172
-8.pk> <C:\Users\Anwender\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\ecbx2488.pk><C:/Users/Anwender/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmex10.pfb><C:/Users/Anwender/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Anwender/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Anwender/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Anwender/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users
-/Anwender/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb><C:/Users/Anwender/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmsy7.pfb><C:/Users/Anwender/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/symbols/msbm10.pfb>
-Output written on docs_pre.pdf (19 pages, 560957 bytes).
+ 111i,21n,116p,10621b,2184s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
+}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></u
+sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/lo
+cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
+al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local
+/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/l
+ocal/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/loc
+al/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local
+/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/local/t
+exlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm0500.pfb></usr/local/tex
+live/2021/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texli
+ve/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive
+/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2
+021/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/202
+1/texmf-dist/fonts/type1/public/cm-super/sfsx1000.pfb></usr/local/texlive/2021/
+texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2021/te
+xmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2021/texm
+f-dist/fonts/type1/public/cm-super/sftt0800.pfb>
+Output written on docs_pre.pdf (26 pages, 703436 bytes).
 PDF statistics:
- 517 PDF objects out of 1000 (max. 8388607)
+ 211 PDF objects out of 1000 (max. 8388607)
+ 121 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  106 words of extra memory for PDF output out of 10000 (max. 10000000)
 

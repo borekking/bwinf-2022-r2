@@ -1,0 +1,15 @@
+/Users/Florian_Bange/bwinf-2022-r2/A3/code/BWINF-HexMax/src/main/java/de/flo/hexMax/util/JavaUtils.java
+/Users/Florian_Bange/bwinf-2022-r2/A3/code/BWINF-HexMax/src/main/java/de/flo/hexMax/AbstractHexMaxSolver.java
+/Users/Florian_Bange/bwinf-2022-r2/A3/code/BWINF-HexMax/src/main/java/de/flo/hexMax/digitChanges/DigitChanges.java
+/Users/Florian_Bange/bwinf-2022-r2/A3/code/BWINF-HexMax/src/main/java/de/flo/hexMax/ResultChangesCreater.java
+/Users/Florian_Bange/bwinf-2022-r2/A3/code/BWINF-HexMax/src/main/java/de/flo/hexMax/digit/display/SevenSegmentDisplay.java
+/Users/Florian_Bange/bwinf-2022-r2/A3/code/BWINF-HexMax/src/main/java/de/flo/hexMax/ChangingRowCreater.java
+/Users/Florian_Bange/bwinf-2022-r2/A3/code/BWINF-HexMax/src/main/java/de/flo/hexMax/digit/display/SSDSet.java
+/Users/Florian_Bange/bwinf-2022-r2/A3/code/BWINF-HexMax/src/main/java/de/flo/hexMax/Main.java
+/Users/Florian_Bange/bwinf-2022-r2/A3/code/BWINF-HexMax/src/main/java/de/flo/hexMax/changingTrack/ChangingRow.java
+/Users/Florian_Bange/bwinf-2022-r2/A3/code/BWINF-HexMax/src/main/java/de/flo/hexMax/digitChanges/HexDigitChanges.java
+/Users/Florian_Bange/bwinf-2022-r2/A3/code/BWINF-HexMax/src/main/java/de/flo/hexMax/HexMaxSolver.java
+/Users/Florian_Bange/bwinf-2022-r2/A3/code/BWINF-HexMax/src/main/java/de/flo/hexMax/digit/display/SSDSetPrinter.java
+/Users/Florian_Bange/bwinf-2022-r2/A3/code/BWINF-HexMax/src/main/java/de/flo/hexMax/changingTrack/SSDSetChangingRow.java
+/Users/Florian_Bange/bwinf-2022-r2/A3/code/BWINF-HexMax/src/main/java/de/flo/hexMax/digit/HexDigit.java
+/Users/Florian_Bange/bwinf-2022-r2/A3/code/BWINF-HexMax/src/main/java/de/flo/hexMax/digit/HexDigitUtils.java

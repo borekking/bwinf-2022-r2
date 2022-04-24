@@ -72,10 +72,10 @@
 \section{Einleitung}
 Dieses Problem moechte ich loesen, indem ich das gleiche, allgemeinere Problem fuer beliebige Basen (im Folgenden "`a"' genannt) angehe. Das Programm ist fuer die Basis 16 geschrieben.
 \\\\
-Im Folgenden werden die sieben Positionen einer Siebensegmentanzeige Segmente genannt. Weiter sind "`aktivierte Segmente"' Segmente, welche durch ein "`Staebchen"' belegt sind und "`deaktivierte Segmente"' Segmente, welche frei sind.
+Im Folgenden werden die sieben Positionen einer Siebensegmentanzeige "`Segmente"' genannt. Weiter sind "`aktivierte Segmente"' Segmente, welche durch ein "`Staebchen"' belegt sind und "`deaktivierte Segmente"' Segmente, welche frei sind.
 
 \section{Ziffern veraendern}
-Um dieses Problem zu loesen, muss man offensichtlich die Ziffern der gegebenen Zahl systematisch veraendern.\\\\
+Um das Problem zu loesen, muss man die Ziffern der gegebenen Zahl systematisch veraendern.\\\\
 Moechte man eine Siebensegmentanzeige d zu einer anderen Siebensegmentanzeige g veraendern, muss man dafuer Segmente in d aktivieren und/oder deaktivieren.\\
 Aktivieren muss man die Segmente, welche in d nicht aktiviert, aber in g aktiviert sind und deaktivieren muss man die Segmente, welche in d aktiviert sind, aber in g nicht.
 \\ \\
@@ -86,17 +86,17 @@ Die Anzahl der Segmente, die aktiviert werden muessen, nenne ich im Folgenden a 
 \textbf{Beispiele}
 \begin{enumerate}
 	\item
-	Moechte man A zu B veraendern - \\ \\
+	Moechte man A zu B veraendern \dots \\ \\
 \includegraphics{AB} \\
-- muss man zwei Segmente, oben rechts deaktivieren und ein Segment unten aktivieren. Somit ist r=2 und a=1.
+\dots muss man zwei Segmente, oben rechts deaktivieren und ein Segment unten aktivieren. Somit ist r=2 und a=1.
 	\item
-	Moechte man A zu F veraendern - \\ \\
+	Moechte man A zu F veraendern \dots \\ \\
 \includegraphics{AF} \\
-- muss man zwei Segmente, rechts deaktivieren und keine Segmente aktivieren. Somit ist r=2 und a=0.
+\dots muss man zwei Segmente rechts deaktivieren und keine Segmente aktivieren. Somit ist r=2 und a=0.
 	\item
-Moechte man 2 zu 5 veraendern - \\ \\
+Moechte man 2 zu 5 veraendern \dots \\ \\
 \includegraphics{25} \\
-- muss man oben links und unten rechts ein Segment aktivieren und oben rechts und unten links ein Segment deaktivieren. Somit ist r=2 und a=2.
+\dots muss man oben links und unten rechts ein Segment aktivieren und oben rechts und unten links ein Segment deaktivieren. Somit ist r=2 und a=2.
 \end{enumerate}
 \\\\
 Selbstverstaendlich exestiert ebenfalls der Fall, dass r und a gleich 0 sind, falls d = g gilt.
@@ -105,11 +105,11 @@ Selbstverstaendlich exestiert ebenfalls der Fall, dass r und a gleich 0 sind, fa
 \\
 Sei nun
 \[changes: (d, \ g) \rightarrow (a, \ r)\]
-eine Funktion, welche von Tupeln an Ziffern (d und g) abbildet auf Tupel der natuerlichen Zahlen mit null (a, r).\\\\
+eine Funktion, welche von Tupeln an Ziffern (d und g) abbildet auf Tupel der natuerlichen Zahlen mit Null (a, r).\\\\
 Dabei stellt d die Ziffer der Ausgangssiebensegmentanzeige und g die Ziffer der Zielsiebensegmentanzeige dar. a ist die Anzahl der Segmente, welche aktiviert werden muessen und r die Anzahl der Segmente, welche deaktiviert werden muessen, 
 um von d's Siebensegmentanzeige zu g's Siebensegmentanzeige zu kommen.\\\\
 \textbf{Pseudocode}\\
-Der Pseudocode zum erhalten von den Werten \(a\) und \(r\) fuer zwei Ziffern \(d\) und \(g\) sieht wie folgt aus:
+Der Pseudocode zum Erhalten der Werte \(a\) und \(r\) fuer zwei Ziffern \(d\) und \(g\) sieht wie folgt aus:
 \begin{algorithmic}[1]
 \Procedure {getAddAndRemove}{\(d, \ g\)}
 		\State \(segmentD_1, \ \dots \ , \ segmentD_7\) \gets \(getSegments(d)\)
@@ -129,7 +129,7 @@ Der Pseudocode zum erhalten von den Werten \(a\) und \(r\) fuer zwei Ziffern \(d
 \EndProcedure
 \end{algorithmic}
 \\\\
-Die Methode \(getSegments\) soll hier eine Methode darstellen, welche die sieben Segmente der Siebensegmentanzeige einer Ziffer als Wahrheitswert zurueckgibt.\\\\
+Die Methode \(getSegments\) soll hier eine Methode darstellen, welche die sieben Segmente der Siebensegmentanzeige einer Ziffer als Wahrheitswerte zurueckgibt.\\\\
 Die soeben beschriebene Vorgehensweise kann ebenfalls benutzt werden, um herrauszufinden, welche Segmente (bestimmt durch ihren Index) aktiviert/deaktiviert werden muessen, um von \(d\) zu \(g\) zu kommen.
 
 \section{Reihenfolge der Veraenderungen}
@@ -149,7 +149,7 @@ Sei \(i\) eine natuerliche Zahl mit \(1 \leq i \leq n\).
 Nun wird gezeigt, dass der Wert der Stelle \(i\) mit der Ziffer \(1\) groeszer ist als die Summe aller Stellen mit einem Index kleiner als \(i\) mit je der groeszten Ziffer, \(a-1\).\\
 Formal (Induktionsvoraussetzung):
 \[1 * a^{i-1} > \sum_{k=1}^{i-1} (a-1) * a^{k-1}\]
-Induktions Anfang (\(i = 1\))
+Induktionsanfang (\(i = 1\))
 \[1 * a^{1-1} = a^{1-1} = a^0 = 1 > 0 = \sum_{k=1}^0 (a-1)*a^{k-1} = \sum_{k=1}^{1-1} (a-1)*a^{k-1}\]
 Induktionsbehauptung:
 \[1 * a^{(i+1)-1} > \sum_{k=1}^{(i+1)-1} (a-1) * a^{k-1}\]
@@ -164,9 +164,10 @@ Damit eine Zahl eine korrekte Loesung ist, muss Folgendes gegeben sein:
 	\item Die gegebene Maximalzahl an Umlegungen ist nicht ueberschritten
 	\item Die Zahl ist groeszer als die gegebene Zahl oder gleich grosz
 \end{enumerate}
-
-\section{Schluesse aus der korrekten Loesung}
-Sein \(d_n, \ \dots \ , \ d_1\) die Ziffern der gegeben Zahl von links nach rechts und \(d_n', \ \dots \ , \ d_1'\) die jeweiligen Ziffern der korrekten Loesung. Weiter sind \(a_i\) und \(r_i\) die Anzahl an Segmenten, 
+\\\\
+Aus diesen Eigenschaften lassen sich weitere Eigenschaften schlieszen.\\
+\\
+Sein \(d_n, \ \dots \ , \ d_1\) die Ziffern der gegebenen Zahl von links nach rechts und \(d_n', \ \dots \ , \ d_1'\) die jeweiligen Ziffern der korrekten Loesung. Weiter sind \(a_i\) und \(r_i\) die Anzahl an Segmenten, 
 die man hinzufuegen, bzw. entfernen muss um von \(d_is\) Siebensegmentanzeige zu \(d_i's\) Siebensegmentanzeige zu kommen (\(1 \leq i \leq n\)), bzw.
 \[(a_i, \ r_i) = changes(d_i, \ d_i')\]
 fuer alle \(i \in \mathbb{N}\) mit (\(1 \leq i \leq n\)).
@@ -175,7 +176,7 @@ Weiter sei
 \[A = \sum_{i=1}^n a_i\]
 und
 \[R = \sum_{i=1}^n r_i\]
-Daraus, dass eine korrekte Loesung, nach den zuvor beschriebenen Punkten gegeben ist, laesst sich Folgendes schlieszen:
+Daraus, dass eine korrekte Loesung nach den zuvor beschriebenen Punkten gegeben ist, laesst sich Folgendes schlieszen:
 \begin{enumerate}
 
 	\item
@@ -194,32 +195,34 @@ Dies liegt schlicht daran, dass somit nicht mehr Segmente entfernt oder hinzugef
 	\[\Leftrightarrow A - R = 0\]
 	\[\Leftrightarrow A = R\]
 	
-	\item Man kann benoetigt \(\dfrac{A+R}{2}\) Umlegungen\\
-	Dies wird ersicht, da A die Anzahl aller Segmente ist, die hinzugefügt werden muessen (dort ist also noch kein aktiviertes Segment) und R die Anzahl der Segmente ist, die entfernt werden muessen (dort ist also ein aktiviertes Segment) (um von \(d_1, \ \dots \ , \ d_n\) zu \(d_1', \ \dots \ , \ d_n'\) zu kommen). Nun kann man fuer jedes der R Segmente, die deaktiviert werden muessen, je eines der A Segmente, die aktiviert werden muessen, aktivieren. Dies ist moeglich, da \(A = R\) gelten muss. Somit ergeben sich \(\dfrac{A+R}{2}\) Umlegungen. Bzw., da A gleich R gilt, A = R Umlegungen.
+	\item Man benoetigt \(\dfrac{A+R}{2}\) Umlegungen\\
+	Dies wird ersichtlich, da A die Anzahl aller Segmente ist, die hinzugefuegt werden muessen (dort ist also noch kein aktiviertes Segment) und R die Anzahl der Segmente ist, die entfernt werden muessen (dort ist also ein aktiviertes Segment) (um von \(d_1, \ \dots \ , \ d_n\) zu \(d_1', \ \dots \ , \ d_n'\) zu kommen). Nun kann man fuer jedes der R Segmente, die deaktiviert werden muessen, je eines der A Segmente, die aktiviert werden muessen, aktivieren. Dies ist moeglich, da \(A = R\) gelten muss. Somit ergeben sich \(\dfrac{A+R}{2}\) Umlegungen. Bzw., da A gleich R gilt, A = R Umlegungen.
 \end{enumerate}
-\\\\\\\\
+\\\\\\
+Durch diese Schlussfolgerungen weisz man nun, welche Eigenschaften ein Loesungsweg ueberpruefen bzw. einhalten muss, um eine korrekte Loesung zu erzeugen.\\
+Naemlich muss $A = R \leq m$ gelten, da wie erlaeutert A bzw. R Umlegungen benoetigt werden (so fern $A = R$ gilt).
 
 \section{Modellierung}
 Sei eine Zahl der Basis a mit n Ziffern gegeben. Die Ziffern seien nun \(d_1, \ \dots \ , \ d_n\) (\(d_1\) ganz links, \(d_n\) ganz rechts).\\\\
 Alle moeglichen Belegungen der Ziffern \(d_1, \ \dots \ , \ d_n\) lassen sich als Baum darstellen.\\\\
 Dabei ist die Wurzel auf Level 0 des Baums leer.\\
-Fuer jeden Index \(i\) der Zahl (\(1 \leq i \leq n\)) gehen auf Level \(i - 1\) stets a Pfade von jedem Knoten auf Level \(i-1\) zu je einem Knoten auf Level \(i\) ab. Diese \(a\) Knoten Stellen je alle \(a\) Ziffern der Basis \(a\) (\(0, \ \dots \ , \ a-1\)) dar.\\\\
+Fuer jeden Index \(i\) der Zahl (\(1 \leq i \leq n\)) gehen auf Level \(i - 1\) stets a Pfade von jedem Knoten auf Level \(i-1\) zu je einem Knoten auf Level \(i\) ab. Diese \(a\) Knoten stellen je alle \(a\) Ziffern der Basis \(a\) (\(0, \ \dots \ , \ a-1\)) dar.\\\\
 Jeder Knoten auf Level i enthaelt eine Ziffer g, sowie das Tupel \(changes(d_i, \ g)\)\\\\
 Die Anzahl an Blaettern ist demnach \(a^n\) und die Hoehe ist \(n+1\). \\\\
-Ein Beispiel Baum zur Zahl 12 der Basis 3 (n ist somit 2) ist:
+Ein Beispielbaum zur Zahl 12 der Basis 3 (n ist somit 2) ist:
 \begin{center}
 \includegraphics[width=15cm]{12_B3-Graph}
 \end{center}
 In einem solchen Baum waere nun die Aufgabe, den Pfad zu finden, bei dem die Summe A aller a's der Summe R aller r's entspricht.\\
-Und fuer diese Summen gilt, dass sie beide nicht groeszer sind als die Maximalanzahl an Veraenderungen.\\\\
-Selbstverstaendlich soll dabei der Pfad gefunden werden, der als Zahl den groeszten Wert hat. Dazu koennte man die a Knoten, welche die a Ziffern der Basis a darstellen, immer absteigend (wie im Beispiel) oder immer aufsteigend hinzufuegen. Dann muesste man nur von rechts nach links bzw. von links nach rechts eine Tiefensuche durchfuehren und den ersten Pfad waehlen, welcher die zuvor beschriebene Eigenschaften hat.
+Und fuer diese Summen gilt, dass sie beide nicht groeszer sind als die Maximalanzahl an Umlegungen (gemaesz der Eigenschaften einer korrekten Loesung).
+\\\\Selbstverstaendlich soll dabei der Pfad gefunden werden, der als Zahl den groeszten Wert hat. Dazu koennte man die a Knoten, welche die a Ziffern der Basis a darstellen, immer absteigend oder immer aufsteigend (wie im Beispiel) hinzufuegen. Dann muesste man nur von links nach rechts bzw. von rechts nach links eine Tiefensuche durchfuehren und den ersten Pfad waehlen, welcher die zuvor beschriebenen Eigenschaften hat. Denn dann "`erhoeht"' man die Ziffern von links nach rechts, so dass man, wie zuvor bewiesen, die hoechstmoegliche Zahl findet.
 
 \section{Rekursiver Algorithmus}
-Im Folgenden Loesungsweg wird ausschlieszlich die Berechnung der hoechsten Zahl umgesetzt ohne die Umlegungen zu beachten. Denn diese koennen deutlich einfacher im Nachhinein berechnet werden. Dazu spaeter mehr.\\\\
+Im folgenden Loesungsweg wird ausschlieszlich die Berechnung der hoechsten Zahl umgesetzt ohne die Umlegungen zu beachten. Denn diese koennen deutlich einfacher im Nachhinein berechnet werden. Dazu spaeter mehr.\\\\
 Aus der Darstellung als Baum kann man vermuten, dass sich das HexMax-Problem rekursiv formulieren laesst. Tatsaechlich ist dies wie folgt moeglich:\\\\
 Geben ist erneut die Zahl der Basis a mit den n Ziffern \(d_1, \ \dots \ , \ d_n\) und die Maximalzahl an Veraenderungen m.
 \\\\
-Fuer den rekusiven Algorithmus sein nun folgende Eingabeparamether gegeben:
+Fuer den rekursiven Algorithmus seien nun folgende Eingabeparameter gegeben:
 \begin{enumerate}
 	\item Ein momentaner Index einer Ziffer: index (\(1 \leq index \leq n\))
 	\item Die momentane Gesamtanzahl an Segmenten, die hinzugefuegt werden muessen: A
@@ -227,7 +230,7 @@ Fuer den rekusiven Algorithmus sein nun folgende Eingabeparamether gegeben:
 \end{enumerate}
 Der Rueckgabewert soll eine Liste an Ziffern der Groesze \(n - index + 1\) oder NULL sein. NULL stellt den Fall dar, dass keine Loesung gefunden wird.
 \\\\
-Die Aufgabe des Algorithmus lautet, ab dem gegebenen Index (inklusive index) die hoechste Belegung der Ziffern zu finden, welche die benoetigten Eigenschaften erfuehlt: \(A = R \leq m\)
+Die Aufgabe des Algorithmus lautet, ab dem gegebenen Index (inklusive index) die hoechste Belegung der Ziffern zu finden, welche die benoetigten Eigenschaften erfuellt: \(A = R \leq m\) (wie unter Eigenschaften einer korrekten Loesung beschrieben).
 \\\\
 Rekursion kann hier sehr schoen angewendet werden, indem an jedem Aufruf an einem Index i, alle moeglichen Ziffern g der Basis a absteigend durchgegangen werden. Dazu wird dann \((a, \ r) = changes(d_i, \ g)\) berechnet und die Funktion rekursiv benutzt, wobei als naechster Index index+1, als naechstes A A+a und als naechstes R R+r genommen werden.\\
 Sollte der Rueckgabewert des rekursiven Aufrufs NULL sein, so wird die naechstkleinere moegliche Ziffer probiert. Sollte der Rueckgabewert nicht NULL sein, wird eine Liste erzeugt, welche an erster Position g hat und weiter mit dem Rueckgabewert gefuellt ist. Diese wird zurueckgegeben.\\\\
@@ -235,13 +238,13 @@ Sollte, nachdem alle Ziffern der Basis a absteigend durchgegangen wurden, jeder 
 \\\\
 Die Abbruchbedingungen des rekursiven Algorithmus stellen dar:
 \begin{enumerate}
-	\item A+R ist groeszer als 2 * m\\
+	\item $A+R$ ist groeszer als $2 * m$\\
 	In diesem Fall wuerden zu viele Umlegungen gebraucht, so dass NULL zurueckgegeben werden muss.\\
 	Denn, wie aus korrekten Loesungen geschlossen wurde, muss \(A = R \leq m\) gelten. Dies laesst sich zu \(2A = 2R \leq 2m\) umformen. Dies wiederum entspricht \(A + R \leq 2m\), da \(A = R\) sein muss.
 	
 	\item Ein zu groszer Index, bzw. ein Index der groeszer als n ist\\
 	In diesem Fall wird ueberprueft, ob \(A = R\) und \(A \leq m\) bzw. \(R \leq m\) gilt, nur dann wird eine leere Liste zurueckgegeben, sonst wird NULL zurueckgegeben.\\
-	Wird die Reihenfolge, wie hier nummeriert benutzt, kann die Abfrage nach \(A \leq m\) bzw. \(R \leq m\)
+	Wird die Reihenfolge, wie hier nummeriert, benutzt, kann die Abfrage nach \(A \leq m\) bzw. \(R \leq m\)
 	natuerlich weggelassen werden, da sie durch Punkt 1 gegeben ist.
 	
 	\item \(A+R\) ist genau gleich \(2*m\)\\ 
@@ -250,28 +253,28 @@ Die Abbruchbedingungen des rekursiven Algorithmus stellen dar:
 \end{enumerate}
 
 \section{Loesung durch Dynamische Programmierung}
-Der soeben beschriebene Algorithmus loest zwar das Problem, indem die Uebergabeparamether \(index = 1, A = 0\) und \(R = 0\) benutzt werden, hat aber eine deutlich zu hohe Laufzeit von maximal ca. \(a^n\).\\
+Der soeben beschriebene Algorithmus loest zwar das Problem, indem die Uebergabeparameter \(index = 1, A = 0\) und \(R = 0\) benutzt werden, hat aber eine deutlich zu hohe Laufzeit von maximal ca. \(a^n\).\\
 Dies ergibt sich daraus, dass so maximal lange gesucht wuerde, bis das Ergebnis gleich der Eingabezahl ist. \\\\
-Um diese Laufzeit stark zu senken, kann man einen Blick auf die Anzahl an moeglichen Eingaben fuer die jeweiligen Eingabeparamether werfen:\\\\
+Um diese Laufzeit stark zu senken, kann man einen Blick auf die Anzahl an moeglichen Eingaben fuer die jeweiligen Eingabeparameter werfen:\\\\
 \begin{tabular}{ c | c | c}
   index & A & R\\
 	\hline
   n & 5n & 5n 
 \end{tabular}\\\\\\
 Dabei ergeben sich die Werte fuer A und R durch die Maximalzahl an Segmenten, die deaktiviert bzw. aktiviert werden koennen, um eine neue Ziffer zu erstellen: 5. Dies ist bei 1 und 8 der Fall. Multipliziert man diese Maximalzahl der Segmente, die aktiviert/deaktiviert werden koennen mit der Anzahl an Ziffern (n), ergibt sich 5n.\\\\
-Multipliziert man die Anzahl an moeglichen Eingaben fuer jeden Eingabeparamether, ergibt sich
+Multipliziert man die Anzahl an moeglichen Eingaben fuer jeden Eingabeparameter, ergibt sich
 \[n * 5n * 5n = 25n^3.\]
 Dieser Wert stellt die Maximalzahl an Eingaben fuer den Algorithmus dar.
 \\\\
 Da dieser Wert deutlich langsamer waechst als \(a^n\), kann man hier Memoisation bzw. Dynamische Programmierung benutzen. Dies bedeutet, dass man bereits berechnete Rueckgabwerte speichert, um sie ggf. wieder benutzen zu koennen.\\
 Dazu wird am Anfang des Algorithmus ueberprueft, ob dieselbe Eingabe (index, A und R) bereits gespeichert wurde. Ist dies der Fall, wird das gespeicherte Ergebnis zurueckgegeben.\\
-Damit dies moeglich ist, wird der Wert, welcher zurueckgegeben werden wird, gespeichert. Dies ist stets entweder ein Liste oder NULL.
+Damit dies moeglich ist, wird der Wert, welcher zurueckgegeben werden wird, gespeichert. Und zwar so, dass man den Rueckgabewert mit Hilfe der Eingabeparameter finden kann. Dies ist stets entweder eine Liste oder NULL.
 \\\\
 \textbf{Pseudocode}\\
 Nun folgt der Pseudocode fuer den zuvor beschriebenen rekursiven Algorithmus zusammen mit der Dynamischen Programmierung.\\\\
-Gegeben, als feste Werte fuer den Algorithmus sind die Ziffern der Zahl (nun von links nach rechts): \(d_1, \ \dots \ , \ d_n\) ganz links in der Zahl ist \(d_1\) und \(d_n\) ist ganz rechts. Somit hat die Zahl \(n\) Ziffern - dieser Wert ist ebenfalls gegeben.\\
+Gegeben, als feste Werte fuer den Algorithmus, sind die Ziffern der Zahl (nun von links nach rechts): \(d_1, \ \dots \ , \ d_n\), wobei \(d_1\) ganz links und \(d_n\) ganz rechts in der Zahl ist. Somit hat die Zahl \(n\) Ziffern - dieser Wert ist ebenfalls gegeben. Genauso, wie die Basis $a$ der Zahl. Da diese nicht verwechselt werden sollte, mit dem $a$ der $changes$ Funktion, werden die "`Rueckgabewerte"' dieser als $(adds, removes)$ bezeichnet.\\
 Weiter ist die Maximalanzahl an Umlegungen \(m\) gegeben.\\
-Die Eingabeparamether des Algorithmus sind wie beschrieben (index, A, R).\\
+Die Eingabeparameter des Algorithmus sind wie beschrieben (index, A, R).\\
 
 % \begin{center}
 % \begin{algorithm}
@@ -283,19 +286,19 @@ Die Eingabeparamether des Algorithmus sind wie beschrieben (index, A, R).\\
 			\State \textbf{return} memo.get(index, A, R) \Comment{Return them if so} 
 	\EndIf	
 	\State
-	\If{A + R > 2*m} \Comment{Max amount of changes is overstepped, so returning null}
+	\If{$A + R > 2*m$} \Comment{Max amount of changes is overstepped, so returning null}
 			\State \textbf{return} NULL
 	\EndIf		
 	\State
 	\If{index > n} \Comment{Index of digit is bigger than amount of digits (n)}
-			\If{A = R} \Comment{Check \(A = R\), note that \(A+R \leq 2*m\) is given by previous check}
+			\If{$A = R$} \Comment{Check \(A = R\), note that \(A+R \leq 2*m\) is given by previous check}
 					\State \textbf{return} [ \ ] \Comment{Empty array} 		
 			\Else
 					\State \textbf{return} NULL
 			\EndIf
 	\EndIf		
 	\State
-	\If{A + R = 2*m} \Comment{Max amount of changes exactly reached}
+	\If{$A + R = 2*m$} \Comment{Max amount of changes exactly reached}
 			\If{A = R} \Comment{Check \(A = R\)}
 					\State \textbf{return} [\(d_{index}, \ \dots \ , \ d_n\)]
 			\Else
@@ -303,8 +306,8 @@ Die Eingabeparamether des Algorithmus sind wie beschrieben (index, A, R).\\
 			\EndIf
 	\EndIf		
 	\State
-	\For{g \gets (a-1) \ \textbf{to} \ 0} \Comment{Go through digits of base a, decreasing}
-			\State (adds, removes) \gets changes(\(d_{index}\), \ g)
+	\For{g \gets $(a-1)$ \ \textbf{to} \ 0} \Comment{Go through digits of base a, decreasing}
+			\State $(adds, removes)$ \gets changes(\(d_{index}\), \ g)
 			\State subResult \gets getHighestNumber(index \(+1\), \ A \(+\) adds, \ R \(+\) removes)
 			\If{subResult \(\not=\) NULL}
 					\State finalResult \gets \([ \ g \ ]\)
@@ -319,16 +322,16 @@ Die Eingabeparamether des Algorithmus sind wie beschrieben (index, A, R).\\
 \EndProcedure
 \end{algorithmic}
 % \end{algorithm}
-\\\\\\Wichtig ist zu beachten, dass die Reihenfolge der Abbruchbedingung der Rekursion so gehalten werden, dass stets sicher ist, dass \(A = R \leq m\) gilt.
-\\\\Weiter ist das Memoisation Objekt "`memo"' zum speichern der Ergebnisse hier vereinfacht dargestellt. Es sollen index, A und R als Schluessel (keys) und die Liste oder NULL als dazu assozierter Wert (value) gesehen werden. Dazu unter Implementierung genaueres.
-\\\\Weiter sei wiederholt, dass dieser Algorithmus mit den Uebergabeparamethern Index = 1, A = 0 und R = 0 das eigentliche Problem loest.
+\\\\\\Wichtig ist zu beachten, dass die Reihenfolge der Abbruchbedingung der Rekursion so eingehalten werden, dass stets sicher ist, dass \(A = R \leq m\) gilt.
+\\\\Weiter ist das Memoisation Objekt "`memo"' zum Speichern der Ergebnisse hier vereinfacht dargestellt. Es sollen index, A und R als Schluessel (keys) und die Liste oder NULL als dazu assoziierter Wert (value) gesehen werden. Dazu unter Implementierung genaueres.
+\\\\Weiter sei wiederholt, dass dieser Algorithmus mit den Uebergabeparametern Index = 1, A = 0 und R = 0 das eigentliche Problem loest, wobei der Rueckgabewert nicht die Zahl selbst sondern eine Liste ihrer Ziffern ist.
 
 \section{Berechnung der Umlegungen}
 Nach dem die hoechstmoegliche Zahl berechnet wurde, kann man mit dieser und der Ausgangszahl die benoetigten Umlegungen berechnen. Dabei muss beachtet werden, dass stets ein aktiviertes Segment mit einem deaktivierten Segment getauscht und niemals eine Siebensegmentanzeige vollstaendig geleert wird. 
 \\\\
 Gegeben sein die Ziffern der gegebenen Zahl \(d_1, \ \dots \ , \ d_n\) und die Ziffern der resultierenden Zahl \(d_1', \ \dots \ , \ d_n'\).
 \\\\
-Zunaechst wird fuer jedes Paar (\(d_i\) und \(d_i'\)) die Liste der Segmente, die entfernt werden muessen - \(removes_i\) - und die Liste der Segmente, die hinzugefuegt werden muessen - \(adds_i\), berechnet.\\
+Zunaechst wird fuer jedes Paar (\(d_i\) und \(d_i'\)) die Liste der Segmente, die entfernt werden muessen - \(removes_i\) - und die Liste der Segmente, die hinzugefuegt werden muessen - \(adds_i\), berechnet (wie unter Ziffern veraendern beschrieben).\\
 Segmente werden dabei ueber ihren Index j (\(0 \leq j < 7\)) definiert.
 \\\\
 Anschlieszend werden alle Indexe i der Hex-Zahl (\(1 \leq i \leq n\)) durchgegangen. Fuer jeden Index i werden so lange Elemente aus \(adds_i\) mit Elementen aus \(removes_i\) getauscht, wobei bei jedem Tausch die jeweiligen Segmente aus beiden Listen entfernt werden, bis eine Liste leer ist.
@@ -344,7 +347,7 @@ Die Uebergabeparamether sind \(d_1, \ \dots \ , \ d_n\) - die Ziffern der gegebe
 \begin{algorithmic}[1]
 	\Procedure {getNeededChanges}{\(d_1, \ \dots \ , \ d_n\), \(d_1', \ \dots \ , \ d_n'\)}
 	\State \(adds_1, \ \dots \ , \ add_n \) \Comment{Declare adds-lists}
-	\State \(removes_i, \ \dots \ , \ removes_i \) \Comment{Declare removes-lists}
+	\State \(removes_1, \ \dots \ , \ removes_n \) \Comment{Declare removes-lists}
 	\For{i \gets 1 \ \textbf{to} \ n} \Comment{Get remove- and add-stacks for each index i}
 			\State \(add_i\) \gets \(neededAdds(d_i, \ d_i')\)
 			\State \(removes_i\) \gets \(neededRemoves(d_i, \ d_i')\)
@@ -383,7 +386,7 @@ Die Uebergabeparamether sind \(d_1, \ \dots \ , \ d_n\) - die Ziffern der gegebe
 \EndProcedure
 \end{algorithmic}
 \\\\
-Die removes und adds Listen werden hier ueber die Methoden neededAdds und neededRemoves erhalten. Diese sollen Methoden dastellen, welche fuer zwei Ziffern ausgeben, welche Segmente (bestimmt durch ihren Index) entfernt bzw. hinzugefuegt werden muessen, um von der einen Ziffer zur anderen zu kommen.\\\\
+Die removes und adds Listen werden hier ueber die Methoden neededAdds und neededRemoves erhalten. Diese sollen Methoden dastellen, welche fuer zwei Ziffern ausgeben, welche Segmente (bestimmt durch ihren Index) entfernt bzw. hinzugefuegt werden muessen, um von der einen Ziffer zur anderen zu kommen. Dies soll geschehen, wie unter Ziffern veraendern beschrieben.\\\\
 Die removes und adds Listen sollen hier des weiteren Stacks sein, so dass das oberste Element des Stacks mit der pop-Methode bekommen und vom Stack entfernt werden kann.\\
 Des weiteren sollen die addSwap Methoden die Taeusche (swaps) speichern. \\
 Zu beidem unter Implementierung genaueres.
@@ -391,17 +394,14 @@ Zu beidem unter Implementierung genaueres.
 Warum dieses Verfahren korrekt ist, wird unter Korrektheit argumentiert.
 
 \section{Optimierung}
-Optimieren kann man diesen Loesungsweg durch Folgendes:
-\begin{enumerate}
-	\item Es sollten alle Ergebnisse der changes-Funktion bereits vorgeneriet sein, so dass r und a nicht jedes Mal neu berechnet werden muessen.
-	Genauer sollte fuer jedes Paar an Ziffern der Basis a die Liste an Segmenten (bzw. deren Indexe), welche hinzugefuegt/entfernt werden, vorgeneriert werden, so dass diese im Laufe des Programs nicht mehrmals berechnet werden.
-\end{enumerate}
+Optimieren kann man diesen Loesungsweg dadurch, dass alle Ergebnisse der changes-Funktion bereits vorgeneriert werden, so dass r und a nicht jedes Mal neu berechnet werden muessen. Genauer sollte fuer jedes Paar an Ziffern der Basis a die Liste an Segmenten (bzw. deren Indexe), welche hinzugefuegt/entfernt werden, vorgeneriert werden, so dass diese im Laufe des Programms nicht mehrmals berechnet werden.
+
 
 \section{Korrektheit}
 Die Korrektheit werde ich nun Punkt fuer Punkt begruenden.
 \\\\
 \textbf{Zunaechst zur Korrektheit der Berechnung der Umlegungen.}\\
-Hier ist zu beachten, dass eine Siebensegmentanzeige niemals vollkommen leer sein darf. Es muss also jede immer mindestens ein aktiviertes Segment enthalten.
+Hier ist zu beachten, dass eine Siebensegmentanzeige niemals vollkommen leer sein darf. Es muss also jede Siebensegmentanzeige immer mindestens ein aktiviertes Segment enthalten.
 \\\\
 Im ersten Teil der Berechnung wird niemals eine Anzeige leer sein, da die Anzahl an aktivierten Segmenten in einer Anzeige die gleiche bleibt, wenn man eine Umlegung innerhalb der Anzeige vornimmt.
 \\
@@ -423,7 +423,7 @@ Im zweiten Teil der Berechnung gibt es fuer jede Ziffer an Index i drei Moeglich
 	\item Die Anzahl der Ziffern ist nicht veraendert.\\
 	Dies ist gegeben, da in dem Loesungsweg keine Moeglichkeit existiert, Ziffern hinzuzufuegen oder zu entfernen.
 	
-	\item Die Anzahl der aktivierten Segmente ist die gleiche, wie bei der gegebenen Zahl.\\
+	\item Die Anzahl der aktivierten Segmente ist die gleiche wie bei der gegebenen Zahl.\\
 	Dies ist gegeben, da in den Abbruchbedingungen stets geprueft wird, dass \(A = R\) ist, sodass gleich viele Segmente aktiviert und deaktiviert werden.
 
 	\item Die Loesung ist groeszer oder gleich grosz zur gegebenen Zahl.\\
@@ -432,46 +432,47 @@ Im zweiten Teil der Berechnung gibt es fuer jede Ziffer an Index i drei Moeglich
 \end{enumerate}
 
 \section{Implementierung}
-\\\\Die Umsetzung des Algorithmus wurde in Java 8 vorgenommen.
-Bei der Umsetzung sind einige Dinge wichtig.
+\\\\Die Umsetzung des Algorithmus wurde in Java 8 vorgenommen. Im Programm wurde die Basis 16 implementiert, so dass Hex-Zahlen dargestellt werden koennen.\\
+Bei der Umsetzung sind folgende Dinge wichtig.
 \\\\
 \textbf{Siebensegmentanzeige}\\
-Sonaechst benoetigt man eine Implementation fuer eine hexadezimale Zahl, sowie fuer die Siebensegmentanzeigen.\\
-Die Siebensegmentanzeige wurden als unveraenderliche Klasse (immutable class) implementiert, welche ein siebenelementiges Array an booleans enthaelt, welches die Segmente darstellt. True bedeutet, das Segment ist aktiviert, false bedeutet, das Segment ist deaktiviert. Des  weiteren enthaelt die Klasse Methoden, um Segmente zu setzen und zu erhalten (als boolean; an einem index), sowie um zu ueberpruefen, ob die Anzeige leer ist. Methoden, welche das Objekt veraendern, geben eine neue Anzeige zurueck.
+Zunaechst benoetigt man eine Implementierung fuer eine hexadezimale Zahl, sowie fuer die Siebensegmentanzeigen.\\
+Die Siebensegmentanzeige wurde als unveraenderliche Klasse (immutable class) implementiert, welche ein siebenelementiges Array an booleans enthaelt, welches die Segmente darstellt. True bedeutet, das Segment ist aktiviert, false bedeutet, das Segment ist deaktiviert. Des  weiteren enthaelt die Klasse Methoden, um Segmente zu setzen und zu erhalten (als boolean; an einem index), sowie um zu ueberpruefen, ob die Anzeige leer ist. Methoden, welche das Objekt veraendern, geben eine neue Anzeige zurueck.
 \\\\
 Auszerdem braucht man eine Moeglichkeit mehrere Siebensegmentanzeigen darzustellen, so dass man eine Hex-Zahl representieren kann. Dazu gibt es eine Klasse "`SSDSet"', welche ein Array an Siebensegmentanzeigen enthaelt. Die Klasse ist ebenfalls immutable und enthaelt eine Methode, um das Array zu erhalten, sowie eine Methode, um eine Siebensegmentanzeige an einem index im Array neu zu setzen.
 \\\\
-Die beiden Typen sind immutable, damit keine Werte unerwartet veraendert werden. Aufgrund des Java Garbage Collectors wird dadurch auch kein Speicherplatz unnoetig belegt. Da dieser nicht mehr referenzierte/genutzte Objekt entfernt.
+Die beiden Typen sind immutable, damit keine Werte unerwartet veraendert werden. Aufgrund des Java Garbage Collectors wird dadurch auch kein Speicherplatz unnoetig belegt, da dieser nicht mehr referenzierte/genutzte Objekt entfernt.
 \\\\
-Die 16 hexadezimalen Zahlen von 0 bis F habe ich mit einer Enumeration umgesetzt, diese enthaelt fuer jede Ziffer, den Namen der Ziffer (z.B. "`0"' oder "`F"'), den Wert der Ziffer in dezimal, sowie ein boolean-array fuer die Siebensegmentanzeige und Methoden, um diese Eigenschaften zu erhalten. Desweiteren gibt es eine Utility (Hilfs-) Klasse um hexadezimale Zahlen durch den Namen oder den Wert zu erhalten, sowie um alle Hex-Zahlen sortiert nach einer bestimmten Eigenschaft als Liste zu erhalten.
+Die 16 hexadezimalen Zahlen von 0 bis F habe ich mit einer Enumeration umgesetzt, diese enthaelt fuer jede Ziffer den Namen der Ziffer (z.B. "`0"' oder "`F"'), den Wert der Ziffer in dezimal, sowie ein boolean-array fuer die Siebensegmentanzeige und Methoden, um diese Eigenschaften zu erhalten. Desweiteren gibt es eine Utility (Hilfs-) Klasse um hexadezimale Zahlen durch den Namen oder den Wert zu erhalten, sowie um alle Hex-Zahlen sortiert nach einer bestimmten Eigenschaft als Liste zu erhalten.
 \\\\
 \textbf{Umsetzung der Optimierung}\\
 Das unter Optimierung erwaehnte Speichern der Listen an Segmenten, welche hinzugefuegt/entfernt werden muessen, fuer jedes Paar an Ziffern der Basis a, wird umgesetzt durch die Klasse HexDigitChanges, welche eine statische Singleton besitzt.\\
-Diese Klasse speichert die Listen an Indexen der Segmente fuer alle moeglichen Paare an Ziffern und verfuegt ueber eine Methode diese Listen fuer zwei angegebene Ziffern zu erhalten.
+Diese Klasse speichert die Listen an Indexen der Segmente fuer alle moeglichen Paare an Ziffern und verfuegt ueber eine Methode diese Listen fuer zwei angegebene Ziffern zu erhalten.\\
+Die Singleton wird benutzt, um sicher zu gehen, dass das Objekt nicht mehrmals erstellt wird, so dass die Berechnung nicht mehrfach vorgenommen werden.
 \\\\
 \textbf{Berechnung der hoechsten Zahl mit Hilfe Dynamischer Programmierung}\\
-Bei diesem Algorithmus wurde als Rueckgabewert ein Array and HexDigits (Hex-Ziffern) gewaehlt.\\
+Bei diesem Algorithmus wurde als Rueckgabewert ein Array an HexDigits (Hex-Ziffern) gewaehlt.\\
 Ein Array ist hier sinnvoller als eine Liste, da die Laenge bereits bei der Dekleration des Arrays bekannt ist. Somit muessen keine Arrayvergroeszerungen vorgenommen werden (wie ggf. bei einer ArrayList).
 \\\\
 \textbf{Memoisation Objekt}\\
-Nun zur Umsetzung des Memoisation Objekts, welches Rueckgabewerte des Algorithmus speichert und bei erneutem Aufruf des Algorithmus mit gleichen Uebergabeparamethern diese direkt zurueckgibt.
+Nun zur Umsetzung des Memoisation Objekts, welches Rueckgabewerte des Algorithmus speichert und bei erneutem Aufruf des Algorithmus mit gleichen Uebergabeparametern diese direkt zurueckgibt.
 \\Das Memoisation Objekt wird implementiert als geschachtelte HashMap. Die aeuszerste HashMap zeigt von Indexen auf die zweite HashMap, die zweite HashMap zeigt von A-Werten auf die innere HashMap. Diese zeigt von R-Werten auf HexDigit Arrays.
-\\Um den Quellcode simpel zu halten, wird vor Begin des Algorithmus die aeuszerste HashMap vollkommen gefuellt. Dadurch ist es einfacher zu ueberpruefen, welche inneren HashMaps welche Schluessel enthalten. 
-\\\\Soll fuer beliebige Werte Index, A, R ueberprueft werden, ob eine Eingabe bereits berechnet wurde, so wird mit dem Index als Schluessel in der aeuszerste HashMap die zweite HashMap erhalten. In dieser wird ueberprueft, ob sie A als Schluessel enthaelt, ist dies nicht der Fall, wurden die Eingabeparamether noch nicht berechnet. Andernfalls muss ueberprueft werden, ob die innerste HashMap, welche man mit A erhaelt, R als Schluessel enthaelt.
-\\\\Soll ein Rueckgabewert gefunden werden, muss nicht ueberprueft, ob die HashMaps die Schluessel enthalten, da dies nur passiert, wenn zuvor ueberprueft wurde, ob die dies tun. Somit muss nur aus der ersten HashMap die zweite erhalten werden, aus der zweiten die dritte und aus dieser der Rueckgabwert.
-\\\\Soll ein Rueckgabewert result fuer die Uebergabeparamether index, A, R gespeichert werden, muss aus der ersten HashMap die zweite erhalten werden. Bei der zweiten muss ueberprueft werden, ob diese A als Schluessel enthaelt. Ist dies der Fall, kann die innere HashMap erhalten werden. Ist dies nicht der Fall, muss eine neue HashMap erstellt werden, welche mit dem Schluessel A in die zweite Map getan wird. Anschlieszend wird entweder in die erhaltene HashMap oder in die neu erstellte result mit dem Schluessel R getan.
+\\Um den Quellcode simpel zu halten, wird vor Begin des Algorithmus die aeuszerste HashMap vollkommen gefuellt. Dadurch ist es einfacher zu ueberpruefen, welche inneren HashMaps welche Schluessel enthalten. \\
+\\Soll fuer beliebige Werte Index, A, R ueberprueft werden, ob eine Eingabe bereits berechnet wurde, so wird mit dem Index als Schluessel in der aeuszerste HashMap die zweite HashMap erhalten. In dieser wird ueberprueft, ob sie A als Schluessel enthaelt. Ist dies nicht der Fall, wurden die Eingabeparameter noch nicht berechnet. Andernfalls muss ueberprueft werden, ob die innerste HashMap, welche man mit A erhaelt, R als Schluessel enthaelt.
+\\\\Soll ein Rueckgabewert gefunden werden, muss nicht ueberprueft werden, ob die HashMaps die Schluessel enthalten, da dies nur passiert, wenn zuvor ueberprueft wurde, ob sie dies tun. Somit muss nur aus der ersten HashMap die zweite erhalten werden, aus der zweiten die dritte und aus dieser der Rueckgabwert.
+\\\\Soll ein Rueckgabewert result fuer die Uebergabeparameter index, A, R gespeichert werden, muss aus der ersten HashMap die zweite erhalten werden. Bei der zweiten muss ueberprueft werden, ob diese A als Schluessel enthaelt. Ist dies der Fall, kann die innere HashMap erhalten werden. Ist dies nicht der Fall, muss eine neue HashMap erstellt werden, welche mit dem Schluessel A in der zweiten HashMap gespeichert wird. Anschlieszend wird entweder in der erhaltenen HashMap oder der neu erstellten HashMap result mit dem Schluessel R gespeichert.
 \\\\
 \textbf{Berechnung der Umlegungen}\\
-Bei der Berechnung der Umlegungen von der Ausgangszahl zu resultierenden Zahl werden die Listen der Segmente welche entfernt/hinzugefuegt werden muessen (bzw. deren Indexe) in ArrayDeques gespeichert. Diese ermoeglichen die stacktypische Methode pop, welche das "`oberste"' Element der Liste zurueckgibt und aus der Liste entfernt.\\
-Diese Datenstruktur wird verwendet, da jedes Element aller Listen genau ein mal benoetigt wird, wenn es getauscht wird.\\
+Bei der Berechnung der Umlegungen von der Ausgangszahl zur resultierenden Zahl werden die Listen der Segmente, welche entfernt/hinzugefuegt werden muessen (bzw. deren Indexe), in ArrayDeques gespeichert. Diese ermoeglichen die stacktypische Methode pop, welche das "`oberste"' Element der Liste zurueckgibt und aus der Liste entfernt.\\
+Diese Datenstruktur wird verwendet, da jedes Element aller Listen genau einmal benoetigt wird, wenn es getauscht wird.\\
 Dadurch muss man nicht zusaetzlich Elemente aus den Listen entfernen.
 \\\\
-Die erwaehnten Taeusche werden umgesetzt mit einer eigenen Klasse, welche die Indexe der Ziffern und die Indexe der Segmente in den Ziffern speichert.\\
+Die erwaehnten Taeusche werden objektorientiert umgesetzt mit einer eigenen Klasse, welche die Indexe der Ziffern und die Indexe der Segmente in den Ziffern speichert.\\
 Bei der Berechnung der Umlegungen erhaelt man also am Ende eine Liste an Taeuschen.
 \\\\
 Moechte man die Taeusche auf die wirklichen Hex-Ziffern anwenden, um Tests einfacher zu machen oder die Veraenderungen grafisch auszugeben, so benoetigt man eine Moeglichkeit, die Veraenderungen bzw. Umlegungen der Ausgangszahl zu der resultierenden Zahl zu speichern.
-\\Dafuer gibt es eine Klasse, welche eine LinkedList (verkettete Liste) enthaelt in welcher SSDSets gespeichert werden. In dieser Klasse gibt es eine Methode, um ein neues SSDSet Objekt zur LinkedList hinzuzufuegen. Diese wird benutzt um neue, veraenderte SSDSet Objekte waerend der Berechnung der Umlegungen zu speichern.
-\\Eine LinkedList wird genutzt da kein sofortiger Zugriff auf bestimmte Elemente in der Liste benoetigt wird. Durch eine LinkedList ist zudem das Vergroeszern eines Array (wie bei einer ArrayList) nicht noetig.
+\\Dafuer gibt es eine Klasse, welche eine LinkedList (verkettete Liste) enthaelt in welcher SSDSets gespeichert werden. In dieser Klasse gibt es eine Methode, um ein neues SSDSet Objekt zur LinkedList hinzuzufuegen. Diese wird benutzt um neue, veraenderte SSDSet Objekte waehSrend der Berechnung der Umlegungen zu speichern.
+\\Eine LinkedList wird genutzt, da kein sofortiger Zugriff auf bestimmte Elemente in der Liste benoetigt wird. Durch eine LinkedList ist zudem das Vergroeszern eines Array (wie bei einer ArrayList) nicht noetig.
 
 
 \section{Laufzeitanalyse}
@@ -479,44 +480,44 @@ Die worst-case Laufzeit des gesamten Algorithmus setzt sich zusammen aus folgend
 
 \begin{enumerate}
 	\item Die Vorgenerierung der r's und a's von allen Ziffern zu allen Ziffern. \\
-	Diese laeuft in Konstanter Zeit, da stets genau \(a^2\) Durchlaeufe benoetigt werden, wobei a kein Teil der Eingabe ist. \\
+	Diese laeuft in konstanter Zeit, da stets genau \(a^2\) Durchlaeufe benoetigt werden, wobei a kein Teil der Eingabe ist. \\
 	Dieser Teil laeuft somit in \(\mathcal{O}(1)\).
 
 	\item Berechnung der hoechsten Zahl mit Hilfe Dynamischer Programmierung\\
 	Diese Laufzeit stellt sich als etwas komplizierter heraus.
 	\\\\
-	Zunaechst sei zu wissen, dass die Laufzeit eines Algorithmus mit Memoisation wie folgt berechnet wird, indem die
+	Zunaechst sei zu wissen, dass die Laufzeit eines Algorithmus mit Memoisation berechnet wird, indem die
 	Anzahl der Teilprobleme mit der Laufzeit pro Teilproblem multipliziert wird, wobei der rekursive Teil als konstant (\(\mathcal{O}(1)\)) gewertet wird.
 	\\\\
 	Die Laufzeit pro Teilproblem besteht aus \dots
 	\begin{enumerate}
-		\item 4 Abfragen Konstanter Zeit, \(\mathcal{O}(1)\)
+		\item 4 Abfragen konstanter Zeit, \(\mathcal{O}(1)\)
 		\item einer Schleife mit maximal a Durchgaengen, \(\mathcal{O}(a) = \mathcal{O}(1)\)
-		\item einem kopieren von maximal n Elementen pro Schleifendurchgang, \(\mathcal{O}(a*n) = \mathcal{O}(n)\)
+		\item einem Kopieren von maximal n Elementen pro Schleifendurchgang, \(\mathcal{O}(a*n) = \mathcal{O}(n)\)
 		\item einem Speichern des Ergebnisses in konstanter Zeit, \(\mathcal{O}(1)\)
 	\end{enumerate}
 	\\\\
 	\(a\) feallt hier als Faktor weg, da \(a\) kein Teil der Eingabe ist.
 	\\\\
-	Weiter hat das Speichern und erhalten der bereits gespeicherten Rueckgabewerte eine konstante Laufzeit, da die Schluessel der HashMaps ausschlieszlich 32-bit-Integer sind,
+	Weiter hat das Speichern und Erhalten der bereits gespeicherten Rueckgabewerte eine konstante Laufzeit, da die Schluessel der HashMaps ausschlieszlich 32-bit-Integer sind,
 	so dass fuer die hash-Funktion der Klasse HashMap, welche den hashcode der Integer durch bitweise Operationen bearbeitet, eine konstante Zeit gebraucht wird.\\
 	Genauer sind diese bitweisen Operationen das XOR und bitweise Verschiebungen.\\\\
 	Insgesamt erhaelt man also eine Laufzeit von
 	\[\mathcal{O}(1) + \mathcal{O}(1) + \mathcal{O}(n) + \mathcal{O}(1) = \mathcal{O}(n)\]
 	pro Teilproblem.
 	\\\\
-	Die Anzahl der Teilprobleme kann man angehen ueber die Eingabeparamether des Algorithmus: index, A und R \\
+	Die Anzahl der Teilprobleme kann man angehen ueber die Eingabeparameter des Algorithmus: index, A und R \\
 	Wie bereits beschrieben, erhaelt man theoretisch
 	\[n * 5n * 5n = 25 * n^3\]
-	moegliche verschiedene Eingabeparamether.\\\\
-	Die insgesamt Laufzeit des eigentlichen Algorithmus ist somit
+	moegliche verschiedene Eingabeparameter.\\\\
+	Die gesamte Laufzeit des eigentlichen Algorithmus ist somit
 	\[25 * n^3 * \mathcal{O}(n) = O(25 n^3 * n) = O(n^4)\]
 
 	\item Berechnung der Umlegungen \\
-	Ein simpler Weg die Laufzeitkomplexitaet der Berechnung der Umlegungen anzugehen ist, dass fuer die bereits beschriebenen Werte A und R (aller zu entfernen und hinzuzufuegenen Segmente) gilt, dass 
+	Ein simpler Weg die Laufzeitkomplexitaet der Berechnung der Umlegungen anzugehen ist, dass fuer die bereits beschriebenen Werte A und R (aller zu entfernenden und hinzuzufuegenden Segmente) gilt, dass 
 	\[\dfrac{A+R}{2}\]
-	die Anzahl an Umlegungen ist (siehe Punkt 5 -Schluesse aus der korrekten Loesung).\\\\
-	Da, wie soeben beschrieben, A und R je maximal \(5n\) sein koennen, laesst sich dies Umformen zu
+	die Anzahl an Umlegungen ist (siehe Punkt 5 - Schluesse aus der korrekten Loesung).\\\\
+	Da, wie soeben beschrieben, A und R je maximal \(5n\) sein koennen, laesst sich dies umformen zu
 	\[\dfrac{5n + 5n}{2}\]
 	\[= \dfrac{10n}{2}\]
 	\[= 5n\]
@@ -524,19 +525,19 @@ Die worst-case Laufzeit des gesamten Algorithmus setzt sich zusammen aus folgend
 	\[\mathcal{O}(5n) = \mathcal{O}(n).\]
 \end{enumerate}
 \\
-Demnach ist die insgesamte Laufzeitkomplexitaet
+Demnach ist die gesamte Laufzeitkomplexitaet
 \[\mathcal{O}(1) + \mathcal{O}(n^4) + \mathcal{O}(n) = \mathcal{O}(n^4).\]
 
 \section{Platzkomplexitaet}
-Die Platzkomplexitaet ist sehr aenlich zur Laufzeitkomplexitaet und besteht aus den selben folgenden Teilen:
+Die Platzkomplexitaet ist sehr aehnlich zur Laufzeitkomplexitaet und besteht aus denselben folgenden Teilen:
 \begin{enumerate}
 	\item Die Vorgenerierung der r's und a's von allen Ziffern zu allen Ziffern \\
-	Diese hat auch hier eine komplexitaet von \(\mathcal{O}(1)\), da \(a^2\) Ziffern mit je sieben Segmenten gespeichert werden muessen.
+	Diese hat auch hier eine Komplexitaet von \(\mathcal{O}(1)\), da \(a^2\) Ziffern mit je sieben Segmenten gespeichert werden muessen.
 	
 	\item Berechnung der hoechsten Zahl mit Hilfe Dynamischer Programmierung \\
 	Bei dieser wird zum einem pro Aufruf des Algorithmus ein Array mit maximal \(n\) Elementen erzeugt.\\\\
-	Weiter mueesen aufgrund der Rekursion maximal \(n\) Ruecksprungadressen und eine bestimmte Anzahl an lokalen Variablen, welche von \(n\) unabhaengig sind, gespeichert werden.
-	Zu beachten ist dabei, dass das erwaehnte Array keine dieser lokalen Variablen ist, da es erst entsteht, wenn der Rekursive Teil des Algorithmus vorbei ist.\\\\
+	Weiter muessen aufgrund der Rekursion maximal \(n\) Ruecksprungadressen und eine bestimmte Anzahl an lokalen Variablen, welche von \(n\) unabhaengig sind, gespeichert werden.
+	Zu beachten ist dabei, dass das erwaehnte Array keine dieser lokalen Variablen ist, da es erst entsteht, wenn der rekursive Teil des Algorithmus vorbei ist.\\\\
 	Diese beiden Teile ergeben also eine Platzkomplexitaet von \mathcal{O}(n).
 	\\\\
 	Weiter werden maximal \(25 n^3\) Rueckgabewerte gespeichert, welche je eine maximal Groesze von \(n\) haben.\\
@@ -554,24 +555,26 @@ Die Platzkomplexitaet ist sehr aenlich zur Laufzeitkomplexitaet und besteht aus 
 	Somit ist die Platzkomplexitaet hier 
 	\[\mathcal{O}(4*5n) = \mathcal{O}(n).\]
 \end{enumerate}
-Somit ist die Platzkomplexitaet ebenfalls
+Somit ist die gesamte Platzkomplexitaet ebenfalls
 \[\mathcal{O}(1) + \mathcal{O}(n^4) + \mathcal{O}(n) = \mathcal{O}(n^4).\]
 
 \section{Beispiele}
-Nun folgen die Ergebnisse des Programs fuer die Eingaben der bwinf website.\\
-Dabei wurden stets die Eingabe, die Ausgabe, die Anzahl an genutzten Umlegungen und die benoetigte Zeit angegeben.
-Zusaetzlich wurde bei den Eingabedatein "`hexmax0.txt"', "`hexmax1.txt"' und "`hexmax2.txt"' die Umlegungen angegeben.
+Nun folgen die Ergebnisse des Programms fuer die Eingaben der bwinf website.\\
+Dabei wurden stets die Eingabe, die maximale Anzahl an Umlegungen, die Ausgabe, die Anzahl an genutzten Umlegungen und die benoetigte Zeit angegeben.
+Zusaetzlich wurde bei den Eingabedateien "`hexmax0.txt"', "`hexmax1.txt"' und "`hexmax2.txt"' die Umlegungen angegeben.
 \\\\
 \subsection{hexmax0.txt}
-Eingabe: 
+Eingabe: \\
+Zahl: 
 $$
 \mathrm{D24}
 $$
+Maximale Anzahl an Umlegungen: 3 \\
 Ausgabe:
 $$
 \mathrm{EE4}
 $$
-Anzahl Umlegungen: 3\\
+Anzahl genutzter Umlegungen: 3\\
 Zeit (mit Ausgabe der Umlegungen): 2 ms
 \\\\
 Umlegungen: \\
@@ -579,15 +582,17 @@ Umlegungen: \\
 
 \\\\
 \subsection{hexmax1.txt}
-Eingabe: 
+Eingabe: \\
+Zahl: 
 $$
 \mathrm{509C431B55}
 $$
+Maximale Anzahl an Umlegungen: 8 \\
 Ausgabe:
 $$
 \mathrm{FFFEA97B55}
 $$
-Anzahl Umlegungen: 8\\
+Anzahl genutzter Umlegungen: 8 \\
 Zeit (mit Ausgabe der Umlegungen): 16 ms
 \\\\
 Umlegungen: \\
@@ -596,15 +601,17 @@ Umlegungen: \\
 
 \\\\
 \subsection{hexmax2.txt}
-Eingabe: 
+Eingabe: \\
+Zahl: 
 $$
 \mathrm{632B29B38F11849015A3BCAEE2CDA0BD496919F8}
 $$
+Maximale Anzahl an Umlegungen: 37 \\
 Ausgabe:
 $$
 \mathrm{FFFFFFFFFFFFFFFFD9A9BEAEE8EDA8BDA989D9F8}
 $$
-Anzahl Umlegungen: 37
+Anzahl genutzter Umlegungen: 37 \\
 Zeit (mit Ausgabe der Umlegungen): 32 ms
 \\\\
 Umlegungen: \\
@@ -631,13 +638,15 @@ Umlegungen: \\
 
 \\\\
 \subsection{hexmax3.txt}
-Eingabe:
+Eingabe: \\
+Zahl: 
 $$
 \mathrm{0E9F1DB46B1E2C081B059EAF198FD491F477CE1CD37EBFB65F}
 $$
 $$
 \mathrm{8D765055757C6F4796BB8B3DF7FCAC606DD0627D6B48C17C09}
 $$
+Maximale Anzahl an Umlegungen: 121 \\
 Ausgabe:
 $$
 \mathrm{FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
@@ -645,18 +654,20 @@ $$
 $$
 \mathrm{FFFFFFFFFFFFFFAA98BB8B9DFAFEAE888DD888AD8BA8EA8888}
 $$
-Anzahl Umlegungen: 121\\
+Anzahl genutzter Umlegungen: 121\\
 Zeit (ohne Ausgabe der Umlegungen): 48 ms
 \\\\
 
 \subsection{hexmax4.txt}
-Eingabe:
+Eingabe: \\
+Zahl: 
 $$
 \mathrm{1A02B6B50D7489D7708A678593036FA265F2925B21C28B4724}
 $$
 $$
 \mathrm{DD822038E3B4804192322F230AB7AF7BDA0A61BA7D4AD8F888}
 $$
+Maximale Anzahl an Umlegungen: 87 \\
 Ausgabe:
 $$
 \mathrm{FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEB8DE88BAA8A}
@@ -664,12 +675,13 @@ $$
 $$
 \mathrm{DD888898E9BA88AD98988F898AB7AF7BDA8A61BA7D4AD8F888}
 $$
-Anzahl Umlegungen: 87\\
+Anzahl genutzter Umlegungen: 87\\
 Zeit (ohne Ausgabe der Umlegungen): 77 ms
 \\\\
 
 \subsection{hexmax5.txt}
-Eingabe:
+Eingabe: \\
+Zahl: 
 $$
 \mathrm{EF50AA77ECAD25F5E11A307B713EAAEC55215E7E640FD263FA}
 $$
@@ -730,6 +742,7 @@ $$
 $$
 \mathrm{75092226E7D54DEB42E1BB2CA9661A882FB718E7AA53F1E606}
 $$
+Maximale Anzahl an Umlegungen: 1369 \\
 Ausgabe:
 $$
 \mathrm{FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
@@ -791,10 +804,371 @@ $$
 $$
 \mathrm{88888888888888888888888888888888888888888888888888}
 $$
-Anzahl Umlegungen: TEST2 - 1369 \\
+Anzahl genutzter Umlegungen: 1369 \\
 Zeit (ohne Ausgabe der Umlegungen):  62,6 s
 \\\\
+\subsection{Eigene Beispiele}
+Die folgenden drei Beispiele zeigen, dass das Programm auch fuer Eingaben funktioniert, bei welchen die Ausgabe ebenfalls die Eingabe ist.\\
+\\
+\textbf{1. Beispiel}\\
+Eingabe: \\
+Zahl: 
+$$
+\mathrm{FFFFFFFFFFFFFFFFFFFFFFF}
+$$
+Maximale Anzahl an Umlegungen: 420 \\
+Ausgabe:
+$$
+\mathrm{FFFFFFFFFFFFFFFFFFFFFFF}
+$$
+Anzahl genutzter Umlegungen: 0\\
+\\\\
+\textbf{2. Beispiel}\\
+Eingabe: \\
+Zahl: 
+$$
+\mathrm{32AA438430CCFF327DE6F78A}
+$$
+Maximale Anzahl an Umlegungen: 0 \\
+Ausgabe:
+$$
+\mathrm{32AA438430CCFF327DE6F78A}
+$$
+Anzahl genutzter Umlegungen: 0\\
+\\\\
+\textbf{3. Beispiel}\\
+Eingabe: \\
+Zahl: 
+$$
+\mathrm{88888888888888888888888888888888888}
+$$
+Maximale Anzahl an Umlegungen: 187 \\
+Ausgabe:
+$$
+\mathrm{88888888888888888888888888888888888}
+$$
+Anzahl genutzter Umlegungen: 0\\
 
+\section{Quellcode}
+Nun folgen die wichtigsten Bestandteile des Quellcodes.
 
+\subsection{Methode zum Erhalten der zu veraendernden Segmente}
+Diese private Methode ist Teil einer Klasse und erhaelt zwei Hex-Zahlen. Sie soll zwei Listen "`remove"' und "`add"', welche Attribute der Klasse sind, befuellen mit den Indexen der Segmente, welche aktiviert bzw. deaktiviert werden muessen, um von der ersten Zahl zur zweiten zu kommen.
+\\
+\begin{lstlisting}[language=Java]
+	/**
+     * Add indexes of segment that have to be removed or added, to get from digit to goal, 
+     * into their lists
+     * @param digit Start digit
+     * @param goal Goal digit
+     */
+    private void findChanges(HexDigit digit, HexDigit goal) {
+        // Numbers' segments
+        boolean[] digitSegments = digit.getSegments(), goalSegments = goal.getSegments();
+
+        // Get segments indexes: stay/remove/add
+        for (int i = 0; i < SevenSegmentDisplay.SEGMENT_AMOUNT; i++) {
+            boolean numberSegment = digitSegments[i], goalSegment = goalSegments[i];
+
+            // Segment has to be removed because it's enabled in number but not in goal
+            if (numberSegment && !goalSegment) {
+                this.remove.add(i);
+            }
+            // Segment has to be enabled/added because it's disabled in number but enabled in goal
+            else if (!numberSegment && goalSegment) {
+                this.add.add(i);
+            }
+
+            // If segment already is on right position, it can be ignored
+        }
+    }
+\end{lstlisting}
+
+\subsection{Loesung mit Dynamischer Programmierung}
+Diese Methode ist die Umsetzung des Algorithmus zum Finden der hoechst moeglichen Zahl durch Tiefensuche mit Dynamischer Programmierung.
+\\
+\begin{lstlisting}[language=Java]
+	/**
+     * Implementation of solving.
+     *
+     * @param index The current index in digits
+     * @param A     The currently used amount of adds (segment which will be activated)
+     * @param R     The currently used amount of removes (segment which will be deactivated)
+     * @return An array of the biggest hex-number as hex-digits from given list (digits; constructor)
+     * starting at index or null if there is no
+     */
+    private HexDigit[] solveImp(int index, int A, int R) {
+        // Check in memo
+        if (this.isInMemo(index, A, R)) {
+            return this.getFromMemo(index, A, R);
+        }
+
+        int AR = A + R; // Used twice
+
+        // A + R > 2*m
+        // Max amount of changes is overstepped, so returning null
+        if (AR > this.doubledMaxChanges) {
+            return null;
+        }
+
+        // index >= n
+        // Index is bigger than or equal size of digits;
+        // index was out of range
+        if (index >= this.n) {
+            // Check A = R, meaning a's can be swapped with r's
+            // s.t. solution is valid
+            if (A != R) return null;
+            // A == R given and A <= m and R <= m given by previous condition
+
+            // Return empty array
+            return new HexDigit[0];
+        }
+
+        // A+R = 2*m
+        // Amount of changes exactly reached
+        if (AR == this.doubledMaxChanges) {
+            // If dif is not zero, meaning no solution, return null
+            if (A != R) return null; // Check A == R
+
+            // Return digits from index (inclusive) to end (n, exclusive)
+            return Arrays.copyOfRange(this.digits, index, this.n);
+        }
+
+        HexDigit current = this.digits[index];
+        HexDigit[] result = null; // Default result is null
+
+        int nextIndex = index + 1;
+
+        // Go through all hex-digits in decreasing order
+        for (HexDigit digit : HexDigitUtils.getHexDigitsDecreasing()) {
+            // a and r in int array obtained HexDigitChanges object
+            int[] values = this.hexDigitChanges.getChanges(current, digit).getValues();
+            int a = values[0], r = values[1]; // Amount of segments to add (a) / remove (r) to get from current to digit
+
+            // Recursive part to get the best solution for next index with new A and R
+            HexDigit[] subResult = this.solveImp(nextIndex, A + a, R + r);
+
+            if (subResult != null) {
+                int newSize = this.n - index;
+                result = new HexDigit[newSize]; // Set result to new HexDigit Array
+
+                // Fill result with digit on first index and subResult on the others
+                result[0] = digit;
+                System.arraycopy(subResult, 0, result, 1, newSize - 1);
+
+                // Break loop because best result was found
+                break;
+            }
+        }
+
+        // Put result in memo (might be null)
+        this.putInMemo(index, A, R, result);
+
+        // Return the found result (might be null)
+        return result;
+    }
+\end{lstlisting}
+
+\subsection{Implementierung des Memoisation Objekts}
+Die folgenden Methoden, welche bereits im vorherigen Quellcode benutzt wurden, sind die unter Implementierung beschriebenen Vorgehensweisen, um bereits berechnete Rueckgabewerte des Hauptalgorithmus (welche zuvor beschrieben wurden) zu speichern und zu erhalten.\\\\
+Der Typ der Variable memo ist dieser:
+\begin{lstlisting}[language=Java]
+Map<Integer, Map<Integer, Map<Integer, HexDigit[]>>>
+\end{lstlisting}
+Initialisiert wird die Variable als HashMap:
+\begin{lstlisting}[language=Java]
+this.memo = new HashMap<>();
+\end{lstlisting}
+Die ebenfalls unter Implementierung beschriebene Vorbefuellung des Memoisation Objekts sieht wie folgt aus:
+\begin{lstlisting}[language=Java]
+		// Prefill memo on indexes
+        for (int index = 0; index <= this.n; index++) {
+            this.memo.put(index, new HashMap<>());
+        }
+\end{lstlisting}
+\\Nun zu den bereits benutzten Methoden.\\\\
+\textbf{isInMemo-Methode}\\
+\begin{lstlisting}[language=Java]
+	/**
+     * Methode returning if given solveImp input was already saved/is contained in memo
+     *
+     * @return If given solveImp input was already saved/is contained in memo
+     */
+     private boolean isInMemo(int index, int A, int R) {
+        Map<Integer, Map<Integer, HexDigit[]>> subMap = this.memo.get(index);
+        if (!subMap.containsKey(A)) return false;
+
+        Map<Integer, HexDigit[]> subSubMap = subMap.get(A);
+        return subSubMap.containsKey(R);
+    }
+\end{lstlisting}
+\\\\
+\textbf{getFromMemo-Methode}\\
+\begin{lstlisting}[language=Java]
+	/**
+     * Methode returning result to given solveImp input from memo
+     *
+     * @return Result to given solveImp input
+     */
+    private HexDigit[] getFromMemo(int index, int A, int R) {
+        Map<Integer, Map<Integer, HexDigit[]>> subMap = this.memo.get(index);
+        Map<Integer, HexDigit[]> subSubMap = subMap.get(A);
+        return subSubMap.get(R);
+    }	
+\end{lstlisting}
+\\\\
+\textbf{putInMemo-Methode}\\
+\begin{lstlisting}[language=Java]
+	/**
+     * Methode for putting given solveImp input in memo with given result
+     */
+    private void putInMemo(int index, int A, int R, HexDigit[] result) {
+        // Get subMap (will exist because of prefilling in constructor) by index
+        Map<Integer, Map<Integer, HexDigit[]>> subMap = this.memo.get(index);
+
+        // Get subSubMap by A:
+        // If subMap already contains A, get it from subMap.
+        // Otherwise, create new HashMap and put it into subMap
+        Map<Integer, HexDigit[]> subSubMap;
+
+        if (subMap.containsKey(A)) {
+            subSubMap = subMap.get(A);
+        } else {
+            subSubMap = new HashMap<>();
+            subMap.put(A, subSubMap);
+        }
+
+        // Put result into subSubMap
+        subSubMap.put(R, result);
+    }
+\end{lstlisting}
+
+\subsection{Berechnung der Umlegungen}
+Die Berechnung der Umlegungen geschieht in einer Klasse, welche die Berechnungen im Konstruktor umsetzt und eine oeffentliche Methode besitzt, um eine erzeugte Liste an Taeuschen (Swaps) zu erhalten. Im Konstruktor wird zuneachst die Methode loadEnableDisable und anschlieszend die Methode fillSwaps aufgerufen.
+\\\\
+\textbf{loadEnableDisable-Methode}\\
+Diese Methode soll alle die Segmente jeder Ziffer finden, welche aktiviert und deaktiviert werden muessen. Diese Indexe werden in zwei HashMaps ("`enable"' und "`disable"') gespeichert.\\
+\begin{lstlisting}[language=Java]
+	/**
+     * Methode for filling of enable and disable map
+     */
+    private void loadEnableDisable() {
+        // Get all segments that have to be enabled/activated and deactivated/disabled
+        // by looping through all digits
+        for (int i = 0; i < this.size; i++) {
+            // Get changes needed to get from given at i to result at i
+            DigitChanges changes = HexDigitChanges.getSingleton().getChanges(this.given[i], this.result[i]);
+
+            // Lists of segments that have to be enabled/disabled by index
+            Deque<Integer> adds = changes.getAdd(ArrayDeque::new), removes = changes.getRemove(ArrayDeque::new);
+
+            // Add arrays to their maps
+            this.enable.put(i, adds);
+            this.disable.put(i, removes);
+        }
+    }
+\end{lstlisting}
+\\
+\textbf{fillSwaps-Methode und Untermethoden}\\
+Die Methode fillSwaps ruft diverse Untermethoden auf welche alle im folgenden Codeblock enthalten sind.\\
+Nach Aufruf der Methode soll die Liste an Taeuschen ("`swaps"') vollkommen befuellt sein.\\
+\begin{lstlisting}[language=Java]
+	/**
+     * Methode for filling the swaps list containing the swaps from given to result number
+     */
+    private void fillSwaps() {
+        // 1. Only swap inside digits
+        this.swapInside();
+
+        // 2. Swap each enable with next disable (they are same size)
+        this.swapOutside();
+    }
+
+    /**
+     * Swap adds with removes in all numbers (not just in one at a time)
+     */
+    private void swapOutside() {
+        Deque<Integer> enableDeque = new ArrayDeque<>(), disableDeque = new ArrayDeque<>();
+        int enableIndex = -1, disableIndex = -1;
+
+        boolean isDone = false;
+        while (!isDone) {
+            // Set enable Deque to next non-empty Deque in enable map if needed and possible (by index)
+            while (enableDeque.isEmpty() && enableIndex < this.size - 1) {
+                enableIndex++;
+                enableDeque = this.enable.get(enableIndex);
+            }
+
+            // Set disable Deque to next non-empty Deque in disable map if needed and possible (by index)
+            while (disableDeque.isEmpty() && disableIndex < this.size - 1) {
+                disableIndex++;
+                disableDeque = this.disable.get(disableIndex);
+            }
+
+            // Check Deques not being updated, meaning no changes left
+            // They should have the same amount of elements, so just testing one
+            if (enableDeque.isEmpty()) {
+                isDone = true;
+            } else {
+                int enableSegment = enableDeque.pop();
+                int disabledSegment = disableDeque.pop();
+
+                this.addSwap(enableIndex, enableSegment, disableIndex, disabledSegment);
+            }
+        }
+    }
+
+    /**
+     * Swap adds with removes until one list is empty inside of all digits
+     */
+    private void swapInside() {
+        for (int i = 0; i < this.size; i++)
+            this.swapInsideDigit(i);
+    }
+
+    /**
+     * Swap adds with removes until one list is empty at index
+     * @param index Current index
+     */
+    private void swapInsideDigit(int index) {
+        // Get which segments have to be enabled/disabled
+        Deque<Integer> enables = this.enable.get(index);
+        Deque<Integer> disables = this.disable.get(index);
+
+        // Swap inside the digit until one list is empty
+        while (!enables.isEmpty() && !disables.isEmpty()) {
+            int enableSegment = enables.pop();
+            int disableSegment = disables.pop();
+
+            this.addSwap(enableSegment, disableSegment, index);
+        }
+    }
+
+    /**
+     * Methode for saving swap of two given segments at given (different!) indexes in number into changingRow
+     *
+     * @param indexA   Index of first display
+     * @param segmentA Index of segment in first display
+     * @param indexB   Index of second display
+     * @param segmentB Index of segment in second display
+     */
+    private void addSwap(int indexA, int segmentA, int indexB, int segmentB) {
+        Swap swap = new Swap(indexA, segmentA, indexB, segmentB);
+        this.swaps.add(swap);
+    }
+
+    /**
+     * Methode for saving swap of two given segments at given index in number into changingRow;
+     * here the segments are in the same digit
+     *
+     * @param segmentA Index of fist segment
+     * @param segmentB Index of second segment
+     * @param index    Display's index
+     */
+    private void addSwap(int segmentA, int segmentB, int index) {
+        Swap swap = new Swap(index, segmentA, index, segmentB);
+        this.swaps.add(swap);
+    }
+\end{lstlisting}
 
 \end{document}

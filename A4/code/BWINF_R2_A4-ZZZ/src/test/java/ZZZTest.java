@@ -1,8 +1,10 @@
 import de.flo.zzz.AbstractZZZSolver;
+import de.flo.zzz.ZZZProblem;
 import de.flo.zzz.ZZZSolver;
 import de.flo.zzz.bitSequence.BitSequence;
 import de.flo.zzz.bitSequence.BitSequenceUtils;
 
+import de.flo.zzz.bruteforceAlgorithm.BruteforceZZZSolver;
 import de.flo.zzz.util.JavaUtils;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -23,8 +25,8 @@ public class ZZZTest {
 
     private static final Function<Integer, String> getFile = i -> String.format(fileFormat, i);
 
-    private List<Integer> getResult(short n, short k, short m, List<BitSequence> bitSequences) {
-        AbstractZZZSolver solver = new ZZZSolver(n, k, m, bitSequences);
+    private int[] getResult(int n, int k, int m, List<BitSequence> bitSequences) {
+        AbstractZZZSolver solver = new ZZZSolver(new ZZZProblem(n, k, m, bitSequences));
         return solver.getResult();
     }
 
@@ -86,10 +88,10 @@ public class ZZZTest {
             bits.add(new BitSequence(lines.get(i)));
         }
 
-        List<Integer> indexes = this.getResult(n, k, m, bits);
+        int[] indexes = this.getResult(n, k, m, bits);
         Assert.assertNotNull("Result was null!", indexes);
 
-        List<BitSequence> result = indexes.stream().map(bits::get).collect(Collectors.toList());
+        List<BitSequence> result = Arrays.stream(indexes).boxed().map(bits::get).collect(Collectors.toList());
         BitSequence xor = BitSequenceUtils.xor(result);
 
         boolean[] boos = new boolean[m];

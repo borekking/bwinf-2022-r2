@@ -63,9 +63,11 @@ public class HexMaxSolver extends AbstractHexMaxSolver {
      * @param index The current index in digits
      * @param A     The currently used amount of adds (segment which will be activated)
      * @param R     The currently used amount of removes (segment which will be deactivated)
-     * @return An array of the highest hex-number as hex-digits from given list (digits; constructor) starting at index or null if there is no
+     * @return An array of the biggest hex-number as hex-digits from given list (digits; constructor)
+     * starting at index or null if there is no
      */
     private HexDigit[] solveImp(int index, int A, int R) {
+        // Check in memo
         if (this.isInMemo(index, A, R)) {
             return this.getFromMemo(index, A, R);
         }

@@ -33,4 +33,8 @@ public class JavaUtils {
     public static <T> List<T> getAsList(T[] arr) {
         return Arrays.stream(arr).collect(Collectors.toList());
     }
+
+    public static <T> List<T> clone(List<T> l) {
+        return new ArrayList<>(l);
+    }
 }

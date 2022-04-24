@@ -85,6 +85,9 @@ public class ResultChangesCreater {
      */
     private final Map<Integer, Deque<Integer>> enable, disable;
 
+    /**
+     * List of needed swaps to get from given to result number
+     */
     private final LinkedList<Swap> swaps;
 
     public ResultChangesCreater(HexDigit[] digits, HexDigit[] result) {
@@ -100,14 +103,14 @@ public class ResultChangesCreater {
         this.disable = new HashMap<>();
         this.loadEnableDisable();
 
-        // Actually fill the changing row
-        this.fillChangingRow();
+        // Actually fill the swaps list
+        this.fillSwaps();
     }
 
     /**
-     * Methode for creating the SSDSetChangingRow for the changing from given to result
+     * Methode for filling the swaps list containing the swaps from given to result number
      */
-    private void fillChangingRow() {
+    private void fillSwaps() {
         // 1. Only swap inside digits
         this.swapInside();
 

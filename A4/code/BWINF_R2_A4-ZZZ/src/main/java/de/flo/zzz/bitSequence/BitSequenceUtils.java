@@ -8,8 +8,11 @@ import java.util.stream.Collectors;
 
 public class BitSequenceUtils {
 
-    // XOR on list of BitSequences
-    // -> (amount * bitAmount)
+    /**
+     * Function to do the XOR in a list of BitSequence
+     * @param sequences The list of BitSequences
+     * @return The resulting XOR
+     */
     public static BitSequence xor(List<BitSequence> sequences) {
         int amount = sequences.size();
 
@@ -41,25 +44,47 @@ public class BitSequenceUtils {
         return xor;
     }
 
+    /**
+     * Function to sort list of BitSequences in place, increasing
+     * @param list The list to sort
+     */
     public static void sortBitSequences(List<BitSequence> list) {
         list.sort(BitSequence::compareTo);
     }
 
+    /**
+     * Function to check if a String is a binary String
+     * @param str String to check
+     * @return If str is a binary String
+     */
     public static boolean isBinary(String str) {
         return str.matches("[0|1]*");
     }
 
-    // Binary-string to boolean-array
+    /**
+     * Function to convert a binary String to a boolean-array
+     * @param binaryNumber Binary String to convert
+     * @return The boolean-array
+     */
     public static boolean[] getBooleanArray(String binaryNumber) {
+        // Check string is a binary string
         if(!isBinary(binaryNumber)) {
             throw new RuntimeException("\"" + binaryNumber + "\" is not a binary number!");
         }
 
-        List<Boolean> bitList = Arrays.stream(binaryNumber.split("")).map(s -> s.equals("1")).collect(Collectors.toList());
+        // Convert binary string to list of booleans using streams
+        List<Boolean> bitList = Arrays.stream(binaryNumber.split(""))
+                .map(s -> s.equals("1")).collect(Collectors.toList());
+
+        // Convert list of boolean to boolean array and return array
         return JavaUtils.toPrimitiveArray(bitList);
     }
 
-    // Boolean-array to binary-string
+    /**
+     * Function to create binary String by given boolean-array
+     * @param bits Boolean-array to convert
+     * @return The resulting binary string
+     */
     public static String getBinaryString(boolean[] bits) {
         char[] chars = new char[bits.length];
 
@@ -68,46 +93,5 @@ public class BitSequenceUtils {
         }
 
         return new String(chars);
-    }
-
-    // Returns array of BS containing all possible BS with given size.
-    // Runtime: O(2^size * size)
-    public static BitSequence[] getAllCombinations(int size) {
-        int arraySize = (int) Math.pow(2, size);
-        boolean[][] BSBits = new boolean[arraySize][size];
-
-        for (int index = 0; index < size; index++) // size
-            reverseXORImp(BSBits, size, index); // O(2^n)
-
-        BitSequence[] result = new BitSequence[arraySize];
-        for (int i = 0; i < arraySize; i++)
-            result[i] = new BitSequence(BSBits[i]);
-
-        return result;
-    }
-
-    // Creating reverse xor combinations (with repetition) by putting the result for each digit into results (TODO Text)
-    // -> O(2^n)
-    private static void reverseXORImp(boolean[][] arr, int n, int index) {
-        int steps = (int) Math.pow(2, n - (index + 1));
-        int amount = (int) Math.pow(2, index + 1);
-
-        // Note: amount*steps = 2^{n-index-1} * 2^{index+1} = 2^{n-index-1+index+1} = 2^n
-        int current = 0;
-        for (int i = 0; i < amount; i++) {
-            if (i % 2 == 0) {
-                for (int j = 0; j < steps; j++) {
-                    arr[current][index] = true;
-
-                    current++;
-                }
-            } else {
-                for (int j = 0; j < steps; j++) {
-                    arr[current][index] = false;
-
-                    current++;
-                }
-            }
-        }
     }
 }

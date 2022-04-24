@@ -2,35 +2,51 @@ package de.flo.zzz.bitSequence;
 
 import java.util.Arrays;
 
+/**
+ * Comparable implementation of a bit sequence containing bits.
+ * <p>
+ * Example: 1001, 110, 000, 110001
+ *
+ */
 public class BitSequence implements Comparable<BitSequence> {
 
-    private final int value;
-
+    /**
+     * Amount of bit in the BitSequence
+     */
     private final int size;
 
+    /**
+     * The BitSequence's actual bits
+     */
     private final boolean[] bits;
 
+    /**
+     * Contractor creating a BitSequence with given bits
+     * @param bits The BitSequence's bits as boolean-array
+     */
     public BitSequence(boolean[] bits) {
         this.size = bits.length;
         this.bits = bits;
-        this.value = this.getValueImp();
     }
 
-    // Constructor taking a binary number
+    /**
+     * Constructor taking a binary number as bits
+     * @param binaryNumber The binary string
+     */
     public BitSequence(String binaryNumber) {
         this.size = binaryNumber.length();
         this.bits = BitSequenceUtils.getBooleanArray(binaryNumber);
-        this.value = this.getValueImp();
     }
 
-    private void check() {
-        if (this.size > 20) {
-            throw new RuntimeException("Too big BS!");
-        }
-    }
-
-    // XOR Operation
-    // -> O(size)
+    /**
+     * XOR operation of two BitSequences, returning a new BitSequence.
+     * <p>
+     * Note that this operation only works if both BitSequences have the same length.
+     * <p>
+     * This methode runs in O(n) where n is the BitSequences' size.
+     * @param that The second BitSequence to do the XOR on
+     * @return The resulting XOR as new BitSequence
+     */
     public BitSequence xor(BitSequence that) {
         // Make sure sequences have same length
         if (this.size != that.size) {
@@ -46,25 +62,6 @@ public class BitSequence implements Comparable<BitSequence> {
 
         // Return NEW BitSequence
         return new BitSequence(result);
-    }
-
-    public BitSequence subSequence(int fromInclusive, int toExclusive) {
-        boolean[] subBits = Arrays.copyOfRange(this.bits, fromInclusive, toExclusive);
-        return new BitSequence(subBits);
-    }
-
-    private int getValueImp() {
-        int exp = this.size - 1;
-        int value = 0;
-
-        for (boolean b : this.bits) {
-            if (b)
-                value += Math.pow(2, exp);
-
-            exp--;
-        }
-
-        return value;
     }
 
     @Override
@@ -83,41 +80,36 @@ public class BitSequence implements Comparable<BitSequence> {
 
     @Override
     public int hashCode() {
-        return value;
+        return Arrays.hashCode(this.bits);
     }
 
     @Override
     public int compareTo(BitSequence that) {
-        return Integer.compare(that.value, this.value);
+        if (this.size != that.size) {
+            throw new RuntimeException("Can not compare BitSequences, which have not the same size!");
+        }
 
-//        if (this.size != that.size) {
-//            throw new RuntimeException("Can not compare BitSequences, which have not the same size!");
-//        }
-//
-//        // Compare bit arrays (this.bits, that.bits) using BitSequence#getBit
-//        for (int i = 0; i < this.size; i++) {
-//            boolean bitThis = this.getBit(i);
-//            boolean bitThat = that.getBit(i);
-//
-//            if (bitThis && !bitThat) return 1; // Current bit in this is true, current bit in that isn't -> this > that
-//            if (bitThat && !bitThis) return -1; // Current bit in that is true, current bit in this isn't -> this < that
-//        }
-//
-//        // Arrays are equal
-//        return 0;
+        // Compare bit arrays (this.bits, that.bits) using BitSequence#getBit
+        for (int i = 0; i < this.size; i++) {
+            boolean bitThis = this.getBit(i);
+            boolean bitThat = that.getBit(i);
+
+            if (bitThis && !bitThat) return 1; // Current bit in this is true, current bit in that isn't -> this > that
+            if (bitThat && !bitThis) return -1; // Current bit in that is true, current bit in this isn't -> this < that
+        }
+
+        // Arrays are equal
+        return 0;
     }
 
-    public int getValue() {
-        return value;
-    }
-
-    // Returns bit on given index
+    /**
+     * Methode to get a bit of BitSequence on given index
+     * @param index The bit's index
+     * @return The bit at given index
+     * @throws ArrayIndexOutOfBoundsException If index >= size
+     */
     public boolean getBit(int index) {
         return this.bits[index];
-    }
-
-    public boolean[] getBits() {
-        return this.bits.clone();
     }
 
     public int getSize() {

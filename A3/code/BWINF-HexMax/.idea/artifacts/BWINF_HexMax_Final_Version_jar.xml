@@ -1,8 +1,11 @@
 <component name="ArtifactManager">
-  <artifact type="jar" build-on-make="true" name="BWINF_HexMax-Final_Version:jar">
+  <artifact type="jar" name="BWINF_HexMax-Final_Version:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/BWINF_HexMax_Final_Version_jar</output-path>
     <root id="archive" name="BWINF_HexMax-Final_Version.jar">
-      <element id="module-output" name="main" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="BWINF_HexMax-Final_Version" />
     </root>
   </artifact>
 </component>
