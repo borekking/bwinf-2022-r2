@@ -943,7 +943,8 @@ Diese Methode ist die Umsetzung des Algorithmus zum Finden der hoechst moegliche
         for (HexDigit digit : HexDigitUtils.getHexDigitsDecreasing()) {
             // a and r in int array obtained HexDigitChanges object
             int[] values = this.hexDigitChanges.getChanges(current, digit).getValues();
-            int a = values[0], r = values[1]; // Amount of segments to add (a) / remove (r) to get from current to digit
+						// Amount of segments to add (a) / remove (r) to get from current to digit
+            int a = values[0], r = values[1];
 
             // Recursive part to get the best solution for next index with new A and R
             HexDigit[] subResult = this.solveImp(nextIndex, A + a, R + r);
@@ -1057,10 +1058,12 @@ Diese Methode soll alle die Segmente jeder Ziffer finden, welche aktiviert und d
         // by looping through all digits
         for (int i = 0; i < this.size; i++) {
             // Get changes needed to get from given at i to result at i
-            DigitChanges changes = HexDigitChanges.getSingleton().getChanges(this.given[i], this.result[i]);
+            DigitChanges changes = HexDigitChanges.getSingleton()
+															.getChanges(this.given[i], this.result[i]);
 
             // Lists of segments that have to be enabled/disabled by index
-            Deque<Integer> adds = changes.getAdd(ArrayDeque::new), removes = changes.getRemove(ArrayDeque::new);
+            Deque<Integer> adds = changes.getAdd(ArrayDeque::new), removes = changes
+																									.getRemove(ArrayDeque::new);
 
             // Add arrays to their maps
             this.enable.put(i, adds);
@@ -1099,7 +1102,8 @@ Nach Aufruf der Methode soll die Liste an Taeuschen ("`swaps"') vollkommen befue
                 enableDeque = this.enable.get(enableIndex);
             }
 
-            // Set disable Deque to next non-empty Deque in disable map if needed and possible (by index)
+            // Set disable Deque to next non-empty Deque in disable map if needed 
+						// and possible (by index)
             while (disableDeque.isEmpty() && disableIndex < this.size - 1) {
                 disableIndex++;
                 disableDeque = this.disable.get(disableIndex);
@@ -1145,7 +1149,8 @@ Nach Aufruf der Methode soll die Liste an Taeuschen ("`swaps"') vollkommen befue
     }
 
     /**
-     * Methode for saving swap of two given segments at given (different!) indexes in number into changingRow
+     * Methode for saving swap of two given segments at given (different!) indexes in number 
+		 * into changingRow
      *
      * @param indexA   Index of first display
      * @param segmentA Index of segment in first display
