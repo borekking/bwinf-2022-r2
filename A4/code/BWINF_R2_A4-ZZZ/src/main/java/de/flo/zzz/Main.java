@@ -66,7 +66,7 @@ public class Main {
 
     private Main() throws FileNotFoundException {
         // "stapel%d.txt";
-        // this.runTask("inputs/stapel3.txt");
+//        this.runTask("inputs/stapel2.txt");
         this.runAllTasks(this::runTask, 6);
     }
 
@@ -75,9 +75,13 @@ public class Main {
 
         for (int i = 0; i < amount; i++) {
             String fileName = String.format(format, i);
+            System.out.println(fileName + ":");
+
             ZZZProblem task = Main.readFile(fileName);
 
             consumer.accept(task);
+
+            System.out.println("----------");
         }
     }
 
