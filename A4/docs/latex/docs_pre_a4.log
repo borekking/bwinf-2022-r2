@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.9.13)  25 APR 2022 23:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.9.13)  25 APR 2022 23:35
 entering extended mode
 **./docs_pre_a4.tex
 (docs_pre_a4.tex
@@ -1981,7 +1981,7 @@ Package rerunfilecheck Info: File `docs_pre_a4.out' has not changed.
 Here is how much of TeX's memory you used:
  20544 strings out of 478864
  368587 string characters out of 2847238
- 1178602 words of memory out of 3000000
+ 1178608 words of memory out of 3000000
  37879 multiletter control sequences out of 15000+600000
  424161 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2014,9 +2014,9 @@ ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Anwende
 r/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Us
 ers/Anwender/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/
 msbm10.pfb>
-Output written on docs_pre_a4.pdf (20 pages, 390393 bytes).
+Output written on docs_pre_a4.pdf (20 pages, 390970 bytes).
 PDF statistics:
- 1111 PDF objects out of 1200 (max. 8388607)
+ 1113 PDF objects out of 1200 (max. 8388607)
  305 named destinations out of 1000 (max. 500000)
  225 words of extra memory for PDF output out of 10000 (max. 10000000)
 
