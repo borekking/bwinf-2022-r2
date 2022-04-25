@@ -4,7 +4,6 @@ import java.util.*;
 
 import de.flo.zzz.Main;
 import de.flo.zzz.util.HammingUtils;
-import de.flo.zzz.util.JLinAlgSeri;
 import de.flo.zzz.util.JLinAlgUtils;
 
 import org.jlinalg.Matrix;
@@ -165,7 +164,7 @@ public class FinalSolutionFinder {
             for (int i = 0; i < this.frees; i++) {
                 if (row[i]) c++;
             }
-            System.out.println(c + " -> " + Main.binomialCoefficient(c, n));
+//            System.out.println(c + " -> " + Main.binomialCoefficient(c, n));
             return null;
         }
 

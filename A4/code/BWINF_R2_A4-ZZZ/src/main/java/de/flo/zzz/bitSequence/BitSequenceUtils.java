@@ -6,7 +6,16 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Utility class for BS', providing some useful functions
+ */
 public class BitSequenceUtils {
+
+    /**
+     * Private constructor, s.t. this class can not have objects
+     */
+    private BitSequenceUtils() {
+    }
 
     /**
      * Function to do the XOR in a list of BitSequence
@@ -65,11 +74,12 @@ public class BitSequenceUtils {
      * Function to convert a binary String to a boolean-array
      * @param binaryNumber Binary String to convert
      * @return The boolean-array
+     * @throws IllegalArgumentException If the String is not binary
      */
     public static boolean[] getBooleanArray(String binaryNumber) {
         // Check string is a binary string
         if(!isBinary(binaryNumber)) {
-            throw new RuntimeException("\"" + binaryNumber + "\" is not a binary number!");
+            throw new IllegalArgumentException("\"" + binaryNumber + "\" is not a binary number!");
         }
 
         // Convert binary string to list of booleans using streams

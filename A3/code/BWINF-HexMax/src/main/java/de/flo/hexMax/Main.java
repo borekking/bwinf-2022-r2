@@ -20,6 +20,12 @@ import java.util.Scanner;
 public class Main {
 
     /**
+     * Private constructor, s.t. this class can not have objects
+     */
+    private Main() {
+    }
+
+    /**
      * main Methode of the program
      * @param args Program's args (unused)
      */
@@ -40,7 +46,7 @@ public class Main {
     }
 
     /**
-     * Methode asking the user for inputs (file name/path, print-changes) and running the problem solving
+     * Methode asking the user for inputs (file name/path, print-changes) and running the problem-solving
      * @param sc A console Scanner
      */
     private static void run(Scanner sc) {

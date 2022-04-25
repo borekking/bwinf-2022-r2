@@ -1,72 +1,24 @@
 package de.flo.zzz;
 
 import de.flo.zzz.bitSequence.BitSequence;
+import de.flo.zzz.bitSequence.BitSequenceUtils;
 import de.flo.zzz.util.JavaUtils;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
 import java.util.function.Consumer;
-import java.util.function.Function;
 
+/**
+ * Main class of whole Program
+ */
 public class Main {
 
-    private static Function<ZZZProblem, int[]> solve =
-            prop -> new ZZZSolver(prop).getResult();
-
-    /*
-     * Formula:
-     *      n! / (k! * (n-k)! )
-     *
-     *   = (1 * ... * (n-k) * ... * n) / (k! * (1 * ... * (n-k)))
-     *   = ((n-k+1) * ... * n) / k!
-     */
-    public static BigDecimal binomialCoefficient(int n, int k) {
-        BigDecimal upper = multiplyRange(n - k + 1, n); // (n-k+1) * ... * n
-        BigDecimal down = multiplyRange(1, k); // 1 * ... * k
-        return upper.divide(down, 0, RoundingMode.DOWN);
-    }
-
-    // Calculate (a * ... * b), where a < b
-    // Calling (1, n) is equal to n! = 1 * ... * n
-    public static BigDecimal multiplyRange(int a, int b) {
-        // !(a <= b) = a > b
-        if (a > b) return new BigDecimal(-1);
-
-        BigDecimal result = new BigDecimal(1);
-        for (int i = a; i <= b; i++) {
-            result = result.multiply(new BigDecimal(i));
-        }
-
-        return result;
-    }
-
-    /*
-     * Note:
-     *
-     * Zara's card: k + 1
-     * Added cards: m - k - 1
-     *
-     */
-
-    // unsorted 0: [2, 3, 5, 9, 11]
-    // unsorted 1: [1, 2, 4, 6, 7, 9, 11, 14, 15]
-    // unsorted 5: [70, 77, 163, 167, 185]
-
-    public static void main(String[] args) throws FileNotFoundException {
-        new Main();
-    }
-
-    private Main() throws FileNotFoundException {
-        // "stapel%d.txt";
-//        this.runTask("inputs/stapel2.txt");
-        this.runAllTasks(this::runTask, 6);
-    }
-
-    private void runAllTasks(Consumer<ZZZProblem> consumer, int amount) throws FileNotFoundException {
+    private static void runAllTasks(Consumer<ZZZProblem> consumer, int amount) throws FileNotFoundException {
         String format = "inputs/stapel%d.txt";
 
         for (int i = 0; i < amount; i++) {
@@ -81,11 +33,69 @@ public class Main {
         }
     }
 
-    private void runTask(ZZZProblem task) {
+    /**
+     * Private constructor, s.t. this class can not have objects
+     */
+    private Main() {
+    }
+
+    /**
+     * main Methode of the program
+     * @param args Program's args (unused)
+     */
+    public static void main(String[] args) throws FileNotFoundException {
+//        // Declare one Scanner for console to use for the whole program
+//        Scanner sc = new Scanner(System.in);
+//
+//        boolean repeat = true;
+//
+//        // Run the procedure, ask the user if he wants to repeat,
+//        // if so, repeat.
+//        while (repeat) {
+//            run(sc);
+//
+//            repeat = getBoolInput(sc, "Do you want to repeat this program (y/n)?");
+//            if (repeat) System.out.println("---------------" + System.lineSeparator());
+//        }
+
+//        runTask("inputs/stapel3.txt");
+        runAllTasks(Main::runTask, 6);
+    }
+
+    /**
+     * Methode asking the user for inputs (file name/path, print-changes) and running the problem-solving
+     * @param sc A console Scanner
+     */
+    private static void run(Scanner sc) {
+        ZZZProblem problem = null;
+
+        while (problem == null) {
+            String fileName = getInput(sc, "Please enter file name/path:");
+            try {
+                problem = readFile(fileName);
+            } catch (FileNotFoundException e) {
+                System.out.println("Could not find file name/path \"" + fileName + "\"! Please try again:");
+                continue;
+            }
+
+            if (problem == null) {
+                System.out.println("Given file seems to be unvalid!");
+                continue;
+            }
+
+            runTask(problem);
+        }
+    }
+
+    /**
+     * Functio for running an actual problem instance
+     * @param task The ZZZ-Problem to run
+     */
+    private static void runTask(ZZZProblem task) {
         List<BitSequence> bitSequences = task.getBitSequences();
 
         long millis = System.currentTimeMillis();
-        int[] indexes = solve.apply(task);
+        int[] indexes = new ZZZSolver(task).getResult();
         millis = System.currentTimeMillis() - millis;
 
         System.out.println("Bit Sequences:");
@@ -100,30 +110,84 @@ public class Main {
         System.out.println();
     }
 
-    private void runTask(String fileName) throws FileNotFoundException {
-        ZZZProblem task = Main.readFile(fileName);
-
-        this.runTask(task);
-    }
-
-    public static ZZZProblem readFile(String fileName) throws FileNotFoundException {
+    /**
+     * Function to create ZZZProblem instance given a file; making sure that problem will be zero if any input format is wrong
+     * @param fileName The file's name
+     * @return The ZZZProblem instance
+     * @throws FileNotFoundException If the file could not be found
+     */
+    private static ZZZProblem readFile(String fileName) throws FileNotFoundException {
         File file = new File(fileName);
 
-        List<String> lines = JavaUtils.readFile(file);
+        List<String> lines;
+        try {
+            lines = JavaUtils.readFile(file);
+        } catch (FileNotFoundException e) {
+            throw new FileNotFoundException();
+        }
+
+        if (lines.size() < 1) return null;
 
         String firstLine = lines.get(0);
 
         String[] splitted = firstLine.split(" ");
 
-        int n = Short.parseShort(splitted[0]);
-        int k = Short.parseShort(splitted[1]);
-        int m = Short.parseShort(splitted[2]);
+        int n, k, m;
+        try {
+            n = Integer.parseInt(splitted[0]);
+            k = Integer.parseInt(splitted[1]);
+            m = Integer.parseInt(splitted[2]);
+        } catch(NumberFormatException e) {
+            return null;
+        }
+
+        if (lines.size() <= n) return null;
 
         List<BitSequence> bits = new ArrayList<>();
         for (int i = 1; i <= n; i++) {
+            if (!BitSequenceUtils.isBinary(lines.get(i))) {
+                return null;
+            }
+
             bits.add(new BitSequence(lines.get(i)));
         }
 
         return new ZZZProblem(n, k, m, bits);
+    }
+
+    /**
+     * Methode to get a user's input
+     * @param sc Scanner for console
+     * @param msg Message to send before getting input
+     * @return The user input
+     */
+    private static String getInput(Scanner sc, String msg) {
+        System.out.println(msg);
+
+        if (sc.hasNext()) {
+            return sc.nextLine();
+        }
+
+        return null; // Unreachable
+    }
+
+    /**
+     * Methode to get a boolean input from user (true=y, false=n)
+     * @param sc Scanner for console
+     * @param msg Message to send before getting input
+     * @return The boolean input from the user
+     */
+    private static boolean getBoolInput(Scanner sc, String msg) {
+        System.out.println(msg);
+
+        while (sc.hasNext()) {
+            String str = sc.nextLine().toLowerCase();
+
+            if (str.equals("y")) return true;
+            else if (str.equals("n")) return false;
+            else System.out.println("Input did not match 'y' or 'n'! Please try again!" + System.lineSeparator() + msg);
+        }
+
+        return false; // Unreachable
     }
 }

@@ -9,18 +9,43 @@ import org.jlinalg.f2.F2;
 
 import java.util.List;
 
+/**
+ * Class implementing a ZZZ-Problem
+ */
 public class ZZZProblem {
 
-    /*
-     * n = size of bitSequences
-     * m = amount if bits per bitSequence
-     * k = amount of added bitSequences
-     *
+    /**
+     * Amount of bit sequences
      */
-    public final int n, k, m, size;
+    public final int n;
 
+    /**
+     * Amount of added  bit sequences
+     */
+    public final int k;
+
+    /**
+     * Amount if bits per bit sequence/bit sequences' size
+     */
+    public final int m;
+
+    /**
+     * Amount of bit sequences to find (which create the zero-bit-sequences)
+     */
+    public final int size;
+
+    /**
+     * The given bit sequences
+     */
     private final List<BitSequence> bitSequences;
 
+    /**
+     * Constructor taking the needed attributes
+     * @param n Amount of bit sequences
+     * @param k Amount of added  bit sequences
+     * @param m Amount if bits per bit sequence/bit sequences' size
+     * @param bitSequences The bit sequences
+     */
     public ZZZProblem(int n, int k, int m, List<BitSequence> bitSequences) {
         this.n = n;
         this.k = k;
@@ -29,7 +54,11 @@ public class ZZZProblem {
         this.bitSequences = bitSequences;
     }
 
-    public Matrix<F2> createLinearSystem() {
+    /**
+     * Methode to create the matrix corresponding to the problem, where each bit sequences is a column
+     * @return The matrix
+     */
+    public Matrix<F2> createMatrix() {
         // Define amount of rows and columns
         int rows = this.m;
         int columns = this.n;
@@ -51,6 +80,9 @@ public class ZZZProblem {
         return new Matrix<>(matrixArray);
     }
 
+    /**
+     * @return A clone of the given bit sequences
+     */
     public List<BitSequence> getBitSequences() {
         return JavaUtils.clone(this.bitSequences);
     }

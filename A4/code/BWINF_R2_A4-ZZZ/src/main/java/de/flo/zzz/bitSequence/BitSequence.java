@@ -64,11 +64,20 @@ public class BitSequence implements Comparable<BitSequence> {
         return new BitSequence(result);
     }
 
+    /**
+     * Methode to create readable BS
+     * @return Readable BS
+     */
     @Override
     public String toString() {
         return BitSequenceUtils.getBinaryString(this.bits);
     }
 
+    /**
+     * Equals methode comparing by BS by bits
+     * @param o Object to check equality
+     * @return If this and o are equal by content
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -78,11 +87,20 @@ public class BitSequence implements Comparable<BitSequence> {
         return Arrays.equals(this.bits, that.bits);
     }
 
+    /**
+     * HashCode methode, creating HashCode by content (bits)
+     * @return HashCode created by bits
+     */
     @Override
     public int hashCode() {
         return Arrays.hashCode(this.bits);
     }
 
+    /**
+     * Comparable implementation to make BS' comparable
+     * @param that BS to compare to
+     * @return 1 if this is bigger, -1 if that is bigger, 0 for equality
+     */
     @Override
     public int compareTo(BitSequence that) {
         if (this.size != that.size) {

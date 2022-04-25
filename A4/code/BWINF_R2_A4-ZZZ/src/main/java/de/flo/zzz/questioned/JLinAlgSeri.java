@@ -1,5 +1,6 @@
-package de.flo.zzz.util;
+package de.flo.zzz.questioned;
 
+import de.flo.zzz.util.JLinAlgUtils;
 import org.jlinalg.AffineLinearSubspace;
 import org.jlinalg.Matrix;
 import org.jlinalg.Vector;
