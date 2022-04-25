@@ -18,21 +18,6 @@ import java.util.function.Consumer;
  */
 public class Main {
 
-    private static void runAllTasks(Consumer<ZZZProblem> consumer, int amount) throws FileNotFoundException {
-        String format = "inputs/stapel%d.txt";
-
-        for (int i = 0; i < amount; i++) {
-            String fileName = String.format(format, i);
-            System.out.println(fileName + ":");
-
-            ZZZProblem task = Main.readFile(fileName);
-
-            consumer.accept(task);
-
-            System.out.println("----------");
-        }
-    }
-
     /**
      * Private constructor, s.t. this class can not have objects
      */
@@ -44,22 +29,19 @@ public class Main {
      * @param args Program's args (unused)
      */
     public static void main(String[] args) throws FileNotFoundException {
-//        // Declare one Scanner for console to use for the whole program
-//        Scanner sc = new Scanner(System.in);
-//
-//        boolean repeat = true;
-//
-//        // Run the procedure, ask the user if he wants to repeat,
-//        // if so, repeat.
-//        while (repeat) {
-//            run(sc);
-//
-//            repeat = getBoolInput(sc, "Do you want to repeat this program (y/n)?");
-//            if (repeat) System.out.println("---------------" + System.lineSeparator());
-//        }
+        // Declare one Scanner for console to use for the whole program
+        Scanner sc = new Scanner(System.in);
 
-//        runTask("inputs/stapel3.txt");
-        runAllTasks(Main::runTask, 6);
+        boolean repeat = true;
+
+        // Run the procedure, ask the user if he wants to repeat,
+        // if so, repeat.
+        while (repeat) {
+            run(sc);
+
+            repeat = getBoolInput(sc, "Do you want to repeat this program (y/n)?");
+            if (repeat) System.out.println("---------------" + System.lineSeparator());
+        }
     }
 
     /**

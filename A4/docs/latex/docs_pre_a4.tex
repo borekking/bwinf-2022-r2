@@ -622,10 +622,14 @@ $$
 \mathcal{O}(f(A)^{r})
 $$
 ist.
-\\\\
-Dieser Loesungsweg hat also ebenbenfalls eine exponentielle Laufzeit und laesst sich nur anwenden, wenn die Loesungsmenge des homogenen System der Matrix klein genug ist, bezueglich der Anzahl an freinen Variablen.\\
+
+\subsection{Anwendungsmoeglichkeit}
+Dieser Loesungsweg hat also ebenbenfalls eine exponentielle Laufzeit und laesst sich nur anwenden, wenn die Loesungsmenge des homogenen Systems der Matrix klein genug ist, bezueglich der Anzahl an freien Variablen.\\
 Dies laesst sich aber durch das Gausz-Verfahren schnell herrausfinden.\\
 Ist die Loesungsmenge allerdings klein genug, so kann eine exakte Loesung berechnet werden.
+\\\\
+Des Weiteren kann dieser Algorithmus auch auf Faelle angewendet, in welchen die Anzahl an freien Variablen zu grosz ist, um alle Moeglichkeiten auszuprobieren.\\
+Fuer diese Faelle kann man die Groesze der Kombinationen an freien Variablen beschraenken. Somit erhaelt man eine polynomielle Laufzeit (z.B. $\mathcal{O}(f(A)^{3})$) mit welcher eine Loesung gefunden werden kann, aber nicht muss.
 
 \section{Implementierung}
 Das Programm wurde in Java 8 und objektorentiert geschrieben.
@@ -640,9 +644,9 @@ Beim Loesen eines homogenen Systems erzeugt die Java-Bibliothek dabei ein Array 
 Des Weiteren ermoeglicht sie, dass Rechnen (auch mit Vektoren und Matrix) im Koerper \(\mathbb{Z}_{2}\). 
 \\\\
 Eine weitere Wichtigkeit der Umsetzung ist, dass das Programm zwischen den Algorithmen abwaegt, oder keinen waehlt, je nach der Eingabe.\\
-Denn ist die Eingabe zu grosz, wird das Programm aufgrund der exponentiellen Laufzeit zu lange brauchen. \\
-Genauer wird zunaechst die Matrix passend zur Eingabe erstellt. Ist die Anzahl an freien Variablen kleiner als $4$, so wird der zweite Algorithmus verwendet. Andernfalls wird ueberprueft, ob $k \leq 4$ ist. In dem Fall wird Algorithmus 1 benutzt.
-In jedem anderen Fall ist das Programm nicht im Stande, die Loesung zu berechnen.
+Denn ist die Eingabe zu grosz, wird das Programm aufgrund der exponentiellen Laufzeiten zu lange brauchen. \\
+Genauer wird zunaechst ueberprueft, ob $k \leq 4$ ist. In dem Fall wird Algorithmus 1 benutzt. Ist dies nicht der Fall, wird anschlieszend die Matrix passend zur Eingabe erstellt und das zur Matrix gehoerende homogene System geloest. Fuer diesen Loesungsraum wird dann Algorithmus 2 (bzw. dessen zweiter Teil) benutzt, wobei die maximale Groesze der Kombinationen 3 ist.\\
+Wird dabei keine Loesung gefunden, war das Programm nicht im Stande, die Loesung zu berechnen und gibt ein leeres Array zurueck. In den anderen Faellen, wird ein Array der Indexe der Bitfolgen zurueckgegeben.
 
 \section{Aufgabenteil c - Beispiele}
 Nun folgen die Loesungen des Programms fuer die Eingaben der bwinf website.\\
@@ -655,7 +659,7 @@ Eingabe & Algorithmus 1 & Algorithmus 2 \\
 stapel0 & Ja & Ja \\
 stapel1 & Ja & Ja \\ 
 stapel2 & Nein & Ja \\
-stapel3 & Nein & Nein \\
+stapel3 & Nein & Ja \\
 stapel4 & Nein & Nein \\
 stapel5 & Ja & Nein \\
 \end{tabular}
@@ -741,8 +745,35 @@ Bitfolgen: \\
 111011101010111001111011110001110011011110110101010111110001101000110100011 \\
 00000111101000010001100100000011101100010001011101000
 
+\subsection{stapel3}
+Zeit: 19ms \\
+Indexe: $[23, \ 26, \ 34, \ 43, \ 71, \ 98, \ 110, \ 120, \ 127, \ 133, \ 144]$ \\
+Bitfolgen: \\
+101101110100101111101100110001010111010000111111000010000011001111111110010 \\
+01100011100011110011111101000111010111000011110110101, \\\\
+101110001011111000101111101010101011001100010000110110011000101101100000011 \\
+00001101111010100001100100010001101000110010011001100, \\\\
+110010110101111111101110100010001001000001011001110101001111101000001001111 \\
+10001110001011000000001001110110010011100000110011110, \\\\
+010100001011011100111100011100110100110011111110000010000001000000101111000 \\
+01110100001001001111101111001010011110110111110011011, \\\\
+101100000010011001101101010001001100111001011001101011110111111010000011101 \\
+00011000001100000010101111111000000000101111010010001, \\\\
+011111011000101011001100111010110101010011010001100111111010101100000001110 \\
+00110101001111111110100100001100010011111100010110100, \\\\
+101111110101010011000001011011001111010000101000101001000010011110101101001 \\
+00101100011101100011010100000011010101001110100010111, \\\\
+011100011111101010000100111000111111111001111011011100010101000101100011000 \\
+10101000010100010100001010000010100001000101110101100, \\\\
+011101101001110010000110111001001010101111110010111100000010110011011001011 \\
+00111001011100000011010010011100111100101011010010111, \\\\
+001000001110011100011010100011111100111100010111101001100101011000100110001 \\
+00111101011001111001111111011110110011111001010100001, \\\\
+110000010110010001101001110111111110111110110110101111101000101100001011110 \\
+00111001010100101100000111011101011010101100111010100
+
 \subsection{stapel5}
-Zeit: 591ms \\
+Zeit: 228ms \\
 Indexe: $[77, \ 185, \ 163, \ 167, \ 70]$ \\
 Bitfolgen:
 $$
@@ -798,25 +829,267 @@ Zusammengefasst muss man also die $n+1$ gefundenen Karten sortieren und kann ans
 Auf die gegebene Aufgabe laesst sich dieses Verfahren einfach uebertragen, indem die 11 gefundenen Karten sortiert werden und fuer jedes Haus $k$ ebenfalls die Karten $k$ und $k+1$ probiert werden. 
 
 \section{Quellcode}
-% \begin{lstlisting}[language=Java]
-% \end{lstlisting}
 Nun folgt der Quellcode der wichtigsten Teile des Programs.
 
 \subsection{Erstellen der Matrix}
 Diese Methode ist Teil der "`ZZZProblem"' Klasse und erstellt aus dem gegebenen ZZZ-Problem eine Matrix,  wie sie in Kapitel "`Loesung des Gleichungssystems mit bestimmtem Hamming-Gewicht"' beschrieben ist.
+\\
+\begin{lstlisting}[language=Java]
+    /**
+     * Methode to create the matrix corresponding to the problem, where each bit sequences is a column
+     * @return The matrix
+     */
+    public Matrix<F2> createMatrix() {
+        // Define amount of rows and columns
+        int rows = this.m;
+        int columns = this.n;
+
+        // Create matrix
+        F2[][] matrixArray = new F2[rows][columns];
+
+        // Iterate through rows and columns
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < columns; col++) {
+                // Get current BS' bit, transform to F2, set in matrix-array
+                boolean val = this.bitSequences.get(col).getBit(row);
+                F2 f2 = JLinAlgUtils.boolToF2Function.apply(val);
+
+                matrixArray[row][col] = f2;
+            }
+        }
+
+        return new Matrix<>(matrixArray);
+    }
+\end{lstlisting}
+
 
 \subsection{Algorithmus 1}
 \\Die folgenden Methoden sind Teil der Klasse, welche den Algorithmus 1 implementiert.
+\\\\
+\textbf{Erstellen der Kombinationen} \\
+\begin{lstlisting}[language=Java]
+		/**
+     * Methode to create all combinations of given size subsets of BitSequences
+     * in bitSequences list.
+     * @param size The size of the subsets
+     * @return A HashMap of BitSequences b pointing to set of all indexes (int-arrays
+     * sized size) creating b.
+     */
+    private Map<BitSequence, Set<int[]>> getCombinations(int size) {
+        Map<BitSequence, Set<int[]>> combinations = new HashMap<>();
+
+        BitSequence zeroBS = new BitSequence(new boolean[this.problem.m]);
+        int[] indexes = new int[size];
+        this.getCombinationsImp(combinations, zeroBS, indexes, 0, -1, size);
+
+        return combinations;
+    }
+
+    /**
+     * Recursive implementation of getting all combinations
+     * @param combinations The HashMap which the results will be added to
+     * @param currentBS The current BitSequences created by the indexes
+     * @param indexes The indexes used
+     * @param indexInArray The current index in indexes
+     * @param indexInList The current index in bitSequences list
+     * @param k The amount of indexes not choosen yet
+     */
+    public void getCombinationsImp(Map<BitSequence, Set<int[]>> combinations,
+                                   BitSequence currentBS, int[] indexes, int indexInArray,
+                                   int indexInList, int k) {
+        // Base case: no indexes left to add
+        if (k == 0) {
+            Set<int[]> combination = combinations.computeIfAbsent(currentBS, k1 -> new HashSet<>());
+            combination.add(Arrays.copyOf(indexes, indexes.length));
+            return;
+        }
+
+        int start = indexInList + 1;
+        int end = this.problem.n - k;
+        int nextK = k - 1;
+        int nextIndexInArray = indexInArray + 1;
+
+        for (int i = start; i < end; i++) {
+            indexes[indexInArray] = i;
+            BitSequence nexBS = currentBS.xor(this.bitSequences.get(i));
+            getCombinationsImp(combinations, nexBS, indexes, nextIndexInArray, i, nextK);
+        }
+    }
+\end{lstlisting}
+\\
+\\
+\textbf{Finden der Loesung fuer k gerade} \\
+\begin{lstlisting}[language=Java]
+		/**
+     * Implementation of bruteforcing if k+1 is even.
+     * @param combinations All combinations of the BitSequences
+     * @return The result to the ZZZ-Problem
+     */
+    private int[] findEvenSolution(Map<BitSequence, Set<int[]>> combinations) {
+        // Go through all different combinations and the associated set of< indexes.
+        // For each set, search for two disjoint arrays in the set and return
+        // both (merged) if they could be found.
+        for (Set<int[]> set : combinations.values()) {
+            int[] disjointArray = this.findDisjointArrays(set);
+            if (disjointArray != null) return disjointArray;
+        }
+
+        return null;
+    }
+
+    /**
+     * Methode to find two disjoint arrays in a set of int-arrays
+     * @param set The set with int-arrays
+     * @return Any two disjoint array merged into one array, or null
+     * if there is non
+     */
+    private int[] findDisjointArrays(Set<int[]> set) {
+        // Go through all combinations of two int-arrays using
+        // double-loop. Check if both current int-arrays are
+        // disjoint, if so return them merged.
+        for (int[] arr1 : set) {
+            for (int[] arr2 : set) {
+                if (this.isDisjoint(arr1, arr2)) {
+                    return this.mergeArrays(arr1, arr2);
+                }
+            }
+        }
+
+        return null;
+    }
+\end{lstlisting}
+\\
+\\
+\textbf{Finden der Loesung fuer k ungerade} \\
+\begin{lstlisting}[language=Java]
+		/**
+     * Implementation of bruteforcing if k+1 is odd.
+     * @param combinations All combinations of the BitSequences
+     * @return The result to the ZZZ-Problem
+     */
+    private int[] findOddSolution(Map<BitSequence, Set<int[]>> combinations) {
+        // Go through all BS, for each go through the combinations.
+        // XOR current BS with current combination and check for combinations
+        // creating the XOR. Now check for any disjoint solutions of all BS.
+        for (int i = 0; i < this.problem.n; i++) {
+            BitSequence bs1 = this.bitSequences.get(i);
+            int[] arrI = new int[]{i};
+
+            for (BitSequence bs2 : combinations.keySet()) {
+                Set<int[]> set = combinations.get(bs2);
+                BitSequence bs3 = bs1.xor(bs2);
+
+                Set<int[]> set2 = combinations.get(bs3);
+                if (set2 == null) continue;
+
+                int[] disjointArray = this.findDisjointArrays(set, set2, arrI);
+                if (disjointArray != null) return disjointArray;
+            }
+        }
+        return null;
+    }
+
+    /**
+     * Methode to find two int-arrays int two sets of int-arrays which are
+     * disjoint and don't contain any element of a third given int-array
+     * @param set1 First set of int-arrays
+     * @param set2 Second set of int-arrays
+     * @param arr The third int-array
+     * @return Any two matching arrays merged into one array with the third one,
+     * or null if there is non
+     */
+    private int[] findDisjointArrays(Set<int[]> set1, Set<int[]> set2, int[] arr) {
+        // Go through all combinations of two int-arrays using
+        // double-loop. Check if both current int-arrays and the third array
+        // are disjoint, if so return them merged.
+        for (int[] arr1 : set1) {
+            for (int[] arr2 : set2) {
+                if (this.isDisjoint(arr1, arr2, arr)) {
+                    return this.mergeArrays(arr1, arr2, arr);
+                }
+            }
+        }
+
+        return null;
+    }
+\end{lstlisting}
 
 \subsection{Algorithmus 2}
 \textbf{Loesen des homogenen Systems} \\
-Diese Methode loest das homogene System einer Matrix mit Hilfe der JLinAlg Java-Bibliothek und loest somit den ersten Teil des zweiten Algorithmus. 
+Diese Methode loest das homogene System einer Matrix mit Hilfe der JLinAlg Java-Bibliothek und loest somit den ersten Teil des zweiten Algorithmus. \\
+\begin{lstlisting}[language=Java]
+    private Vector<F2>[] solveHomogenousSystem(Matrix<F2> matrix) {
+        // Create zero vector
+        Vector<F2> bVec = JLinAlgUtils.getZeroVector(matrix.getRows());
+
+        // Solve Ax = 0 for solution space of x
+        return LinSysSolver.solutionSpace(matrix, bVec).getGeneratingSystem();
+    }
+\end{lstlisting}
 \\
 \\
 \textbf{Bruteforcing der richtigen Loesung der Loesungsmenge} \\
 Diese Methoden loesen den zweiten Teil des zweiten Algorithmus, indem sie die Loesung mit dem Hamming-Gewicht "`weight"' in einer gegebenen Loesungsmenge suchen.\\
-Diese Loesungsmenge ist gegebem als ein Array aus Vektoren aus \(\mathbb{Z}_{2}^n\) (Vector<F2>[ ]).
+Diese Loesungsmenge ist gegebem als ein Array aus Vektoren aus \(\mathbb{Z}_{2}^n\) (Vector<F2>[ ]). \\
+Die erwaehnte maximale Groesze der Kombinationen an freinen Variablen ist hier angegeben als "`maxDepth"'.\\
+\begin{lstlisting}[language=Java]
+		/**
+     * Methode to bruteforce for the solution with given hamming weight
+     * @return The correct solution
+     */
+    private Vector<F2> bruteforce(int maxDepth) {
+        // Try out all any amount of free vectors to choose from 1 to weight (inclusive)
+        for (int i = 1; i <= this.weight; i++) {
+            // Stop searching if current amount of free variables is bigger then the
+            // amount of free variables
+            if (i > this.freeVariables) break;
 
+            // Also stop searching if i is bigger then maxDepth
+            if (i > maxDepth) break;
+
+            int[] choosenVectors = new int[this.freeVariables];
+            Vector<F2> solution = this.bruteforceImp(choosenVectors, 0, -1, i);
+
+            if (solution != null)
+                return solution;
+        }
+
+        return null;
+    }
+
+    /**
+     * Actual methode to bruteforce for the solution using a recursive methode
+     * @param values Currently chosen free variables as their indexes
+     * @param indexInArray Current index in values array
+     * @param indexInSpan Current index in span (aka. solution set, aka. free variables)
+     * @param k Amount of not chosen free variables
+     * @return The resulting vector
+     */
+    private Vector<F2> bruteforceImp(int[] values, int indexInArray, int indexInSpan, int k) {
+        // Base case: No elements left to add in values array
+        if (k == 0) {
+            // Create solution with current values array and check for needed
+            // hamming weight.
+            Vector<F2> solution = this.getSolutionVector(values);
+            if (HammingUtils.getHammingWeight(solution, this.rows) == this.weight)
+                return solution;
+
+            return null;
+        }
+
+        int start = indexInSpan + 1; // Inclusive
+        int end = this.freeVariables - k; // Inclusive
+
+        for (int i = start; i <= end; i++) {
+            values[indexInArray] = i;
+
+            Vector<F2> solution = this.bruteforceImp(values, indexInArray + 1, i, k - 1);
+            if (solution != null) return solution;
+        }
+
+        return null;
+    }
+\end{lstlisting}
 
 \section{Literatur}
 \begin{enumerate}
