@@ -69,7 +69,7 @@
 %\vspace{0.5cm}
 \newpage
 
-\section{Definierung dex XORs}
+\section{Definition des XORs}
 XOR bzw. \(\oplus\) sei zunaechst auf zwei Bits/Wahrheitswerte, wie folgt ueber die Gleichheit, definiert:\\\\
 Sein a, b zwei Wahrheitswerte.
 \[a \ XOR \ b \Longleftrightarrow a \oplus b = \neg (a \Longleftrightarrow b)\]
@@ -93,7 +93,7 @@ Die dazugehoerige Wahrheitstabelle sieht wie folgt aus:
 \end{tabular}     
 
 \section{Darstellung durch \(\mathbb{Z}_{2}\) mit der Addition}
-Die Menge \(\mathbb{Z}_{2} = $ \{ $ 0, 1$ \} $ \) bilded zusammen mit der Addition eine abelsche Gruppe.\\
+Die Menge \(\mathbb{Z}_{2} = $ \{ $ 0, 1$ \} $ \) bildet zusammen mit der Addition eine abelsche Gruppe.\\
 Die dazugehoerige Verknuepfungstabelle sieht wie folgt aus:
 \\\\
 \begin{tabular}[c]{ c | c | c }			
@@ -107,7 +107,7 @@ Somit kann die Verknuepfung XOR mit der Addition in \(\mathbb{Z}_{2}\) dargestel
 
 \section{Eigenschaften des XORs}
 Aufgrund dessen, dass das XOR mit der abelschen Gruppe ( \(\mathbb{Z}_{2}\), \(+\) ) dargestellt werden kann, gelten fuer das XOR die gleichen Eigenschaften, wie fuer die abelsche Gruppe ( \(\mathbb{Z}_{2}\), \(+\) ):
-\\\\Sein \(a, b, c\) beliebige Wahrheitwerte (0, oder 1), bzw. \(a, b, c \in \mathbb{Z}_{2}\).
+\\\\Seien \(a, b, c\) beliebige Wahrheitswerte (0, oder 1), bzw. \(a, b, c \in \mathbb{Z}_{2}\).
 \begin{enumerate}
 	\item Assoziativitaet: (a \(\oplus\) b) \(\oplus\) c = a \(\oplus\) (b \(\oplus\) c)
 	\item Neutrales Element 0: a \(\oplus\) 0 = a
@@ -121,7 +121,7 @@ Aufgrund dessen, dass das XOR mit der abelschen Gruppe ( \(\mathbb{Z}_{2}\), \(+
 
 \section{Bitfolgen}
 Bitfolgen bestehen aus mehren aneinandergereihten Bits.\\
-Eine Bitfolge $b$ aus $m$ Bits besteht aus den Bits $b_1, \ \dots \ , \ b_m$ und laesst sich entweder darstellen als aneinandergereihten Bits:
+Eine Bitfolge $b$ aus $m$ Bits besteht aus den Bits $b_1, \ \dots \ , \ b_m$ und laesst sich entweder darstellen als aneinandergereihte Bits:
 $$
 b_1 \ \dots \ b_m
 $$
@@ -146,7 +146,7 @@ $$
 Die jeweilige Laenge ergibt sich, wie beim Null-Vektor aus dem Zusammenhang.
 \\
 \\
-Wird das XOR auf mehrere Bitfolgen angewandt, wird auf die Bits aller Bitfolgen an Stelle $i$ nacheinander das XOR angewendet. Dies wird fuer alle Stellen $i$ der Bitfolgen durchgefuerht. Das jeweilige Ergebnis wird in der resultierenden Bitfolge an Stelle $i$ notiert.
+Wird das XOR auf mehrere Bitfolgen angewendet, wird auf die Bits aller Bitfolgen an Stelle $i$ nacheinander das XOR angewendet. Dies wird fuer alle Stellen $i$ der Bitfolgen durchgefuehrt. Das jeweilige Ergebnis wird in der resultierenden Bitfolge an Stelle $i$ notiert.
 Dafuer muessen alle mit dem XOR verbundenen Bitfolgen die gleiche Laenge haben.\\
 \\
 Am sinnvollsten ist dazu die Darstellung der Bitfolgen als Vektoren zusammen mit der Vektoraddition fuer Vektoren aus \(\mathbb{Z}_{2}^{m}\).
@@ -241,14 +241,14 @@ $$
 Es gilt also ebenfalls die Assoziativitaet, das Neutralelement $0$, die Eigenschaft des Selbstinversen und die Kommutativitaet.
 
 
-\section{Reduzierung der Aufgabe}
+\section{Definition und Reduzierung der Aufgabe}
 Das Problem der Bonusaufgabe "`Zara Zackigs Zurueckkehr"' (oder kurz das ZZZ-Problem) laesst sich wie folgt formal definieren:\\
 Gegeben sind \(n\) Bitfolgen der Laenge \(m\), und eine Ganzzahl $k > 0$.\\
 Fuer die \(n\) Bitfolgen ist gesucht die Menge an \(k\) Bitfolgen \( \{ s_1, \ \dots \ , \ s_k \} \), fuer welche eine weitere Bitfolge \(x\) exestiert, mit
 \[s_1 \oplus \dots \oplus s_k = x. \]
 Existiert eine solche Loesung nicht, soll die leere Menge das Ergebnis sein.
 \\\\
-Sei folgendes Problem "`Null-Bitfolge"' wie folgt definiert:\\
+Sei das Problem "`Null-Bitfolge"' wie folgt definiert:\\
 Gegeben sind \(n\) Bitfolgen der Laenge $m$ und eine Ganzzahl $k > 0$.\\
 Das Problem lautet, \(k\) der \(n\) gegebenen Bitfolgen zu finden, bei welchen gilt
 \[s_1 \oplus \dots \oplus s_k = 0, \] 
@@ -262,7 +262,7 @@ Das Null-Bitfolge Problem ist durch das Ergebnis des ZZZ-Problems ebenfalls gelo
 wie folgt umstellen kann:\\
 Fuegt man zu beiden Seiten \(\oplus \ s_k \) hinzu, erhaelt man
 \[(s_1 \oplus \dots \oplus s_{k-1}) \oplus s_k = s_k \oplus s_k . \] 
-Durch die Eigenschaft des Selbstinversen, erhaelt man
+Durch die Eigenschaft des Selbstinversen erhaelt man
 \[(s_1 \oplus \dots \oplus s_{k-1}) \oplus s_k = 0,  \] 
 Weiter erhaelt man mit der Assoziativitaet
 \[s_1 \oplus \dots \oplus s_{k-1} \oplus s_k = 0 . \] 
@@ -278,7 +278,7 @@ Anschlieszend kann man irgendeine der $k+1$ gefundenen Bitfolgen auf beiden Seit
 \[s_1 \oplus \dots \oplus s_k \oplus s_{k+1} \oplus s_{k+1} = 0 \oplus s_{k+1} \] 
 \[ \Leftrightarrow s_1 \oplus \dots \oplus s_{k} + 0 = \oplus s_{k+1} \] 
 \[ \Leftrightarrow s_1 \oplus \dots \oplus s_{k} = \oplus s_{k+1}. \] 
-Dadurch hat man $k$ Bitfolgen erhalten fuer welche eine weitere Bitfolge exestiert, bei welcher die vorausgesetzte Bedingung gilt.
+Dadurch hat man $k$ Bitfolgen erhalten fuer welche eine weitere Bitfolge existiert, bei welcher die vorausgesetzte Bedingung gilt.
 \\Fuer den Fall, dass die leere Menge das Ergebnis des Null-Bitfolge Problems ist, gibt es ebenfalls keine Loesung fuer das Null-Bitfolge Problem, so das die leere Menge ebenfalls das Ergebnis ist.
 \\\\
 Dass wiederum bedeutet, dass man das ZZZ-Problem loesen kann, indem man das Null-Bitfolge Problem loest.
@@ -288,18 +288,18 @@ Das ZZZ-Problem ist NP-schwer.\\
 Diese Aussage wird nun bewiesen, indem gezeigt wird, dass das Null-Bitfolge Problem NP-schwer ist. Dies ist moeglich, da das Null-Bitfolge Problem bereits auf das ZZZ-Problem reduziert wurde.
 \\
 \\Um zu zeigen, dass ein Problem $L$ NP-hard ist muss jedes Problem in NP durch eine Polynomialzeitreduktion auf $L$ reduziert werden koennen.
-\\Um dies zu zeigen, kann man ein als NP-vollstaendiges Problem auf $L$ reduzieren.\\
+\\Um dies zu zeigen, kann man ein als NP-vollstaendiges Problem auf $L$ reduzieren. Das bedeutet, dass $L$ mindestens so schwer ist, wie das Problem von welchem reduziert wird.\\
 \\
-Das Problem von welchem reduziert wird, soll hier das "`Weight Distribution"' ([2]) oder auch "`Subspace Weights"' ([1]) genannte Problem sein, welches in [1] als NP-vollstaendig bewiesen wurde:\\
+Das Problem von welchem reduziert wird, soll hier das "`Weight Distribution"' [2] oder auch "`Subspace Weights"' [1] genannte Problem sein, welches in [1] als NP-vollstaendig bewiesen wurde:\\
 Gegeben sind eine binaere $m \times n$ Matrix $A$ und eine Ganzzahl $k$ > 0.\\
-Die Entscheidungsfrage ist, ob eine Menge an $k$ Spalten aus $A$ gibt, welche sich zum Null-Vektor aufaddieren.
+Die Entscheidungsfrage ist, ob es eine Menge an $k$ Spalten aus $A$ gibt, welche sich zum Null-Vektor aufaddieren.
 \\\\
 Dieses Entscheidungsproblem laesst sich wie folgt durch Polynomialzeitreduktion zum ZZZ-Problem reduzieren:\\
 Sein die Spalten der Matrix die Vektoren
 $$
 \vec{v_1}, \ \dots \ , \ \vec{v_n}.
 $$
-Diese Vektoren kann man zu Bitfolgen umschreiben:
+Diese Vektoren kann man als Bitfolgen interpretieren:
 $$
 \vec{v_i} = \begin{bmatrix}
            v_{i, 1} \\
@@ -309,37 +309,37 @@ $$
 $$
 wird zur Bitfolge 
 $$
-s_i = v_{i, 1} \ \dots \ v_{i, m}.
+s_i = \vec{v_i}.
 $$
 Somit erhaelt man die Bitfolgen
 $$
 s_1, \ \dots \ , \ s_n.
 $$
-Diese Bitfolgen und $k$ kann man nun als Eingabe fuer das Null-Bitfolge Problem benutzten. 
+Diese Bitfolgen und $k$ kann man nun als Eingabe fuer das Null-Bitfolge Problem benutzen. 
 \\
 Dadurch erhaelt man $k$ Bitfolgen, welche aufaddiert die Null-Bitfolge (bestehend aus $m$ Nullen) ergeben oder die leere Menge.
-\\Erhaelt man $k$ Bitfolgen, so handelt es sich um eine Ja-Instanz, erhaelt man die leere Mengen, handelt es sich um eine Nein-Instanz.
+\\Erhaelt man $k$ Bitfolgen, so handelt es sich um eine Ja-Instanz, erhaelt man die leere Menge, handelt es sich um eine Nein-Instanz.
 \\Dass es sich um eine Ja-Instanz handelt, wenn $k$ Bitfolgen das Ergebnis des Null-Bitfolge Problem sind, liegt daran, dass jede der $k$ Bitfolgen einer Spalte der Matrix entspricht. Somit gibt es $k$ Spalten der Matrix, welche den Null-Vektor ergeben.
-\\Dass es sich um eine Nein-Instanz handelt, wenn die leere Menge zurueck gegeben wurde, ergibt ebenfalls Sinn. Denn in dem Fall konnten keine $k$ Bitfolge, sprich keine $k$ Spalte, gefunden werden, welche die Null-Bitfolge, bzw. den Null-Vektor, bilden.
+\\Dass es sich um eine Nein-Instanz handelt, wenn die leere Menge zurueckgegeben wurde, ergibt ebenfalls Sinn. Denn in dem Fall konnten keine $k$ Bitfolgen, sprich keine $k$ Spalten, gefunden werden, welche die Null-Bitfolge, bzw. den Null-Vektor, bilden.
 \\
 \\
-Aufgrund dessen, dass das ZZZ-Problem NP-schwer ist, kann man davon ausgehen, dass kein Algorithmus existiert, welche das Problem effizient loest, bzw. in Polynomialzeit laeuft.\\
+Aufgrund dessen, dass das ZZZ-Problem NP-schwer ist, kann man davon ausgehen, dass kein Algorithmus existiert, welcher das Problem effizient loest, bzw. in Polynomialzeit laeuft.\\
 \\
-Dennoch werden nun zwei Loesungsansaetze vorgestellt, welche das Problem exakt aber mit exponentieller Laufzeit loesen. Beide Loesungen werden das Null-Bitfolge Problem loesen, welches, wie bereits bewiesen, das ZZZ-Problem loest. Der erste Loesungsansatz basiert auf einem Bruteforceverfahren und der zweitze auf dem Loesen eines linearen Gleichungssystems, welches in den Kapiteln "`Loesung durch ein Gleichungssystem"' und "`Loesung des Gleichungssystems mit bestimmem Hamming-Gewicht"' erlaeutert wird.
+Dennoch werden nun zwei Loesungsansaetze vorgestellt, welche das Problem exakt, aber mit exponentieller Laufzeit loesen. Beide Loesungen werden das Null-Bitfolge Problem loesen, welches, wie bereits bewiesen, das ZZZ-Problem loest. Der erste Loesungsansatz basiert auf einem Bruteforceverfahren und der zweite auf dem Loesen eines linearen Gleichungssystems, welches in den Kapiteln "`Loesung durch ein Gleichungssystem"' und "`Loesung des Gleichungssystems mit bestimmtem Hamming-Gewicht"' erlaeutert wird.
 
 \section{Algorithmus 1: Loesung durch Bruteforce der Kombinationen}
-Das Null-Bitfolge Problem laesst sich loesen, indem alle alle moeglichen Kombinationen (ohne Wiederholung/Zuruecklegen) der Bitfolgen ausprobiert und ueberprueft werden.
+Das Null-Bitfolge Problem laesst sich loesen, indem alle moeglichen Kombinationen (ohne Wiederholung/Zuruecklegen) der Bitfolgen ausprobiert und ueberprueft werden.
 \\\\
 Gegeben sind die $n$ Bitfolgen der Laenge $m$:
 \[b_1, \ \dots \ , \ b_n\]
 Sowie die Anzahl an gesuchten Bitfolgen $k$.
 \\
-\\Um bei diesem Loesungsweg effizient vorzugehen, werden nicht alle moeglichen Kombinationen erstellt, sondern alle Kombinationen von $\lfloor \frac{k}{2} \rfloor$ (die abgerundete Haelfte von k, abgerundet auf die naechst kleinere Ganzzahl) Bitfolgen.\\
+\\Um bei diesem Loesungsweg effizient vorzugehen, werden nicht alle moeglichen Kombinationen erstellt, sondern alle Kombinationen von $\lfloor \frac{k}{2} \rfloor$  Bitfolgen (die abgerundete Haelfte von k, abgerundet auf die naechst kleinere Ganzzahl).\\
 Sei 
 $$
 l = \lfloor \frac{k}{2} \rfloor.
 $$
-Alle moeglichen Kombinationenn der $l$ Bitfolgen werden durchgegangen und das dazu gehoerige XOR wird berechnet. Dadurch erhaelt man je ein Paar bestehend aus den Indexen der gewaehlten Bitfolgen und der, durch das XOR resultierenden, Bitfolge:
+Alle moeglichen Kombinationen der $l$ Bitfolgen werden durchgegangen und das dazugehoerige XOR wird berechnet. Dadurch erhaelt man je ein Paar, bestehend aus den Indexen der gewaehlten Bitfolgen und der durch das XOR resultierenden Bitfolge:
 $$
 (\{i_1, \ \dots \ , \ i_l \}, x),
 $$
@@ -352,7 +352,7 @@ ist.
 Fuer jedes dieser Paare, welche durch die Kombinationen von $l$ der $n$ Bitfolgen entstehen, wird die Menge der Indexe in einer Liste gespeichert. \\
 Dabei ist diese Liste ein Wert, assoziert mit der Bitfolge.\\
 Es entsteht also eine Tabelle, in welcher von Bitfolgen $x$ zu Listen $L_x$ gezeigt wird. Diese Listen ($L_x$) beinhalten stets alle Mengen (der Groesze $l$) an Indexen, dessen Bitfolgen $x$ ergeben.
-\\Der Pseudocode, welcher als Uebergabeparamether die Bitfolgen und $l$ erhaelt, zu der Erstellung dieser Tabelle sieht wie folgt aus:
+\\Der Pseudocode zu der Erstellung dieser Tabelle, welcher als Uebergabeparameter die Bitfolgen und $l$ erhaelt, sieht wie folgt aus:
 \begin{algorithmic}[1]
 \Procedure{createTable}{$ b_1 \ \dots \ , \ b_n, \ size $}
 		\State $table \gets [ \ ]$
@@ -372,19 +372,19 @@ Es entsteht also eine Tabelle, in welcher von Bitfolgen $x$ zu Listen $L_x$ geze
 \EndProcedure
 \end{algorithmic}
 \\\\
-In diesem Pseudocode sollen die Methoden getFirstCombination und getNextCombination je die erste Kombination und die naechste Kombination an Indexen der Bitfolgen zurueckgeben. Wenn die letzt Kombination erreicht ist, soll eine leere Menge zurueckgegeben werden.\\
+In diesem Pseudocode sollen die Methoden getFirstCombination und getNextCombination je die erste Kombination und die naechste Kombination an Indexen der Bitfolgen zurueckgeben. Wenn die letzte Kombination erreicht ist, soll eine leere Menge zurueckgegeben werden.\\
 Dies wird in der While-Schleife ueberprueft, so dass alle Kombinationen einmal gewaehlt sein werden.\\
-Desweiteren ist wichtig, dass currentCombination eine Liste darstellen soll, welche ueber den Index aufgrufen wird (so, wie die Bitfolgen).\\
-Die Tabelle "`table"' soll hier, wie beschrieben, zeigen von Bitfolgen auf Listen an Mengen. Werte der Tabelle, werden dabei ueber eckige Klammern (in welchen der Wert steht) aufgrufen.
+Des Weiteren ist wichtig, dass currentCombination eine Liste darstellen soll, welche ueber den Index aufgrufen wird (so, wie die Bitfolgen).\\
+Die Tabelle "`table"' soll hier, wie beschrieben, zeigen von Bitfolgen auf Listen an Mengen. Werte der Tabelle werden dabei ueber eckige Klammern (in welchen der Wert steht) aufgrufen.
 \\\\
-Mit Hilfe dieser Tabelle kann man nun alle Moeglichen Kombinationen an $k$ Bitfolgen darstellen.\\
-Dazu muss man unterscheiden, ob $k$ eine grade oder ungrade Zahl ist.
+Mit Hilfe dieser Tabelle kann man nun alle moeglichen Kombinationen an $k$ Bitfolgen darstellen.\\
+Dazu muss man unterscheiden, ob $k$ eine gerade oder ungerade Zahl ist.
 \\\\
-Ist $k$ eine grade Zahl, so wurden Kombinationen mit $\frac{k}{2}$ Elementen erstellt und man kann durch alle entstandenen Bitfolgen $x$ iterrieren und fuer jede Liste $L_x$ (welche man durch $x$ erhaelt) Folgenes tun:\\
+Ist $k$ eine gerade Zahl, so wurden Kombinationen mit $\frac{k}{2}$ Elementen erstellt und man kann durch alle entstandenen Bitfolgen $x$ iterrieren und fuer jede Liste $L_x$ (welche man durch $x$ erhaelt) Folgendes tun:\\
 Man sucht in der Liste nach zwei Mengen, welche disjunkt sind (also kein gleiches Element enthalten). 
 \\Hat man zwei Mengen in $L_x$ gefunden, welche disjunkt sind, so hat man ebenfalls $k$ Bitfolgen (bzw. deren Indexe) gefunden, welche die Null-Bitfolge darstellen. Das liegt daran,
-dass beide Mengen mit der Bitfolge $x$ assoziert sind (bzw., die, zu den Indexen gehoerenden Bitfolge, diese ergeben). Hat man nun zwei disjunkte Mengen dessen Bitfolgen je $x$ ergeben, 
-so erhaelt man $k$ Indexe an Bitfolgen ($k = 2*\frac{k}{2}$, weil $k$ hier grade ist) welche, wenn man sie durch das XOR verbindet, die Null-Bitfolge ergeben, denn 
+dass beide Mengen mit der Bitfolge $x$ assoziert sind (bzw., die, zu den Indexen gehoerenden Bitfolge, diese ergeben). Hat man nun zwei disjunkte Mengen, dessen Bitfolgen je $x$ ergeben, 
+so erhaelt man $k$ Indexe an Bitfolgen ($k = 2*\frac{k}{2}$, weil $k$ hier gerade ist) welche, wenn man sie durch das XOR verbindet, die Null-Bitfolge ergeben, denn 
 das XOR ist selbstinvers.\\
 Der Pseudocode fuer diesen Fall sieht wie folgt aus:
 \begin{algorithmic}[1]
@@ -408,8 +408,8 @@ Der Pseudocode fuer diesen Fall sieht wie folgt aus:
 Ist $k$ ungrade, so wurden Kombinationen mit $\frac{k-1}{2}$ Elementen erstellt, so dass man, wuerde man die vorherige Vorgehensweise anwenden, nur $\frac{k-1}{2} * 2 = k-1$ Bitfolgen erhalten, welche die Null-Bitfolge ergeben. \\
 Somit muss eine zusaetzliche Bitfolge eingefuehrt werden. Die Vorgehensweise fuer ein ungrades $k$ ist diese:\\
 Man iterriert fuer jede der $n$ Bitfolgen $b_i$ durch alle entstandenen $x$ der Kombinationen und wendet das XOR auf $b_i$ und $x$ an. Dadurch entsteht eine weitere Bitfolge $z = b_i \ XOR \ x$.\\
-Fuer diese neue Bitfolge ueberprueft man, ob sie in der Tabelle enthalten ist. Ist dies der Fall, so wird versucht, zwei Mengen aus $L_x$ und $L_z$ zu finden (eine aus $L_x$ und eine aus $L_z$), fuer welche gilt, dass sie disjunkt sind, und je nicht $i$ enthalten.\\
-Hat man solche zwei Mengen gefunden so hat man $k = 1 + \frac{k-1}{2} * 2$ Bitfolgen gefunden, welche
+Fuer diese neue Bitfolge ueberprueft man, ob sie in der Tabelle enthalten ist. Ist dies der Fall, so wird versucht, zwei Mengen aus $L_x$ und $L_z$ zu finden (eine aus $L_x$ und eine aus $L_z$), fuer welche gilt, dass sie disjunkt sind und je nicht $i$ enthalten.\\
+Hat man solche zwei Mengen gefunden, so hat man $k = 1 + \frac{k-1}{2} * 2$ Bitfolgen gefunden, welche
 $$
 0 = (b_i \ XOR \ x) \ XOR \ z = (b_i \ XOR \ x) \ XOR \ (b_i XOR x)
 $$
@@ -472,19 +472,19 @@ Die (worst case) Laufzeit fuer diesen Algorithmus ist \dots
 	$$
 \end{enumerate}
 \\
-Dabei ist $c$ eine konstante, welche die durchschnittliche Groeße der Listen $L_x$ darstellen soll.\\
+Dabei ist $c$ die durchschnittliche Groeße der Listen $L_x$.\\
 Die Laufzeit setzt sich also je zusammen, aus der Anzahl an Kombinationen und dem Durchlaufen der Listen, um die disjunkten Mengen zu finden. Je Ueberpruefung der Mengen, 
 braucht es $k$ Durchgaenge, um zu ueberpruefen, ob die Mengen disjunkt sind.
 \\\\
 Der Faktor $c^2 * k$ wird hier ignoriert, da der Binomialkoeffizient deutlich schneller waechst als der Faktor.\\
-Desweiteren kann der Binomialkoeffizient zu einem exponentiellen Ausdruck umgeformt werden, da Folgene Umformung durchgefuerht werden kann:\\
+Des Weiteren kann der Binomialkoeffizient zu einem exponentiellen Ausdruck umgeformt werden, da folgende Umformung durchgefuehrt werden kann:\\
 $$ \binom{n}{k} $$
 $$ = \frac{n * (n-1) * \dots * (n-k+1)}{k!} $$
 $$ = \frac{1}{k!} * (n * (n-1) * \dots * (n-k+1)) $$
 $$ < \frac{1}{k!} * n^k) $$
 $$ < n^k $$
 \\
-Der Algorithmus hat also eine exponentiellen laufzeit und kann somit nur auf kleine $n$ und $k$ angewendet werden. \\
+Der Algorithmus hat also eine exponentielle Laufzeit und kann somit nur auf kleine $n$ und $k$ angewendet werden. \\
 Doch fuer solche Werte bietet er eine exakte Loesung.
 
 \section{Loesung durch ein Gleichungssystem}
@@ -502,7 +502,7 @@ Wodurch \(m\) (Anzahl der Bits) Reihen und \(n\) (Anzahl an Bitfolgen) Spalten e
 Weiter muss 
 \[x_1 + \dots + x_n = k\]
 in \(\mathbb{Z}\) (nicht in \(\mathbb{Z}_{2}\)!) gelten.\\
-Dadurch ist gegeben, dass exakt die benoetigten Anzahl an \(k\) Bitfolgen gewaehlt werden.\\\\
+Dadurch ist gegeben, dass exakt die benoetigte Anzahl an \(k\) Bitfolgen gewaehlt wird.\\\\
 Dass eine Loesung fuer die zuvor beschriebenen Gleichungen ebenfalls eine Loesung fuer das Null-Bitfolge Problem ist, ist einfach zu zeigen:\\\\
 Sein ohne Einschraenkung der Allgemeinheit \(x_1 \ , \ \dots \ , \ x_{k}\) die \(k\) Entscheidungsvariablen, welche 1 annehmen und die Gleichungen erfuellen.\\
 Nun lassen sich die zuvor beschriebenen Gleichungen je auf \(k\) Summanden reduzieren, welche zusammen 0 in \(\mathbb{Z}_{2}\) ergeben.\\
@@ -510,14 +510,14 @@ Diese Gleichungen sehen nun wie folgt aus:
 \[a_{1, 1} + \dots + a_{k, 1} = 0\]
 \[\dots\]
 \[a_{1, m} + \dots + a_{k, m} = 0\]
-Jede Gleichung ist (wie in Punkt 2 beschrieben) equivalent zum XOR angewandt auf mehrere Bits:
+Jede Gleichung ist (wie in Kapitel 2 beschrieben) equivalent zum XOR angewandt auf mehrere Bits:
 \[a_{1, 1} \oplus \dots \oplus a_{k, 1} = 0\]
 \[\dots\]
 \[a_{1, m} \oplus \dots \oplus a_{k, m} = 0\]
-Wie in Punkt 4 beschrieben wurde ist dies wiederrum gleichwertig zum XOR auf Bitfolgen. Hier bei den Bitfolgen \(1\) bis \(k\), welche zusammen die Null-Bitfolge ergeben.\\
+Wie in Kapitel 4 beschrieben wurde ist dies wiederrum gleichwertig zum XOR auf Bitfolgen. Hier bei den Bitfolgen \(1\) bis \(k\), welche zusammen die Null-Bitfolge ergeben.\\
 Somit wurden \(k\) Bitfolgen gefunden, welche, verknuepft durch das XOR, die Null-Bitfolge ergeben.
 
-\section{Loesung des Gleichungssystems mit bestimmem Hamming-Gewicht}
+\section{Loesung des Gleichungssystems mit bestimmtem Hamming-Gewicht}
 Nun ist die Aufgabe folgende Gleichungen ueber \(\mathbb{Z}_{2}\):
 \[a_{1, 1} * x_1 + \dots + a_{n, 1} * x_n = 0\]
 \[\dots\]
@@ -549,7 +549,7 @@ $$
 wt(\vec{x}) = k
 $$
 sein muss.\\
-Wobei $wt(\vec{u})$ das Hamming-Gewicht von $\vec{u}$ ist, welches definiert ist, als die Anzahl an Elementen eines Vektors, welche nicht $0$ sind, bzw.
+Wobei $wt(\vec{u})$ das Hamming-Gewicht von $\vec{u}$ ist, welches definiert ist als die Anzahl an Elementen eines Vektors, welche nicht $0$ sind, bzw.
 $$
 wt(\vec{u}) = | \{ i \in \{ 1, \ , \ \dots \ , \ n \} : e_i \not= 0 \} |
 $$
@@ -566,11 +566,11 @@ wobei das Gleichungssystem ueber \(\mathbb{Z}_{2}\) ist.
 \section{Algorithmus 2: Loesung durch Gausz-Verfahren und Bruteforce}
 In diesem Kapitel wird das zuvor beschriebene Problem angegangen, indem zunaechst das Gleichungssystem in \(\mathbb{Z}_{2}\) geloest und anschlieszend nach einer Loesung der Loesungsmenge gesucht wird, welche die Bedingung des Hamming-Gewichts erfuellt.
 
-\subsection{Loesen des Gleichungssystems in \(\mathbb{Z}_{2}\)}
-Die zu loesende Gleichungen lassen sich wie folgt mit Matrix und Vektoren darstellen:
+\subsection{Loesen des Gleichungssystems ueber \(\mathbb{Z}_{2}\)}
+Die zu loesenden Gleichungen lassen sich wie folgt mit Matrix und Vektoren darstellen:
 \[A * \vec{x} = \vec{0}\]
-Es ist also das homogene System zu A in \(\mathbb{Z}_{2}\) zu loesen.\\\\
-Aufgrund dessen, dass in \(\mathbb{Z}_{2}\) ein Koerper ist, laesst sich zum loesen des Gleichungssystems in \(\mathbb{Z}_{2}\) das Gausz-Verfahren verwenden.\\
+Es ist also das homogene System zu A ueber \(\mathbb{Z}_{2}\) zu loesen.\\\\
+Aufgrund dessen, dass \(\mathbb{Z}_{2}\) ein Koerper ist, laesst sich zum Loesen des Gleichungssystems ueber \(\mathbb{Z}_{2}\) das Gausz-Verfahren verwenden.\\
 Dadurch erhaelt man eine Loesungsmenge, welche wie folgt aussieht:
 \[ \{ \begin{bmatrix}
            x_{1} \\
@@ -581,11 +581,11 @@ Dadurch erhaelt man eine Loesungsmenge, welche wie folgt aussieht:
 Falls \(x_i\) mit \(1 \leq i \leq n\) keine freie Variable ist, ist \(\vec{v_1} = \vec{0}\).			
 
 \subsection{Loesen der letzten Gleichung durch Bruteforce}
-Zu letzt ist die Loesung der Loesungsmenge zu finden, welche ein Hamming-Gewicht von $k$ hat.\\
+Zuletzt ist die Loesung der Loesungsmenge zu finden, welche ein Hamming-Gewicht von $k$ hat.\\
 \\
 Dazu kann man bei Loesungsmengen mit kleiner Anzahl an freien Variablen alle moeglichen Kombinationen (ohne Wiederholung/Zuruecklegen)  ausprobieren.\\
-Dabei sollte man beachten, dass man niemals mehr als $k$ Variablen auswaehlen muss, da bei jedem Vektor, welcher gewaehlt wird mindestens eine Variable aktiviert wird, welche nicht durch einen anderen Vektor wieder deaktiviert werden kann. Diese Variablen sind die freien Variablen.\\
-Wichtig ist dabei, dass man fuer jede Anzahl $i$ mit $1 \leq i \leq min(k, \ f(A))$ an ausgewaehlten freien Variablen alle Komnbinatioen (ohne Wiederholung/Zuruecklegen) probiert. Wobei $f(A)$ die Anzahl an freien Variablen der Loesungsmenge des homogenen Gleichungssystems zu $A$ darstellt.
+Dabei sollte man beachten, dass man niemals mehr als $k$ Variablen auswaehlen darf, da bei jedem Vektor, welcher gewaehlt wird mindestens eine Variable aktiviert wird, welche nicht durch einen anderen Vektor wieder deaktiviert werden kann. Diese Variablen sind die freien Variablen.\\
+Wichtig ist dabei, dass man fuer jede Anzahl $i$ mit $1 \leq i \leq min(k, \ f(A))$ an ausgewaehlten freien Variablen alle Kombinationen (ohne Wiederholung/Zuruecklegen) probiert. Wobei $f(A)$ die Anzahl an freien Variablen der Loesungsmenge des homogenen Gleichungssystems zu $A$ darstellt.
 \\
 Sei 
 $$r = min(k, \ f(A)),$$
@@ -593,14 +593,14 @@ so muss man durch dieses Verfahren
 $$
 {\binom{f(A)}{1} + \dots + \binom{f(A)}{r}
 $$
-moegliche Belegungen ausprobieren. Denn der untere Wert des Binomialkoeffizients darf nicht groeszer als als der obere Wert sein, weil man nicht (in diesem Fall) mehr freie Variablen auswaehlen kann, als da sind. \\
+moegliche Belegungen ausprobieren. Denn der untere Wert des Binomialkoeffizienten darf nicht groeszer als der obere Wert sein, weil man (in diesem Fall) nicht mehr freie Variablen auswaehlen kann, als da sind. \\
 \\
-Fuer jede Belegung $u$ der freien Variablen kann man nun den resultierenden Vektor $\vec{u}$ berechnen, indem alle durch $u$ ausgewaehlten Vektoren der Loesungsmenge addiert werden, und muss nun ausprobieren, ob 
+Fuer jede Belegung $u$ der freien Variablen kann man nun den resultierenden Vektor $\vec{u}$ berechnen, indem alle durch $u$ ausgewaehlten Vektoren der Loesungsmenge addiert werden. Nun muss nun ueberprueft werden, ob 
 $$
 wt(\vec{u}) = k
 $$
 gilt.\\
-Ist dieser Vektor gefunden, so hat man stets eine Loesung des homogenen System mit $k$ benutzen Spalten/Vektoren.
+Ist dieser Vektor gefunden, so hat man stets eine Loesung des homogenen Systems mit $k$ benutzen Spalten/Vektoren.
 
 \subsection{Laufzeit}
 Dieses Verfahren hat eine Laufzeit von 
@@ -610,7 +610,7 @@ $$
 Dabei stellt $p$ ein Polynom dar, welches fuer das Gausz-Verfahren benoetigt wird.\\
 ${\binom{f(A)}{1} + \dots + \binom{f(A)}{r}$ ist erneut die Anzahl an moeglichen Kombinationen. Fuer jede dieser Kombinationen aus $q$ ($1 \leq q \leq r$) muessen maximal $q$ Vektoren der Loesungsmenge addiert werden, um zu ueberprufen, ob die Kombination eine gueltige Loesung darstellt. Dadurch entsteht eine Laufzeit von maximal $\mathcal{O}(q * n)$ pro Ueberpruefung einer Kombination. Denn die Vektoren haben die Laenge $n$.
 \\\\
-Aufgrund dessen das $\mathcal{O}(\binom{n}{k})$ sich, wie zuvor erlaeutert, zu $\mathcal{O}(n^k)$ umformen laesst, ergibt sich
+Aufgrund dessen, dass $\mathcal{O}(\binom{n}{k})$ sich, wie zuvor erlaeutert, zu $\mathcal{O}(n^k)$ umformen laesst, ergibt sich
 $$
 \mathcal{O}(p(A)) + \mathcal{O}( f(A)^1 * 1 * n) + \dots + \mathcal{O}( f(A)^r * r * n ). 
 $$
@@ -624,31 +624,31 @@ $$
 $$
 ist.
 \\\\
-Dieser Loesungsweg hat also ebenbenfalls eine exponentielle Laufzeit und laesst sich nur anwenden, wenn die Loesungsmenge der Matrix klein genug ist, was die Anzahl an freinen Variablen angeht.\\
+Dieser Loesungsweg hat also ebenbenfalls eine exponentielle Laufzeit und laesst sich nur anwenden, wenn die Loesungsmenge des homogenen System der Matrix klein genug ist, bezueglich der Anzahl an freinen Variablen.\\
 Dies laesst sich aber durch das Gausz-Verfahren schnell herrausfinden.\\
 Ist die Loesungsmenge allerdings klein genug, so kann eine exakte Loesung berechnet werden.
 
 \section{Implementierung}
 Das Program wurde in Java 8 und objektorentiert geschrieben.
 \\ Dazu gibt es eine Klasse "`BitSequence"', welche eine Bitfolge darstellt. Sie speichert ein Arary an booleans, welches die Bits darstellt und dessen Laenge als Attribute. 
-Desweiteren besitzt sie zwei Konstruktoren, welche (1) ein boolean Array und (2) einen String als Uebergabeparamether bekommen. Bei dem Konstruktor, welcher einen String erhaelt, soll dieser String ein binaerer String sein, welcher in ein boolean Array umgewandelt wird.
-Die BitSequence Klasse hat des weiteren die Methoden "`xor"', "`getBit"' und "`getSize"', welche je das XOR mit einer weiteren Bitfolge der selben laenge erzeugen, einen Bit an einem bestimmten Index im boolean Array zurueckgeben und die Laenge der Bitsequence zurueckgeben. Desweiteren implementiert die Klasse das Comparable Interface, wodurch sie vergleichbar ist und sie ueberschreibt die equals und hashCode Methoden, durch Methoden, welche je den Inhalt der Objekte vergleichen und einen HashCode bassierend auf den Bit der Bitfolge zurueckgeben.
+Des Weiteren besitzt sie zwei Konstruktoren, welche (1) ein boolean Array und (2) einen String als Uebergabeparamether bekommen. Bei dem Konstruktor, welcher einen String erhaelt, soll dieser String ein binaerer String sein, welcher in ein boolean Array umgewandelt wird.
+Die BitSequence Klasse hat des Weiteren die Methoden "`xor"', "`getBit"' und "`getSize"', welche je das XOR mit einer weiteren Bitfolge der selben Laenge erzeugen, einen Bit an einem bestimmten Index im boolean Array zurueckgeben und die Laenge der Bitsequence zurueckgeben. Auszerdem implementiert die Klasse das Comparable Interface, wodurch sie vergleichbar ist und sie ueberschreibt die equals und hashCode Methoden, durch Methoden, welche je den Inhalt der Objekte vergleichen und einen HashCode, basierend auf den Bits der Bitfolge, zurueckgeben.
 \\\\
-Das ZZZ-Problem wird ebenfalls durch eine Klasse dargestellt, welche die Werte $n, \ k$ und $m$, sowie eine Liste der gegebenen Bitfolgen als Attribute besitzt. Diese Klasse ("`ZZZProblem"') besitzt ebenfalls eine Methode zum Erstellen einer Matrix, wie sie in Kapitel "`Loesung des Gleichungssystems mit bestimmem Hamming-Gewicht"' beschrieben ist.
+Das ZZZ-Problem wird ebenfalls durch eine Klasse dargestellt, welche die Werte $n, \ k$ und $m$, sowie eine Liste der gegebenen Bitfolgen als Attribute besitzt. Diese Klasse ("`ZZZProblem"') besitzt ebenfalls eine Methode zum Erstellen einer Matrix, wie sie in Kapitel "`Loesung des Gleichungssystems mit bestimmtem Hamming-Gewicht"' beschrieben ist.
 \\\\
-Fuer das Loesen des homogenen Systems einer Matrix, sowie fuer die Klassen, welche Matrixen und Vektoren darstellen wurde die JLinAlg Java-Bibliothek. 
+Fuer das Loesen des homogenen Systems einer Matrix, sowie fuer die Klassen, welche Matrizes und Vektoren darstellen wurde die JLinAlg Java-Bibliothek benutzt. 
 Beim Loesen eines homogenen Systems erzeugt die Java-Bibliothek dabei ein Array aus Vektoren aus \(\mathbb{Z}_{2}^n\) (Vector<F2>[ ])
-Desweiteren ermoeglicht sie, dass Rechnen (auch mit Vektoren und Matrix) im Koerper \(\mathbb{Z}_{2}\). 
+Des Weiteren ermoeglicht sie, dass Rechnen (auch mit Vektoren und Matrix) im Koerper \(\mathbb{Z}_{2}\). 
 \\\\
-Eine weitere Wichtigkeit der Umsetzung ist, dass das Program zwischen den Algorithmen abwaegt, oder keinen waehlt, je nach der Eingabe.\\
-Denn ist die Eingabe zu grosz, wird das Program aufgrund der exponentiellen Laufzeit zu lange brauchen. \\
+Eine weitere Wichtigkeit der Umsetzung ist, dass das Programm zwischen den Algorithmen abwaegt, oder keinen waehlt, je nach der Eingabe.\\
+Denn ist die Eingabe zu grosz, wird das Programm aufgrund der exponentiellen Laufzeit zu lange brauchen. \\
 Genauer wird zunaechst die Matrix passend zur Eingabe erstellt. Ist die Anzahl an freien Variablen kleiner als $4$, so wird der zweite Algorithmus verwendet. Andernfalls wird ueberprueft, ob $k \leq 4$ ist. In dem Fall wird Algorithmus 1 benutzt.
-In jedem anderen Fall ist das Program nicht im Stande, die Loesung zu berechnen.
+In jedem anderen Fall ist das Programm nicht im Stande, die Loesung zu berechnen.
 
 \section{Aufgabenteil c - Beispiele}
-Nun folgen die Loesungen des Programs fuer die Eingaben der bwinf website.\\
+Nun folgen die Loesungen des Programms fuer die Eingaben der bwinf website.\\
 \\
-In folgender Tabelle ist dargestellt, welcher Algorithmus, welche Eingabe loesen kann:\\
+In folgender Tabelle ist dargestellt, welcher Algorithmus welche Eingabe loesen kann:\\
 \\
 \begin{tabular}[c]{c|c|c}
 Eingabe & Algorithmus 1 & Algorithmus 2 \\
@@ -776,25 +776,25 @@ Weiter seien die gefundenen Karten
 $$K = (k_1, \ \dots \ , \ k_{n+1}). $$
 Nun seien die Karten 
 $$S = (s_1, \ \dots \ , \ s_{n+1}) $$
-K aufsteigen sortiert.\\
+K aufsteigend sortiert.\\
 $W$, $K$ und $S$ sollen hier Folgen sein.
 \\\\
 Da davon ausgegangen wird, dass die $n+1$ richtigen Karten gefunden wurden, besteht $S$ aus $W$ und $x$.
 \\
-Wichtig ist, dabei, dass $W$ innerhalb von $S$ immer noch die selbe Reihenfolge hat, da die Karten in beiden Folgen aufsteigend sortiert sind.\\
+Wichtig ist dabei, dass $W$ innerhalb von $S$ immer noch dieselbe Reihenfolge hat, da die Karten in beiden Folgen aufsteigend sortiert sind.\\
 Somit wurde ausschlieszlich die zusaetzliche Karte $x$ in die Folge $W$ hinzugefuegt, wodurch $S$ entsteht.
 \\\\
-Sei der Index an welchem $x$ zu $W$ hinzugefuegt wurde $j$, wobei $1 \leq j \leq n+1$ gilt, so dass $x$ innerhalb der Folge oder rechts an die Folge hinzugefuegt wird.
+Sei der Index, an welchem $x$ zu $W$ hinzugefuegt wurde, $j$, wobei $1 \leq j \leq n+1$ gilt, so dass $x$ innerhalb der Folge oder rechts an die Folge hinzugefuegt wird.
 \\Dadurch verschieben sich alle Karten mit einem Index $i \geq j$ um eins nach rechts, so dass eine Karte $w_i$ nun an Index $i+1$ ist (so fern $i \geq j$). Die restlichen Karten (mit $i < j$) bleiben an ihrer Position.\\
 Die Folge saehe dann wie folgt aus:
 $$(w_1, \ \dots \ , \ w_{j-1}, \ x, \ w_{j}, \ \dots \ , \ w_n)$$
 In dieser Folge ist zu erkennen, dass $x$ am Index $j$ liegt. Rechts von $q$ sind die Elemente $e_{j}, \ \dots \ , \ e_n$, welche nun alle eine Position nach rechts  gesetzt wurden (der Index in der Folge hat sich je um 1 erhoeht). Somit hat die Liste nun eine Laenge von $n+1$.
 \\\\
-Somit gibt es fuer jeden Index $i$ eines Codewortes $w_i$ ($1 \leq j \leq n$) zwei Moeglichkeiten, entweder $w_i$ ist in $S$ an Position $i$ oder an Position $i+1$.
+Dementsprechend gibt es fuer jeden Index $i$ eines Codewortes $w_i$ ($1 \leq j \leq n$) zwei Moeglichkeiten, entweder $w_i$ ist in $S$ an Position $i$ oder an Position $i+1$.
 Je nachdem, ob $i < j$ bzw. $i \geq j$ ist.\\
-Das bedeutet, dass man fuer das Haus $k$ ebenfalls zwei Moeglichkeiten fuer das Codewort gibt. Entweder $s_k$ oder $s_{k+1}$. 
+Das bedeutet, dass man fuer das Haus $k$ ebenfalls zwei Moeglichkeiten fuer das Codewort hat, entweder $s_k$ oder $s_{k+1}$. 
 \\\\
-Zusammengefasst muss man also die $n+1$ gefundenen Karten sortieren und kann anschlieszend das Haus $k$ mit dem Schluessel an Index $k$ oder $k+1$ der sortierten Karten suchen. Dies haelt die Bedingung ein, dass maximal 3 Versuche benoetigt werden duerfen.
+Zusammengefasst muss man also die $n+1$ gefundenen Karten sortieren und kann anschlieszend das Haus $k$ mit dem Schluessel an Index $k$ und $k+1$ der sortierten Karten suchen. Dies haelt die Bedingung ein, dass maximal 3 Versuche benoetigt werden duerfen.
 \\\\
 Auf die gegebene Aufgabe laesst sich dieses Verfahren einfach uebertragen, indem die 11 gefundenen Karten sortiert werden und fuer jedes Haus $k$ ebenfalls die Karten $k$ und $k+1$ probiert werden. 
 
@@ -804,10 +804,10 @@ Auf die gegebene Aufgabe laesst sich dieses Verfahren einfach uebertragen, indem
 Nun folgt der Quellcode der wichtigsten Teile des Programs.
 
 \subsection{Erstellen der Matrix}
-Diese Methode ist Teil der "`ZZZProblem"' Klasse und erstellt aus dem gegebenen ZZZ-Problem eine Matrix,  wie sie in Kapitel "`Loesung des Gleichungssystems mit bestimmem Hamming-Gewicht"' beschrieben ist.
+Diese Methode ist Teil der "`ZZZProblem"' Klasse und erstellt aus dem gegebenen ZZZ-Problem eine Matrix,  wie sie in Kapitel "`Loesung des Gleichungssystems mit bestimmtem Hamming-Gewicht"' beschrieben ist.
 
 \subsection{Algorithmus 1}
-\\Die folgenen Methoden sind Teil der Klasse, welche den Algorithmus 1 implementiert.
+\\Die folgenden Methoden sind Teil der Klasse, welche den Algorithmus 1 implementiert.
 
 \subsection{Algorithmus 2}
 \textbf{Loesen des homogenen Systems} \\
@@ -821,8 +821,8 @@ Diese Loesungsmenge ist gegebem als ein Array aus Vektoren aus \(\mathbb{Z}_{2}^
 
 \section{Literatur}
 \begin{enumerate}
-	\item Elwyn R. Berlekamp, Robert J. McEliece and Henk C.A. van Tilborg, \href{https://ieeexplore.ieee.org/document/1055873}{On the inherent intractability of certain coding problems}
-	\item Rod G. Downey, Michael R. Fellows, Alexander Vardy and Geoff Whittle, \href{https://epubs.siam.org/doi/10.1137/S0097539797323571}{The parametrized complexity of some fundamental problems in coding theory}
+	\item Elwyn R. Berlekamp, Robert J. McEliece and Henk C.A. van Tilborg, \href{https://ieeexplore.ieee.org/document/1055873}{On the inherent intractability of certain coding problems}, 1978
+	\item Rod G. Downey, Michael R. Fellows, Alexander Vardy and Geoff Whittle, \href{https://epubs.siam.org/doi/10.1137/S0097539797323571}{The parametrized complexity of some fundamental problems in coding theory}, 1999
 \end{enumerate}
 
 \end{document}

@@ -1,16 +1,16 @@
 \babel@toc {ngerman}{}
-\contentsline {section}{\numberline {1}Definierung dex XORs}{2}{section.1}%
+\contentsline {section}{\numberline {1}Definition des XORs}{2}{section.1}%
 \contentsline {section}{\numberline {2}Darstellung durch \(\mathbb {Z}_{2}\) mit der Addition}{2}{section.2}%
 \contentsline {section}{\numberline {3}Eigenschaften des XORs}{2}{section.3}%
 \contentsline {section}{\numberline {4}Bitfolgen}{2}{section.4}%
-\contentsline {section}{\numberline {5}Reduzierung der Aufgabe}{3}{section.5}%
+\contentsline {section}{\numberline {5}Definition und Reduzierung der Aufgabe}{3}{section.5}%
 \contentsline {section}{\numberline {6}Komplexitaet}{4}{section.6}%
 \contentsline {section}{\numberline {7}Algorithmus 1: Loesung durch Bruteforce der Kombinationen}{5}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Laufzeit}{7}{subsection.7.1}%
 \contentsline {section}{\numberline {8}Loesung durch ein Gleichungssystem}{8}{section.8}%
-\contentsline {section}{\numberline {9}Loesung des Gleichungssystems mit bestimmem Hamming-Gewicht}{9}{section.9}%
+\contentsline {section}{\numberline {9}Loesung des Gleichungssystems mit bestimmtem Hamming-Gewicht}{9}{section.9}%
 \contentsline {section}{\numberline {10}Algorithmus 2: Loesung durch Gausz-Verfahren und Bruteforce}{9}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Loesen des Gleichungssystems in \(\mathbb {Z}_{2}\)}{9}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.1}Loesen des Gleichungssystems ueber \(\mathbb {Z}_{2}\)}{9}{subsection.10.1}%
 \contentsline {subsection}{\numberline {10.2}Loesen der letzten Gleichung durch Bruteforce}{10}{subsection.10.2}%
 \contentsline {subsection}{\numberline {10.3}Laufzeit}{10}{subsection.10.3}%
 \contentsline {section}{\numberline {11}Implementierung}{11}{section.11}%
