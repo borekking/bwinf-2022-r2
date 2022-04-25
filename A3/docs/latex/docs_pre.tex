@@ -137,7 +137,7 @@ Es ist leicht erkennbar, dass man versuchen sollte, die Ziffern von links nach r
 \\\\
 Dies laesst sich wie folgt durch vollstaendige Induktion beweisen.
 \\\\
-Sein
+Seien
 \[d_n, \ d_{n-1}, \ \dots \ , \ d_2, \ d_1\]
 die Ziffern einer Zahl \(m\) mit Basis \(a\), welche \(n\) Ziffern hat. Dabei liegt die Ziffer \(d_n\) ganz links in der Zahl und die Ziffer \(d_1\) ganz rechts in der Zahl. Die Ziffern sind also von rechts nach links aufsteigend nummeriert.
 \\\\
@@ -167,7 +167,7 @@ Damit eine Zahl eine korrekte Loesung ist, muss Folgendes gegeben sein:
 \\\\
 Aus diesen Eigenschaften lassen sich weitere Eigenschaften schlieszen.\\
 \\
-Sein \(d_n, \ \dots \ , \ d_1\) die Ziffern der gegebenen Zahl von links nach rechts und \(d_n', \ \dots \ , \ d_1'\) die jeweiligen Ziffern der korrekten Loesung. Weiter sind \(a_i\) und \(r_i\) die Anzahl an Segmenten, 
+Seien \(d_n, \ \dots \ , \ d_1\) die Ziffern der gegebenen Zahl von links nach rechts und \(d_n', \ \dots \ , \ d_1'\) die jeweiligen Ziffern der korrekten Loesung. Weiter sind \(a_i\) und \(r_i\) die Anzahl an Segmenten, 
 die man hinzufuegen, bzw. entfernen muss um von \(d_is\) Siebensegmentanzeige zu \(d_i's\) Siebensegmentanzeige zu kommen (\(1 \leq i \leq n\)), bzw.
 \[(a_i, \ r_i) = changes(d_i, \ d_i')\]
 fuer alle \(i \in \mathbb{N}\) mit (\(1 \leq i \leq n\)).
@@ -329,7 +329,7 @@ Die Eingabeparameter des Algorithmus sind wie beschrieben (index, A, R).\\
 \section{Berechnung der Umlegungen}
 Nach dem die hoechstmoegliche Zahl berechnet wurde, kann man mit dieser und der Ausgangszahl die benoetigten Umlegungen berechnen. Dabei muss beachtet werden, dass stets ein aktiviertes Segment mit einem deaktivierten Segment getauscht und niemals eine Siebensegmentanzeige vollstaendig geleert wird. 
 \\\\
-Gegeben sein die Ziffern der gegebenen Zahl \(d_1, \ \dots \ , \ d_n\) und die Ziffern der resultierenden Zahl \(d_1', \ \dots \ , \ d_n'\).
+Gegeben seien die Ziffern der gegebenen Zahl \(d_1, \ \dots \ , \ d_n\) und die Ziffern der resultierenden Zahl \(d_1', \ \dots \ , \ d_n'\).
 \\\\
 Zunaechst wird fuer jedes Paar (\(d_i\) und \(d_i'\)) die Liste der Segmente, die entfernt werden muessen - \(removes_i\) - und die Liste der Segmente, die hinzugefuegt werden muessen - \(adds_i\), berechnet (wie unter Ziffern veraendern beschrieben).\\
 Segmente werden dabei ueber ihren Index j (\(0 \leq j < 7\)) definiert.
@@ -343,7 +343,7 @@ Jeder Tausch von zwei Segmenten besteht dabei aus den Indexen der zwei Ziffern u
 \\\\
 \textbf{Pseudocode}\\
 Nun wird der Pseudocode fuer den zuvor beschriebenen Algorithmus folgen.\\
-Die Uebergabeparamether sind \(d_1, \ \dots \ , \ d_n\) - die Ziffern der gegebenen Zahl - und \(d_1', \ \dots \ , \ d_n'\) - die Ziffern der resultierenden Zahl.
+Die Uebergabeparameter sind \(d_1, \ \dots \ , \ d_n\) - die Ziffern der gegebenen Zahl - und \(d_1', \ \dots \ , \ d_n'\) - die Ziffern der resultierenden Zahl.
 \begin{algorithmic}[1]
 	\Procedure {getNeededChanges}{\(d_1, \ \dots \ , \ d_n\), \(d_1', \ \dots \ , \ d_n'\)}
 	\State \(adds_1, \ \dots \ , \ add_n \) \Comment{Declare adds-lists}
@@ -387,8 +387,8 @@ Die Uebergabeparamether sind \(d_1, \ \dots \ , \ d_n\) - die Ziffern der gegebe
 \end{algorithmic}
 \\\\
 Die removes und adds Listen werden hier ueber die Methoden neededAdds und neededRemoves erhalten. Diese sollen Methoden dastellen, welche fuer zwei Ziffern ausgeben, welche Segmente (bestimmt durch ihren Index) entfernt bzw. hinzugefuegt werden muessen, um von der einen Ziffer zur anderen zu kommen. Dies soll geschehen, wie unter Ziffern veraendern beschrieben.\\\\
-Die removes und adds Listen sollen hier des weiteren Stacks sein, so dass das oberste Element des Stacks mit der pop-Methode bekommen und vom Stack entfernt werden kann.\\
-Des weiteren sollen die addSwap Methoden die Taeusche (swaps) speichern. \\
+Die removes und adds Listen sollen hier des Weiteren Stacks sein, so dass das oberste Element des Stacks mit der pop-Methode bekommen und vom Stack entfernt werden kann.\\
+Des Weiteren sollen die addSwap Methoden die Taeusche (swaps) speichern. \\
 Zu beidem unter Implementierung genaueres.
 \\\\
 Warum dieses Verfahren korrekt ist, wird unter Korrektheit argumentiert.
@@ -443,7 +443,7 @@ Auszerdem braucht man eine Moeglichkeit mehrere Siebensegmentanzeigen darzustell
 \\\\
 Die beiden Typen sind immutable, damit keine Werte unerwartet veraendert werden. Aufgrund des Java Garbage Collectors wird dadurch auch kein Speicherplatz unnoetig belegt, da dieser nicht mehr referenzierte/genutzte Objekt entfernt.
 \\\\
-Die 16 hexadezimalen Zahlen von 0 bis F habe ich mit einer Enumeration umgesetzt, diese enthaelt fuer jede Ziffer den Namen der Ziffer (z.B. "`0"' oder "`F"'), den Wert der Ziffer in dezimal, sowie ein boolean-array fuer die Siebensegmentanzeige und Methoden, um diese Eigenschaften zu erhalten. Desweiteren gibt es eine Utility (Hilfs-) Klasse um hexadezimale Zahlen durch den Namen oder den Wert zu erhalten, sowie um alle Hex-Zahlen sortiert nach einer bestimmten Eigenschaft als Liste zu erhalten.
+Die 16 hexadezimalen Zahlen von 0 bis F habe ich mit einer Enumeration umgesetzt, diese enthaelt fuer jede Ziffer den Namen der Ziffer (z.B. "`0"' oder "`F"'), den Wert der Ziffer in dezimal, sowie ein boolean-array fuer die Siebensegmentanzeige und Methoden, um diese Eigenschaften zu erhalten. Des Weiteren gibt es eine Utility (Hilfs-) Klasse um hexadezimale Zahlen durch den Namen oder den Wert zu erhalten, sowie um alle Hex-Zahlen sortiert nach einer bestimmten Eigenschaft als Liste zu erhalten.
 \\\\
 \textbf{Umsetzung der Optimierung}\\
 Das unter Optimierung erwaehnte Speichern der Listen an Segmenten, welche hinzugefuegt/entfernt werden muessen, fuer jedes Paar an Ziffern der Basis a, wird umgesetzt durch die Klasse HexDigitChanges, welche eine statische Singleton besitzt.\\

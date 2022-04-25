@@ -1,11 +1,7 @@
 package de.flo.zzz;
 
 import de.flo.zzz.bitSequence.BitSequence;
-
-import de.flo.zzz.bruteforceAlgorithm.BruteforceZZZSolver;
 import de.flo.zzz.util.JavaUtils;
-import org.jlinalg.Vector;
-import org.jlinalg.f2.F2;
 
 import java.io.File;
 import java.io.FileNotFoundException;

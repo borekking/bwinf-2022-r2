@@ -71,7 +71,7 @@
 
 \section{Definition des XORs}
 XOR bzw. \(\oplus\) sei zunaechst auf zwei Bits/Wahrheitswerte, wie folgt ueber die Gleichheit, definiert:\\\\
-Sein a, b zwei Wahrheitswerte.
+Seien a, b zwei Wahrheitswerte.
 \[a \ XOR \ b \Longleftrightarrow a \oplus b = \neg (a \Longleftrightarrow b)\]
 Die dazugehoerige Wahrheitstabelle sieht wie folgt aus:
 \\\\
@@ -295,7 +295,7 @@ Gegeben sind eine binaere $m \times n$ Matrix $A$ und eine Ganzzahl $k$ > 0.\\
 Die Entscheidungsfrage ist, ob es eine Menge an $k$ Spalten aus $A$ gibt, welche sich zum Null-Vektor aufaddieren.
 \\\\
 Dieses Entscheidungsproblem laesst sich wie folgt durch Polynomialzeitreduktion zum ZZZ-Problem reduzieren:\\
-Sein die Spalten der Matrix die Vektoren
+Seien die Spalten der Matrix die Vektoren
 $$
 \vec{v_1}, \ \dots \ , \ \vec{v_n}.
 $$
@@ -405,8 +405,8 @@ Der Pseudocode fuer diesen Fall sieht wie folgt aus:
 \\
 
 \\\\
-Ist $k$ ungrade, so wurden Kombinationen mit $\frac{k-1}{2}$ Elementen erstellt, so dass man, wuerde man die vorherige Vorgehensweise anwenden, nur $\frac{k-1}{2} * 2 = k-1$ Bitfolgen erhalten, welche die Null-Bitfolge ergeben. \\
-Somit muss eine zusaetzliche Bitfolge eingefuehrt werden. Die Vorgehensweise fuer ein ungrades $k$ ist diese:\\
+Ist $k$ ungerade, so wurden Kombinationen mit $\frac{k-1}{2}$ Elementen erstellt, so dass man, wuerde man die vorherige Vorgehensweise anwenden, nur $\frac{k-1}{2} * 2 = k-1$ Bitfolgen erhalten, welche die Null-Bitfolge ergeben. \\
+Somit muss eine zusaetzliche Bitfolge eingefuehrt werden. Die Vorgehensweise fuer ein ungerades $k$ ist diese:\\
 Man iterriert fuer jede der $n$ Bitfolgen $b_i$ durch alle entstandenen $x$ der Kombinationen und wendet das XOR auf $b_i$ und $x$ an. Dadurch entsteht eine weitere Bitfolge $z = b_i \ XOR \ x$.\\
 Fuer diese neue Bitfolge ueberprueft man, ob sie in der Tabelle enthalten ist. Ist dies der Fall, so wird versucht, zwei Mengen aus $L_x$ und $L_z$ zu finden (eine aus $L_x$ und eine aus $L_z$), fuer welche gilt, dass sie disjunkt sind und je nicht $i$ enthalten.\\
 Hat man solche zwei Mengen gefunden, so hat man $k = 1 + \frac{k-1}{2} * 2$ Bitfolgen gefunden, welche
@@ -443,7 +443,7 @@ Weiter soll table.values die Werte (bzw. Schluessel) der Tabelle darstellen.
 \subsection{Laufzeit}
 Die (worst case) Laufzeit fuer diesen Algorithmus ist \dots
 \begin{enumerate}
-	\item fuer $k$ grade
+	\item fuer $k$ gerade
 	$$
 	\mathcal{O}(\binom{n}{\frac{k}{2}} * c^2 * k) 
 	$$
@@ -454,7 +454,7 @@ Die (worst case) Laufzeit fuer diesen Algorithmus ist \dots
 	= \mathcal{O}(n^{\frac{k}{2}}) 
 	$$
 
-	\item fuer $k$ ungrade
+	\item fuer $k$ ungerade
 	$$
 	\mathcal{O}(\binom{n}{\frac{k-1}{2}} * n * c^2 * k) 
 	$$
@@ -504,7 +504,7 @@ Weiter muss
 in \(\mathbb{Z}\) (nicht in \(\mathbb{Z}_{2}\)!) gelten.\\
 Dadurch ist gegeben, dass exakt die benoetigte Anzahl an \(k\) Bitfolgen gewaehlt wird.\\\\
 Dass eine Loesung fuer die zuvor beschriebenen Gleichungen ebenfalls eine Loesung fuer das Null-Bitfolge Problem ist, ist einfach zu zeigen:\\\\
-Sein ohne Einschraenkung der Allgemeinheit \(x_1 \ , \ \dots \ , \ x_{k}\) die \(k\) Entscheidungsvariablen, welche 1 annehmen und die Gleichungen erfuellen.\\
+Seien ohne Einschraenkung der Allgemeinheit \(x_1 \ , \ \dots \ , \ x_{k}\) die \(k\) Entscheidungsvariablen, welche 1 annehmen und die Gleichungen erfuellen.\\
 Nun lassen sich die zuvor beschriebenen Gleichungen je auf \(k\) Summanden reduzieren, welche zusammen 0 in \(\mathbb{Z}_{2}\) ergeben.\\
 Diese Gleichungen sehen nun wie folgt aus:
 \[a_{1, 1} + \dots + a_{k, 1} = 0\]
@@ -629,9 +629,9 @@ Dies laesst sich aber durch das Gausz-Verfahren schnell herrausfinden.\\
 Ist die Loesungsmenge allerdings klein genug, so kann eine exakte Loesung berechnet werden.
 
 \section{Implementierung}
-Das Program wurde in Java 8 und objektorentiert geschrieben.
+Das Programm wurde in Java 8 und objektorentiert geschrieben.
 \\ Dazu gibt es eine Klasse "`BitSequence"', welche eine Bitfolge darstellt. Sie speichert ein Arary an booleans, welches die Bits darstellt und dessen Laenge als Attribute. 
-Des Weiteren besitzt sie zwei Konstruktoren, welche (1) ein boolean Array und (2) einen String als Uebergabeparamether bekommen. Bei dem Konstruktor, welcher einen String erhaelt, soll dieser String ein binaerer String sein, welcher in ein boolean Array umgewandelt wird.
+Des Weiteren besitzt sie zwei Konstruktoren, welche (1) ein boolean Array und (2) einen String als Uebergabeparameter bekommen. Bei dem Konstruktor, welcher einen String erhaelt, soll dieser String ein binaerer String sein, welcher in ein boolean Array umgewandelt wird.
 Die BitSequence Klasse hat des Weiteren die Methoden "`xor"', "`getBit"' und "`getSize"', welche je das XOR mit einer weiteren Bitfolge der selben Laenge erzeugen, einen Bit an einem bestimmten Index im boolean Array zurueckgeben und die Laenge der Bitsequence zurueckgeben. Auszerdem implementiert die Klasse das Comparable Interface, wodurch sie vergleichbar ist und sie ueberschreibt die equals und hashCode Methoden, durch Methoden, welche je den Inhalt der Objekte vergleichen und einen HashCode, basierend auf den Bits der Bitfolge, zurueckgeben.
 \\\\
 Das ZZZ-Problem wird ebenfalls durch eine Klasse dargestellt, welche die Werte $n, \ k$ und $m$, sowie eine Liste der gegebenen Bitfolgen als Attribute besitzt. Diese Klasse ("`ZZZProblem"') besitzt ebenfalls eine Methode zum Erstellen einer Matrix, wie sie in Kapitel "`Loesung des Gleichungssystems mit bestimmtem Hamming-Gewicht"' beschrieben ist.
@@ -766,7 +766,7 @@ $$
 In Aufgabenteil b ist gefragt, wie man mithilfe der 11 gefundenen Karten am naechsten Wochenende das naechste Haus aufsperren kann, ohne dafuer mehr als zwei Fehlversuche zu benoetigen.\\
 Diese Aufgabenstellung wird nun mit dem allgemeineren  Problem angegangen, dass es $n$ Haeuser gibt, so dass $n+1$ Karten gefunden werden.
 \\\\
-Sein zunaechst die Folge 
+Seien zunaechst die Folge 
 $$
 W = (w_1, \ \dots \ , w_n)
 $$
